@@ -7,14 +7,18 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
+import GooglePlaces
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var restrictRotation:UIInterfaceOrientationMask = .all
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyB9iOpbd1d9uRMxToaQprXMUTabp7eGVj4")
+        GMSPlacesClient.provideAPIKey("AIzaSyB9iOpbd1d9uRMxToaQprXMUTabp7eGVj4")
         return true
     }
 
