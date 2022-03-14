@@ -21,9 +21,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             case MessageComposeResult.sent:
                 print("Message sent successfully")
                 // Activate the recording function after 2 seconds
-                DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
-                    self.audio_record()
-                }
+                self.audio_record_permission()
             default:
                 return
         }
@@ -236,12 +234,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.navigationController?.navigationBar.barTintColor = UIColor.clear
             self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         }
-        
-        /*
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.isNavigationBarHidden = true
-         */
     }
     
     func adding_button_for_stack_view(){
@@ -305,7 +297,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @objc func record_audio(){
-        send_sms()
+        if(recording_stand_by){
+            self.send_sms()
+        }else{
+            self.audioRecord?.stop()
+            self.recording_stand_by = true
+            print("Finished Recording")
+        }
     }
 
     func audio_record_permission(){
@@ -316,14 +314,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             try recordingSession!.setActive(true)
                     
             recordingSession!.requestRecordPermission() { [unowned self] allowed in
-                if(recording_stand_by){
                     self.recording_stand_by = false
                     self.audio_record()
-                }else{
-                    self.audioRecord?.stop()
-                    self.recording_stand_by = true
-                    print("Finished Recording")
-                }
             }
         } catch {
             print("Failed to grant recording accession")

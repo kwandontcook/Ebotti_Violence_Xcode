@@ -1,0 +1,6 @@
+framework module Pods_Ebotti_Violence_Ebotti_ViolenceUITests {
+  umbrella header "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

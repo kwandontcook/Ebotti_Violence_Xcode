@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08FAAA973BCAE983FDF65E9C /* Pods_Ebotti_ViolenceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A645DB1A794A905D27BE0C /* Pods_Ebotti_ViolenceTests.framework */; };
 		7922B50D27DD656C00E9A9B0 /* reveil2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7922B50A27DD656B00E9A9B0 /* reveil2x.png */; };
 		7922B50E27DD656C00E9A9B0 /* reveil3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7922B50B27DD656C00E9A9B0 /* reveil3x.png */; };
 		7922B50F27DD656C00E9A9B0 /* reveil.png in Resources */ = {isa = PBXBuildFile; fileRef = 7922B50C27DD656C00E9A9B0 /* reveil.png */; };
@@ -103,9 +104,8 @@
 		7BB85F8227D4605B0096285F /* Contact_List_cell_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */; };
 		7BB85F8427D4625F0096285F /* Contact_List_cell_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */; };
 		7BB85F8627D468430096285F /* Contact_List_cell_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8527D468430096285F /* Contact_List_cell_5.swift */; };
-		84F22B39B980664D62057756 /* Pods_Ebotti_ViolenceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 749412F5B8FE4244F007860D /* Pods_Ebotti_ViolenceTests.framework */; };
-		BF522FEF56A53B3231EB4560 /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC87899FAC1CDF6697606CDB /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */; };
-		ECDB5EA31268960E1BA8153D /* Pods_Ebotti_Violence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35591C5D9857D66299C7865B /* Pods_Ebotti_Violence.framework */; };
+		8C102835BE763445CFE46AAF /* Pods_Ebotti_Violence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BEC609DFB2A490CA32084D /* Pods_Ebotti_Violence.framework */; };
+		E83A49A4A42929062A0CCBEB /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2975EF887624BCF8532320B2 /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,16 +126,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		070DD0A1F5071AE51C80C643 /* Pods-Ebotti_ViolenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_ViolenceTests.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2B818EB3795A414A3C5C1B1D /* Pods-Ebotti_Violence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.debug.xcconfig"; sourceTree = "<group>"; };
-		35591C5D9857D66299C7865B /* Pods_Ebotti_Violence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ebotti_Violence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A8E7613E5FDE475C217B38B /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig"; sourceTree = "<group>"; };
-		749412F5B8FE4244F007860D /* Pods_Ebotti_ViolenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ebotti_ViolenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A90E4488B36DEE0A7588441 /* Pods-Ebotti_ViolenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_ViolenceTests.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests.release.xcconfig"; sourceTree = "<group>"; };
+		26BEC609DFB2A490CA32084D /* Pods_Ebotti_Violence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ebotti_Violence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2975EF887624BCF8532320B2 /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F3E035C75932421C5A044D /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		688702BBC81FD83B9471C940 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		71A645DB1A794A905D27BE0C /* Pods_Ebotti_ViolenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ebotti_ViolenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73B250DCD3ACF22DF0BE34FB /* Pods-Ebotti_ViolenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_ViolenceTests.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7922B50A27DD656B00E9A9B0 /* reveil2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveil2x.png; sourceTree = "<group>"; };
 		7922B50B27DD656C00E9A9B0 /* reveil3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveil3x.png; sourceTree = "<group>"; };
 		7922B50C27DD656C00E9A9B0 /* reveil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveil.png; sourceTree = "<group>"; };
 		79C69E6427DA425B0020E55F /* SOS+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SOS+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7A1EC1172AD08AE558464727 /* Pods-Ebotti_ViolenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_ViolenceTests.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests.release.xcconfig"; sourceTree = "<group>"; };
 		7B255C3527CB58CE001D5D61 /* Ebotti_Violence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ebotti_Violence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B255C3827CB58CE001D5D61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B255C3A27CB58CE001D5D61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -233,9 +234,8 @@
 		7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_2.swift; sourceTree = "<group>"; };
 		7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_4.swift; sourceTree = "<group>"; };
 		7BB85F8527D468430096285F /* Contact_List_cell_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_5.swift; sourceTree = "<group>"; };
-		B683758E56A958B10EE9C22E /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CC87899FAC1CDF6697606CDB /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D56DC24DF320A0774E912294 /* Pods-Ebotti_Violence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.release.xcconfig"; sourceTree = "<group>"; };
+		8BF4C93B584B9E2C19729C2A /* Pods-Ebotti_Violence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.debug.xcconfig"; sourceTree = "<group>"; };
+		FB2218901938705A61BEDD14 /* Pods-Ebotti_Violence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECDB5EA31268960E1BA8153D /* Pods_Ebotti_Violence.framework in Frameworks */,
+				8C102835BE763445CFE46AAF /* Pods_Ebotti_Violence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F22B39B980664D62057756 /* Pods_Ebotti_ViolenceTests.framework in Frameworks */,
+				08FAAA973BCAE983FDF65E9C /* Pods_Ebotti_ViolenceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF522FEF56A53B3231EB4560 /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework in Frameworks */,
+				E83A49A4A42929062A0CCBEB /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +277,7 @@
 				7B255C5B27CB58D5001D5D61 /* Ebotti_ViolenceUITests */,
 				7B255C3627CB58CE001D5D61 /* Products */,
 				D6B7A1730DCB5CCFBEF20423 /* Pods */,
-				EE16BB172A714457ED0A5423 /* Frameworks */,
+				9D04A2F264B43D26308489BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -503,27 +503,27 @@
 			path = Contact_List_page;
 			sourceTree = "<group>";
 		};
+		9D04A2F264B43D26308489BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26BEC609DFB2A490CA32084D /* Pods_Ebotti_Violence.framework */,
+				2975EF887624BCF8532320B2 /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */,
+				71A645DB1A794A905D27BE0C /* Pods_Ebotti_ViolenceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D6B7A1730DCB5CCFBEF20423 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2B818EB3795A414A3C5C1B1D /* Pods-Ebotti_Violence.debug.xcconfig */,
-				D56DC24DF320A0774E912294 /* Pods-Ebotti_Violence.release.xcconfig */,
-				B683758E56A958B10EE9C22E /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */,
-				4A8E7613E5FDE475C217B38B /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */,
-				070DD0A1F5071AE51C80C643 /* Pods-Ebotti_ViolenceTests.debug.xcconfig */,
-				7A1EC1172AD08AE558464727 /* Pods-Ebotti_ViolenceTests.release.xcconfig */,
+				8BF4C93B584B9E2C19729C2A /* Pods-Ebotti_Violence.debug.xcconfig */,
+				FB2218901938705A61BEDD14 /* Pods-Ebotti_Violence.release.xcconfig */,
+				49F3E035C75932421C5A044D /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */,
+				688702BBC81FD83B9471C940 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */,
+				73B250DCD3ACF22DF0BE34FB /* Pods-Ebotti_ViolenceTests.debug.xcconfig */,
+				1A90E4488B36DEE0A7588441 /* Pods-Ebotti_ViolenceTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		EE16BB172A714457ED0A5423 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				35591C5D9857D66299C7865B /* Pods_Ebotti_Violence.framework */,
-				CC87899FAC1CDF6697606CDB /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */,
-				749412F5B8FE4244F007860D /* Pods_Ebotti_ViolenceTests.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,12 +533,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B255C6227CB58D5001D5D61 /* Build configuration list for PBXNativeTarget "Ebotti_Violence" */;
 			buildPhases = (
-				68C85E8EE5EF647D8E87F1BD /* [CP] Check Pods Manifest.lock */,
+				A91A2277D466A335785D9848 /* [CP] Check Pods Manifest.lock */,
 				7B255C3127CB58CE001D5D61 /* Sources */,
 				7B255C3227CB58CE001D5D61 /* Frameworks */,
 				7B255C3327CB58CE001D5D61 /* Resources */,
-				7312CC748123FF322CD8A8F0 /* [CP] Embed Pods Frameworks */,
-				19E3BF78283A29221A1EB1EE /* [CP] Copy Pods Resources */,
+				84016247B95E1148B8EAC6D2 /* [CP] Embed Pods Frameworks */,
+				B1DB45D3992885A75B08394B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -553,7 +553,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B255C6527CB58D5001D5D61 /* Build configuration list for PBXNativeTarget "Ebotti_ViolenceTests" */;
 			buildPhases = (
-				251BC2BF392C2C671DB21C9D /* [CP] Check Pods Manifest.lock */,
+				19A8AD5E4BB33B423F2DA562 /* [CP] Check Pods Manifest.lock */,
 				7B255C4A27CB58D5001D5D61 /* Sources */,
 				7B255C4B27CB58D5001D5D61 /* Frameworks */,
 				7B255C4C27CB58D5001D5D61 /* Resources */,
@@ -572,12 +572,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B255C6827CB58D5001D5D61 /* Build configuration list for PBXNativeTarget "Ebotti_ViolenceUITests" */;
 			buildPhases = (
-				208FCEF04E84DFDA1A254A4A /* [CP] Check Pods Manifest.lock */,
+				5435DCB9921A80465E5CB881 /* [CP] Check Pods Manifest.lock */,
 				7B255C5427CB58D5001D5D61 /* Sources */,
 				7B255C5527CB58D5001D5D61 /* Frameworks */,
 				7B255C5627CB58D5001D5D61 /* Resources */,
-				82F7A05CF38155A28EC9EC1F /* [CP] Embed Pods Frameworks */,
-				42D899E6D1BCF002BC34487C /* [CP] Copy Pods Resources */,
+				1708BF092FBE6D06D8094637 /* [CP] Embed Pods Frameworks */,
+				FAC5154F47495E46E87C2C18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -715,46 +715,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19E3BF78283A29221A1EB1EE /* [CP] Copy Pods Resources */ = {
+		1708BF092FBE6D06D8094637 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		208FCEF04E84DFDA1A254A4A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		251BC2BF392C2C671DB21C9D /* [CP] Check Pods Manifest.lock */ = {
+		19A8AD5E4BB33B423F2DA562 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -776,24 +754,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		42D899E6D1BCF002BC34487C /* [CP] Copy Pods Resources */ = {
+		5435DCB9921A80465E5CB881 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		68C85E8EE5EF647D8E87F1BD /* [CP] Check Pods Manifest.lock */ = {
+		84016247B95E1148B8EAC6D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A91A2277D466A335785D9848 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -815,38 +815,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7312CC748123FF322CD8A8F0 /* [CP] Embed Pods Frameworks */ = {
+		B1DB45D3992885A75B08394B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		82F7A05CF38155A28EC9EC1F /* [CP] Embed Pods Frameworks */ = {
+		FAC5154F47495E46E87C2C18 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1067,7 +1067,7 @@
 		};
 		7B255C6327CB58D5001D5D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B818EB3795A414A3C5C1B1D /* Pods-Ebotti_Violence.debug.xcconfig */;
+			baseConfigurationReference = 8BF4C93B584B9E2C19729C2A /* Pods-Ebotti_Violence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1107,7 +1107,7 @@
 		};
 		7B255C6427CB58D5001D5D61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D56DC24DF320A0774E912294 /* Pods-Ebotti_Violence.release.xcconfig */;
+			baseConfigurationReference = FB2218901938705A61BEDD14 /* Pods-Ebotti_Violence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1147,7 +1147,7 @@
 		};
 		7B255C6627CB58D5001D5D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 070DD0A1F5071AE51C80C643 /* Pods-Ebotti_ViolenceTests.debug.xcconfig */;
+			baseConfigurationReference = 73B250DCD3ACF22DF0BE34FB /* Pods-Ebotti_ViolenceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1168,7 +1168,7 @@
 		};
 		7B255C6727CB58D5001D5D61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A1EC1172AD08AE558464727 /* Pods-Ebotti_ViolenceTests.release.xcconfig */;
+			baseConfigurationReference = 1A90E4488B36DEE0A7588441 /* Pods-Ebotti_ViolenceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1189,7 +1189,7 @@
 		};
 		7B255C6927CB58D5001D5D61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B683758E56A958B10EE9C22E /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */;
+			baseConfigurationReference = 49F3E035C75932421C5A044D /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1208,7 +1208,7 @@
 		};
 		7B255C6A27CB58D5001D5D61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A8E7613E5FDE475C217B38B /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */;
+			baseConfigurationReference = 688702BBC81FD83B9471C940 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

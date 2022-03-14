@@ -1,0 +1,1701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0C1885900810601510E0C632060FAF26 /* GooglePlaces */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9C94FBBEEFB700C4478289AF59ED693A /* Build configuration list for PBXAggregateTarget "GooglePlaces" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GooglePlaces;
+		};
+		E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = GoogleMaps;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1119BB99FE65FEEA8D08332195F21172 /* SwiftyGif.h in Headers */ = {isa = PBXBuildFile; fileRef = D8668CB0337DE4D42B846AD83C120616 /* SwiftyGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C043525A25252B692AB7089BD72D51 /* NSImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D495F57293E6B0FA1F0A80A48AF88B /* NSImageView+SwiftyGif.swift */; };
+		1B2A3E1D8488055BCB009636F113B7C9 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 693D691C79997049736A5200854E60D7 /* DLRadioButton.m */; };
+		1C4037F996AFFB10E6563988C4E0C29D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1E0F83CE320F1651CB12A8AB1CBD19D9 /* SwiftyGifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC9077D4EAD7D9934A59A159D83F7C /* SwiftyGifManager.swift */; };
+		29F4105B2375B6DA0B0CB4FCEDEC4E20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3724F2076A9567A00D4FED9EB8476D63 /* Pods-Ebotti_ViolenceTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 672BA1E4906CFA96B9DFC7C461FA2225 /* Pods-Ebotti_ViolenceTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = F840C6E6B2231E6D400E40A7ADA758E5 /* DropDown+Appearance.swift */; };
+		647ECDA615BB52EDDBA58D6182099416 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F78BD9CCF07F4978FFE3132EB708CF /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-dummy.m */; };
+		68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 903C950C0D5298B50BFF2506A75B7370 /* DropDownCell.xib */; };
+		74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AD55BDC0B14BDE6E1EE278444F0A35 /* DPDConstants.swift */; };
+		78953B88386EB2E7A3B1878537851318 /* DLRadioButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 947FCECCBCA8C471A5FEE97E1F7CAEB8 /* DLRadioButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BE6810B35C8B46012AAF4D3816A18CC /* Pods-Ebotti_Violence-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 461B5BBB107AD87823870B67042AE80E /* Pods-Ebotti_Violence-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8855012F4347385523594307D0F1FBB1 /* DropDown.swift */; };
+		89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ECE8235373A3D4DC7B6DB0BBD66554 /* DPDKeyboardListener.swift */; };
+		8A66DA13F49FDF9AC6E90A3F0E7DBCE2 /* ObjcAssociatedWeakObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5794FDEA94BBA4727C7F392D75418171 /* ObjcAssociatedWeakObject.swift */; };
+		8DC27195BA1C54FC949AD1AB3D66B226 /* DLRadioButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3525C81C8054196B127B307701FCAD9 /* DLRadioButton-dummy.m */; };
+		907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B66EA81FCA79AA38FC402580D7598B0D /* DropDown-dummy.m */; };
+		90F23D39B736A13F55C4B2796E9EA7A8 /* SwiftyGif-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB10209A9A30A58C459769E60488022C /* SwiftyGif-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A14CA14D8C9EFD9612EF710A1547DF93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A075CE4ED03A810B48E81D326794C4 /* DPDUIView+Extension.swift */; };
+		BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49A8A7B9C965338841591B0C5A9933 /* DropDownCell.swift */; };
+		C6356CA8193FF22A86F815ACE9BD7AEE /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59FFCD9D48CBBE282D4846525B2C3518 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB18002044C2E2DB3054C5C1E5A370AA /* Pods-Ebotti_ViolenceTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C33230B63F005F74640C83B013B68A45 /* Pods-Ebotti_ViolenceTests-dummy.m */; };
+		D34E39CEB1FDD7AC45E4FBB408016703 /* UIImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE19C7D9CD5F4E545EDCD159CB4A725 /* UIImage+SwiftyGif.swift */; };
+		D7526201CB7DF1F4D486330A233934E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5629466FC6D909A64358809CA01E00 /* DropDown-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0BD10140EF6EB02E9238595F78DA5DB /* SwiftyGif-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31849D83CEA183F4167EA0FB2B3AAAA2 /* SwiftyGif-dummy.m */; };
+		E2001B8AE3EB6EA8BAA8E5AA3FABC202 /* Pods-Ebotti_Violence-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1BE85EA8BB9239CE1E6FCF7030A5CA /* Pods-Ebotti_Violence-dummy.m */; };
+		E471C20303CF4410CD5DF29CF583D0E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EC2456C6011E7720EF0B61C36AB5B774 /* NSImage+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD2E1760BB2AD1624189EDEA09E1FCD /* NSImage+SwiftyGif.swift */; };
+		F3579B030CCB270667A0390E7D9CF30A /* DLRadioButton.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC4E77859A03F0E892D09CAA50F3E76 /* DLRadioButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD42DF521EA338F958833869A844E603 /* UIImageView+SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641E6311F9A8F98F88A280A2A7DD032E /* UIImageView+SwiftyGif.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AB7FE1D723ED12040C6F9980F2593BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15AEBAFA43912F898FC2E1A73025C946;
+			remoteInfo = SwiftyGif;
+		};
+		27AA9CCC4E41CB852DB031FFBE57A398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED8F38B6D4A3AD6DFF85D18F9F09435;
+			remoteInfo = DLRadioButton;
+		};
+		70CFC3838B8F79533E2344EEEDF31796 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
+		};
+		72460F8CDF983EC2CF94F1BA71D55E92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15AEBAFA43912F898FC2E1A73025C946;
+			remoteInfo = SwiftyGif;
+		};
+		A865D3CA606BDDDD7BD5F98CBA4D21B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+		ABE88BAE34A470855A73E9E44B2D911B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED8F38B6D4A3AD6DFF85D18F9F09435;
+			remoteInfo = DLRadioButton;
+		};
+		B3DC86F07CE4103A9D323BF845599AF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		BE222ABCCD1604C14283B6EADE4BE318 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA65E3E2B8AC7193A13AD2CDFDFF8C2;
+			remoteInfo = "Pods-Ebotti_Violence";
+		};
+		D28B2A0AB08BED9387DF246A5A2B2245 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9F9401E9C74C0C393164FD8D86D0068;
+			remoteInfo = DropDown;
+		};
+		E309F77770C5C48CC745445BF2221CFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C1885900810601510E0C632060FAF26;
+			remoteInfo = GooglePlaces;
+		};
+		FB00C5B0398CBCB60B069CAC3BC2474F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5B4BBC6DD552AC8943C7E22772FC1D3;
+			remoteInfo = GoogleMaps;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02AD55BDC0B14BDE6E1EE278444F0A35 /* DPDConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDConstants.swift; path = DropDown/helpers/DPDConstants.swift; sourceTree = "<group>"; };
+		03385B63E5E89AA21DBB25E0EC1957D6 /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
+		071974F04E75F5C8BAC854D56287D124 /* Pods-Ebotti_ViolenceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebotti_ViolenceTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0869D6B06339457F3B36CDA22F47A4DB /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		0A0DBF6CE27083194D7E52E4A8545DE5 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		139D32C95274594E7F2642904FBB0835 /* Pods-Ebotti_Violence-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebotti_Violence-Info.plist"; sourceTree = "<group>"; };
+		15EF7A3C902891AAEEF4C77984F3B1CB /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1ED634AB0DAA468B124A297BD15FA7C0 /* Pods-Ebotti_Violence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebotti_Violence.debug.xcconfig"; sourceTree = "<group>"; };
+		232AC9C5A6CAE0178DE654D05ED46BCF /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks.sh"; sourceTree = "<group>"; };
+		2D856F7BDEDDDE8B5BD00BE6AB7B0E94 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources.sh"; sourceTree = "<group>"; };
+		31849D83CEA183F4167EA0FB2B3AAAA2 /* SwiftyGif-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyGif-dummy.m"; sourceTree = "<group>"; };
+		32D4F027AF6358E100634D85D6A54A20 /* Pods-Ebotti_ViolenceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebotti_ViolenceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38FE8925A0F53CEC1CC12DBC87B0D95F /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.modulemap"; sourceTree = "<group>"; };
+		3B5629466FC6D909A64358809CA01E00 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
+		3E26BA03994713FBEB9C3406695782F1 /* DLRadioButton */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DLRadioButton; path = DLRadioButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43020E79C9F0D597B705893E7CE365F8 /* SwiftyGif.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyGif.modulemap; sourceTree = "<group>"; };
+		4382E156C4A46B8C0005C3D8846B4DB9 /* DLRadioButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DLRadioButton-Info.plist"; sourceTree = "<group>"; };
+		461B5BBB107AD87823870B67042AE80E /* Pods-Ebotti_Violence-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ebotti_Violence-umbrella.h"; sourceTree = "<group>"; };
+		512BE022D77822C283BCD697FA7FF15C /* SwiftyGif.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.debug.xcconfig; sourceTree = "<group>"; };
+		52D244C1EA7F16ACCDAAFD5A8087A0D1 /* Pods-Ebotti_ViolenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebotti_ViolenceTests.release.xcconfig"; sourceTree = "<group>"; };
+		5469001D25B8C73B4F4FB179A49D117D /* DLRadioButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-prefix.pch"; sourceTree = "<group>"; };
+		5794FDEA94BBA4727C7F392D75418171 /* ObjcAssociatedWeakObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjcAssociatedWeakObject.swift; path = SwiftyGif/ObjcAssociatedWeakObject.swift; sourceTree = "<group>"; };
+		59FFCD9D48CBBE282D4846525B2C3518 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h"; sourceTree = "<group>"; };
+		5A130452733EDFA92C7FDBC2E088B85C /* Pods-Ebotti_ViolenceTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebotti_ViolenceTests-Info.plist"; sourceTree = "<group>"; };
+		5AF34726120613F60EE425E092C8A9A3 /* DLRadioButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DLRadioButton.modulemap; sourceTree = "<group>"; };
+		5D0D550F58E91735D499E7E32643DA7F /* Pods-Ebotti_Violence-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ebotti_Violence-frameworks.sh"; sourceTree = "<group>"; };
+		63D495F57293E6B0FA1F0A80A48AF88B /* NSImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImageView+SwiftyGif.swift"; path = "SwiftyGif/NSImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		641E6311F9A8F98F88A280A2A7DD032E /* UIImageView+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+SwiftyGif.swift"; path = "SwiftyGif/UIImageView+SwiftyGif.swift"; sourceTree = "<group>"; };
+		672BA1E4906CFA96B9DFC7C461FA2225 /* Pods-Ebotti_ViolenceTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ebotti_ViolenceTests-umbrella.h"; sourceTree = "<group>"; };
+		693D691C79997049736A5200854E60D7 /* DLRadioButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DLRadioButton.m; path = DLRadioButton/DLRadioButton.m; sourceTree = "<group>"; };
+		69F8057FD32290808A6A8B1112383B16 /* DLRadioButton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.release.xcconfig; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73671C53E9E2F79327CFAD4A3ACADC3E /* DropDown.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DropDown.modulemap; sourceTree = "<group>"; };
+		7ABDAD3C9A76BB18FDAC7A2CB1D0A3BE /* Pods-Ebotti_ViolenceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Ebotti_ViolenceTests.modulemap"; sourceTree = "<group>"; };
+		7AD2E1760BB2AD1624189EDEA09E1FCD /* NSImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImage+SwiftyGif.swift"; path = "SwiftyGif/NSImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyGif; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		807200757FA9642A8226EDFEF4661274 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		84918B9BDA508EAEB313062F0F06E3CF /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		8855012F4347385523594307D0F1FBB1 /* DropDown.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDown.swift; path = DropDown/src/DropDown.swift; sourceTree = "<group>"; };
+		8C66C27313663E93607342553B130E1C /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		8ED1B60B9EF1609578F8FF65B5305A41 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		903C950C0D5298B50BFF2506A75B7370 /* DropDownCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = DropDownCell.xib; path = DropDown/resources/DropDownCell.xib; sourceTree = "<group>"; };
+		9065EF7C258488A16E4D99105069FC1E /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
+		947FCECCBCA8C471A5FEE97E1F7CAEB8 /* DLRadioButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton-umbrella.h"; sourceTree = "<group>"; };
+		96C67A3B2CB3D22A779E9AD21494D989 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-Info.plist"; sourceTree = "<group>"; };
+		99A075CE4ED03A810B48E81D326794C4 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
+		9B6725B782188F18CB76A740433F14E4 /* DropDown */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2ECE8235373A3D4DC7B6DB0BBD66554 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
+		A33E812D2E0B5DA971B8DED423218CD9 /* DropDown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.debug.xcconfig; sourceTree = "<group>"; };
+		A3DDD73B02983ABA4F298A17DD725124 /* Pods-Ebotti_ViolenceTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ebotti_ViolenceTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A69490721E815BCB7D43BBB1BFED6B91 /* SwiftyGif-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-prefix.pch"; sourceTree = "<group>"; };
+		ACA0D7BC5125532C47C375F951E55A72 /* Pods-Ebotti_Violence */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Ebotti_Violence"; path = Pods_Ebotti_Violence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC4E77859A03F0E892D09CAA50F3E76 /* DLRadioButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DLRadioButton.h; path = DLRadioButton/DLRadioButton.h; sourceTree = "<group>"; };
+		B1231C2C92B553EEDF2B4962F35DC922 /* Pods-Ebotti_Violence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebotti_Violence.release.xcconfig"; sourceTree = "<group>"; };
+		B66EA81FCA79AA38FC402580D7598B0D /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
+		BB701056ACA06F1954B75055E3D69D4B /* Pods-Ebotti_Violence-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ebotti_Violence-resources.sh"; sourceTree = "<group>"; };
+		BD6FA10EB94119A8762A69D094BF1200 /* DropDown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DropDown.release.xcconfig; sourceTree = "<group>"; };
+		C328ECFB185A118C76C77B6F27BDA20F /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		C33230B63F005F74640C83B013B68A45 /* Pods-Ebotti_ViolenceTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ebotti_ViolenceTests-dummy.m"; sourceTree = "<group>"; };
+		C8F78BD9CCF07F4978FFE3132EB708CF /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-dummy.m"; sourceTree = "<group>"; };
+		CB10209A9A30A58C459769E60488022C /* SwiftyGif-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyGif-umbrella.h"; sourceTree = "<group>"; };
+		D6D069439017140AF832F97EF14F9868 /* DLRadioButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DLRadioButton.debug.xcconfig; sourceTree = "<group>"; };
+		D8668CB0337DE4D42B846AD83C120616 /* SwiftyGif.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftyGif.h; path = SwiftyGif/SwiftyGif.h; sourceTree = "<group>"; };
+		DAE19C7D9CD5F4E545EDCD159CB4A725 /* UIImage+SwiftyGif.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+SwiftyGif.swift"; path = "SwiftyGif/UIImage+SwiftyGif.swift"; sourceTree = "<group>"; };
+		DB5C59A5E35B251C2B725AD2696F78FE /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests"; path = Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBA7586ACCFEB27F51AEBB79993B3A24 /* Pods-Ebotti_Violence-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ebotti_Violence-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DC3E74E217FC4D1AF3A749EA39E85E8F /* SwiftyGif.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyGif.release.xcconfig; sourceTree = "<group>"; };
+		DDC95AFB527BA6FCB7706E69DC289682 /* Pods-Ebotti_ViolenceTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Ebotti_ViolenceTests"; path = Pods_Ebotti_ViolenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CAD7CDDBC13E021AC7B8AB1ADC60E9 /* Pods-Ebotti_Violence.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Ebotti_Violence.modulemap"; sourceTree = "<group>"; };
+		E5A3D84AE419BC817C82C94C93DED309 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E7BC9077D4EAD7D9934A59A159D83F7C /* SwiftyGifManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyGifManager.swift; path = SwiftyGif/SwiftyGifManager.swift; sourceTree = "<group>"; };
+		E957BCC93A3B9B7FE0672E213DE235FF /* SwiftyGif-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyGif-Info.plist"; sourceTree = "<group>"; };
+		EBE77A4285DEA6B552A1D66C681BF1B8 /* GooglePlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.release.xcconfig; sourceTree = "<group>"; };
+		EF52276D1442507C2180DB55A627E33B /* DropDown-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DropDown-Info.plist"; sourceTree = "<group>"; };
+		F092A0BC674D8E0579C4872B3F9A9B7A /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		F3525C81C8054196B127B307701FCAD9 /* DLRadioButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton-dummy.m"; sourceTree = "<group>"; };
+		F840C6E6B2231E6D400E40A7ADA758E5 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DropDown+Appearance.swift"; path = "DropDown/src/DropDown+Appearance.swift"; sourceTree = "<group>"; };
+		FBCF63C30FBEB63803A6EEBB40E833CD /* GooglePlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GooglePlaces.debug.xcconfig; sourceTree = "<group>"; };
+		FCBCAADFFD79D4FA642707B70356F62F /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		FD49A8A7B9C965338841591B0C5A9933 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
+		FDE226683EFB31C7F5EE288731386123 /* Pods-Ebotti_Violence-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebotti_Violence-acknowledgements.plist"; sourceTree = "<group>"; };
+		FE1BE85EA8BB9239CE1E6FCF7030A5CA /* Pods-Ebotti_Violence-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ebotti_Violence-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C5C030FACE475649C2997DB4015699B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E471C20303CF4410CD5DF29CF583D0E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70CF7E848BD9796896BEC3AC6CAE5A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C4037F996AFFB10E6563988C4E0C29D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D86F4481D9328BF45B637B906B3122 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A214C2850128CBF38A49757791D2E676 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7526201CB7DF1F4D486330A233934E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B16E5E11A310921C0EFB86BAD8AA26F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14CA14D8C9EFD9612EF710A1547DF93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D383ACCA0CF07B0196A4D5F64AAD53DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F4105B2375B6DA0B0CB4FCEDEC4E20 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180E794F415C25E188804A88848735A2 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				02AD55BDC0B14BDE6E1EE278444F0A35 /* DPDConstants.swift */,
+				A2ECE8235373A3D4DC7B6DB0BBD66554 /* DPDKeyboardListener.swift */,
+				99A075CE4ED03A810B48E81D326794C4 /* DPDUIView+Extension.swift */,
+				8855012F4347385523594307D0F1FBB1 /* DropDown.swift */,
+				F840C6E6B2231E6D400E40A7ADA758E5 /* DropDown+Appearance.swift */,
+				FD49A8A7B9C965338841591B0C5A9933 /* DropDownCell.swift */,
+				2D4D8E7FCA407733E69409534B6D4F61 /* Resources */,
+				60715B0F859D2774085EA0A7830B9811 /* Support Files */,
+			);
+			name = DropDown;
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		235122B18482923E203A1EEBD00B4856 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				38FE8925A0F53CEC1CC12DBC87B0D95F /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.modulemap */,
+				8ED1B60B9EF1609578F8FF65B5305A41 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-acknowledgements.markdown */,
+				E5A3D84AE419BC817C82C94C93DED309 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-acknowledgements.plist */,
+				C8F78BD9CCF07F4978FFE3132EB708CF /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-dummy.m */,
+				232AC9C5A6CAE0178DE654D05ED46BCF /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks.sh */,
+				96C67A3B2CB3D22A779E9AD21494D989 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-Info.plist */,
+				2D856F7BDEDDDE8B5BD00BE6AB7B0E94 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-resources.sh */,
+				59FFCD9D48CBBE282D4846525B2C3518 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h */,
+				15EF7A3C902891AAEEF4C77984F3B1CB /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */,
+				807200757FA9642A8226EDFEF4661274 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */,
+			);
+			name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests";
+			path = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests";
+			sourceTree = "<group>";
+		};
+		2D4D8E7FCA407733E69409534B6D4F61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				903C950C0D5298B50BFF2506A75B7370 /* DropDownCell.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		397B31C0B40E4D2FAE2E9775DE9F5DFD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3FCF17224FBCEE0FF0271E2D6B230684 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		3D7BF336280E56408C8D027BE572BF2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCBCAADFFD79D4FA642707B70356F62F /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3FCF17224FBCEE0FF0271E2D6B230684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C328ECFB185A118C76C77B6F27BDA20F /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54B977350A42EA2798FE75CDB18FDA87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F092A0BC674D8E0579C4872B3F9A9B7A /* GoogleMaps.framework */,
+				0869D6B06339457F3B36CDA22F47A4DB /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E41B3DEA1F9E3E1C52C525ACAA2E5F8 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				397B31C0B40E4D2FAE2E9775DE9F5DFD /* Base */,
+				F36A2A2CF802B0656753FBE709D434B9 /* Maps */,
+				FCA176B0D003E0845D499BC5210DA23B /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		60715B0F859D2774085EA0A7830B9811 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				73671C53E9E2F79327CFAD4A3ACADC3E /* DropDown.modulemap */,
+				B66EA81FCA79AA38FC402580D7598B0D /* DropDown-dummy.m */,
+				EF52276D1442507C2180DB55A627E33B /* DropDown-Info.plist */,
+				9065EF7C258488A16E4D99105069FC1E /* DropDown-prefix.pch */,
+				3B5629466FC6D909A64358809CA01E00 /* DropDown-umbrella.h */,
+				A33E812D2E0B5DA971B8DED423218CD9 /* DropDown.debug.xcconfig */,
+				BD6FA10EB94119A8762A69D094BF1200 /* DropDown.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DropDown";
+			sourceTree = "<group>";
+		};
+		66DBF1C2330853149F28FAC948DC0E35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A0DBF6CE27083194D7E52E4A8545DE5 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F42BE0FF385A07E951E465FEA2A66E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E26BA03994713FBEB9C3406695782F1 /* DLRadioButton */,
+				9B6725B782188F18CB76A740433F14E4 /* DropDown */,
+				ACA0D7BC5125532C47C375F951E55A72 /* Pods-Ebotti_Violence */,
+				DB5C59A5E35B251C2B725AD2696F78FE /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */,
+				DDC95AFB527BA6FCB7706E69DC289682 /* Pods-Ebotti_ViolenceTests */,
+				7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79CC6EC313AEA480B800D65CEE883233 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC0FD8BAA276CAE3C50C6056365CE47A /* Pods-Ebotti_Violence */,
+				235122B18482923E203A1EEBD00B4856 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */,
+				CBA494F2768DD44E75B895EC37D585E6 /* Pods-Ebotti_ViolenceTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B357C07C087C270E7AA4758D8818AC7F /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				66DBF1C2330853149F28FAC948DC0E35 /* Frameworks */,
+				3D7BF336280E56408C8D027BE572BF2B /* Resources */,
+				F97E65AA7D117E6CD31EE351B201A2C3 /* Support Files */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		B89276515D94C9A51EA2A21BA0287056 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E06FF3415D2626CFAAF28289E07B0536 /* DLRadioButton */,
+				180E794F415C25E188804A88848735A2 /* DropDown */,
+				5E41B3DEA1F9E3E1C52C525ACAA2E5F8 /* GoogleMaps */,
+				B357C07C087C270E7AA4758D8818AC7F /* GooglePlaces */,
+				D74D42AA870858D1B69352F6408D6625 /* SwiftyGif */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC0FD8BAA276CAE3C50C6056365CE47A /* Pods-Ebotti_Violence */ = {
+			isa = PBXGroup;
+			children = (
+				E3CAD7CDDBC13E021AC7B8AB1ADC60E9 /* Pods-Ebotti_Violence.modulemap */,
+				DBA7586ACCFEB27F51AEBB79993B3A24 /* Pods-Ebotti_Violence-acknowledgements.markdown */,
+				FDE226683EFB31C7F5EE288731386123 /* Pods-Ebotti_Violence-acknowledgements.plist */,
+				FE1BE85EA8BB9239CE1E6FCF7030A5CA /* Pods-Ebotti_Violence-dummy.m */,
+				5D0D550F58E91735D499E7E32643DA7F /* Pods-Ebotti_Violence-frameworks.sh */,
+				139D32C95274594E7F2642904FBB0835 /* Pods-Ebotti_Violence-Info.plist */,
+				BB701056ACA06F1954B75055E3D69D4B /* Pods-Ebotti_Violence-resources.sh */,
+				461B5BBB107AD87823870B67042AE80E /* Pods-Ebotti_Violence-umbrella.h */,
+				1ED634AB0DAA468B124A297BD15FA7C0 /* Pods-Ebotti_Violence.debug.xcconfig */,
+				B1231C2C92B553EEDF2B4962F35DC922 /* Pods-Ebotti_Violence.release.xcconfig */,
+			);
+			name = "Pods-Ebotti_Violence";
+			path = "Target Support Files/Pods-Ebotti_Violence";
+			sourceTree = "<group>";
+		};
+		BD93FB2490C6B8AD78D575CDD9A5AD5E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AF34726120613F60EE425E092C8A9A3 /* DLRadioButton.modulemap */,
+				F3525C81C8054196B127B307701FCAD9 /* DLRadioButton-dummy.m */,
+				4382E156C4A46B8C0005C3D8846B4DB9 /* DLRadioButton-Info.plist */,
+				5469001D25B8C73B4F4FB179A49D117D /* DLRadioButton-prefix.pch */,
+				947FCECCBCA8C471A5FEE97E1F7CAEB8 /* DLRadioButton-umbrella.h */,
+				D6D069439017140AF832F97EF14F9868 /* DLRadioButton.debug.xcconfig */,
+				69F8057FD32290808A6A8B1112383B16 /* DLRadioButton.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DLRadioButton";
+			sourceTree = "<group>";
+		};
+		CBA494F2768DD44E75B895EC37D585E6 /* Pods-Ebotti_ViolenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				7ABDAD3C9A76BB18FDAC7A2CB1D0A3BE /* Pods-Ebotti_ViolenceTests.modulemap */,
+				A3DDD73B02983ABA4F298A17DD725124 /* Pods-Ebotti_ViolenceTests-acknowledgements.markdown */,
+				071974F04E75F5C8BAC854D56287D124 /* Pods-Ebotti_ViolenceTests-acknowledgements.plist */,
+				C33230B63F005F74640C83B013B68A45 /* Pods-Ebotti_ViolenceTests-dummy.m */,
+				5A130452733EDFA92C7FDBC2E088B85C /* Pods-Ebotti_ViolenceTests-Info.plist */,
+				672BA1E4906CFA96B9DFC7C461FA2225 /* Pods-Ebotti_ViolenceTests-umbrella.h */,
+				32D4F027AF6358E100634D85D6A54A20 /* Pods-Ebotti_ViolenceTests.debug.xcconfig */,
+				52D244C1EA7F16ACCDAAFD5A8087A0D1 /* Pods-Ebotti_ViolenceTests.release.xcconfig */,
+			);
+			name = "Pods-Ebotti_ViolenceTests";
+			path = "Target Support Files/Pods-Ebotti_ViolenceTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B89276515D94C9A51EA2A21BA0287056 /* Pods */,
+				6F42BE0FF385A07E951E465FEA2A66E5 /* Products */,
+				79CC6EC313AEA480B800D65CEE883233 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D74D42AA870858D1B69352F6408D6625 /* SwiftyGif */ = {
+			isa = PBXGroup;
+			children = (
+				7AD2E1760BB2AD1624189EDEA09E1FCD /* NSImage+SwiftyGif.swift */,
+				63D495F57293E6B0FA1F0A80A48AF88B /* NSImageView+SwiftyGif.swift */,
+				5794FDEA94BBA4727C7F392D75418171 /* ObjcAssociatedWeakObject.swift */,
+				D8668CB0337DE4D42B846AD83C120616 /* SwiftyGif.h */,
+				E7BC9077D4EAD7D9934A59A159D83F7C /* SwiftyGifManager.swift */,
+				DAE19C7D9CD5F4E545EDCD159CB4A725 /* UIImage+SwiftyGif.swift */,
+				641E6311F9A8F98F88A280A2A7DD032E /* UIImageView+SwiftyGif.swift */,
+				E96090E4BF466680B7B418FE0EFDA41A /* Support Files */,
+			);
+			name = SwiftyGif;
+			path = SwiftyGif;
+			sourceTree = "<group>";
+		};
+		E06FF3415D2626CFAAF28289E07B0536 /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				AEC4E77859A03F0E892D09CAA50F3E76 /* DLRadioButton.h */,
+				693D691C79997049736A5200854E60D7 /* DLRadioButton.m */,
+				BD93FB2490C6B8AD78D575CDD9A5AD5E /* Support Files */,
+			);
+			name = DLRadioButton;
+			path = DLRadioButton;
+			sourceTree = "<group>";
+		};
+		E96090E4BF466680B7B418FE0EFDA41A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				43020E79C9F0D597B705893E7CE365F8 /* SwiftyGif.modulemap */,
+				31849D83CEA183F4167EA0FB2B3AAAA2 /* SwiftyGif-dummy.m */,
+				E957BCC93A3B9B7FE0672E213DE235FF /* SwiftyGif-Info.plist */,
+				A69490721E815BCB7D43BBB1BFED6B91 /* SwiftyGif-prefix.pch */,
+				CB10209A9A30A58C459769E60488022C /* SwiftyGif-umbrella.h */,
+				512BE022D77822C283BCD697FA7FF15C /* SwiftyGif.debug.xcconfig */,
+				DC3E74E217FC4D1AF3A749EA39E85E8F /* SwiftyGif.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyGif";
+			sourceTree = "<group>";
+		};
+		F19B857BF169792674F068B45FBCB96A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C66C27313663E93607342553B130E1C /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F36A2A2CF802B0656753FBE709D434B9 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				54B977350A42EA2798FE75CDB18FDA87 /* Frameworks */,
+				F19B857BF169792674F068B45FBCB96A /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		F97E65AA7D117E6CD31EE351B201A2C3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FBCF63C30FBEB63803A6EEBB40E833CD /* GooglePlaces.debug.xcconfig */,
+				EBE77A4285DEA6B552A1D66C681BF1B8 /* GooglePlaces.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GooglePlaces";
+			sourceTree = "<group>";
+		};
+		FCA176B0D003E0845D499BC5210DA23B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				03385B63E5E89AA21DBB25E0EC1957D6 /* GoogleMaps.debug.xcconfig */,
+				84918B9BDA508EAEB313062F0F06E3CF /* GoogleMaps.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C61AD97495FA523B8705E8EEA6AB034 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE6810B35C8B46012AAF4D3816A18CC /* Pods-Ebotti_Violence-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DD921E0111869872AE7B86316889FB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3579B030CCB270667A0390E7D9CF30A /* DLRadioButton.h in Headers */,
+				78953B88386EB2E7A3B1878537851318 /* DLRadioButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97CE91431E229797751455423C79CA4F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0A8C46EEE733B55971B1CC5ED65C9AA /* DropDown-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A13F8F20B670EE2CECBD87BB7F0F22CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3724F2076A9567A00D4FED9EB8476D63 /* Pods-Ebotti_ViolenceTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD1B71FDEBC56508459633982B38A9EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6356CA8193FF22A86F815ACE9BD7AEE /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6250923615FD738FBB9701899B04543 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1119BB99FE65FEEA8D08332195F21172 /* SwiftyGif.h in Headers */,
+				90F23D39B736A13F55C4B2796E9EA7A8 /* SwiftyGif-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		15AEBAFA43912F898FC2E1A73025C946 /* SwiftyGif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C867C5A40F81096D616EDC7F38540A72 /* Build configuration list for PBXNativeTarget "SwiftyGif" */;
+			buildPhases = (
+				F6250923615FD738FBB9701899B04543 /* Headers */,
+				ED0AE9A395D326A6C08DFB5657455BFA /* Sources */,
+				70CF7E848BD9796896BEC3AC6CAE5A64 /* Frameworks */,
+				F76858BC3579218524AE8B626C810CB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyGif;
+			productName = SwiftyGif;
+			productReference = 7AD67EFB9A7864151301DC2890207AA2 /* SwiftyGif */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C196D3BACDAEDDD9ADD53A9937D4EF5 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C85AA0F0544EAD3AE14169D9696687BE /* Build configuration list for PBXNativeTarget "Pods-Ebotti_Violence-Ebotti_ViolenceUITests" */;
+			buildPhases = (
+				AD1B71FDEBC56508459633982B38A9EB /* Headers */,
+				6C9163F077D902445607969C1DAF1FB2 /* Sources */,
+				3C5C030FACE475649C2997DB4015699B /* Frameworks */,
+				3C754ED82A1B7555EF8D85BA73D817D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFA02DE6B17219DBBA415D029E471B54 /* PBXTargetDependency */,
+				467A62E1C0913163523369C680EF8CCE /* PBXTargetDependency */,
+				E654F6792CE45EDB76F8F438C10614B9 /* PBXTargetDependency */,
+				1014A582CC1891C157FD41213A7CDD52 /* PBXTargetDependency */,
+				9CDEEE485293440CCE3B483E706ECABF /* PBXTargetDependency */,
+			);
+			name = "Pods-Ebotti_Violence-Ebotti_ViolenceUITests";
+			productName = Pods_Ebotti_Violence_Ebotti_ViolenceUITests;
+			productReference = DB5C59A5E35B251C2B725AD2696F78FE /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		7A9B4CB1654B340D9CFE4F5C831D315A /* Pods-Ebotti_ViolenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1BCC2D39396C4D952185F7F1872DE36 /* Build configuration list for PBXNativeTarget "Pods-Ebotti_ViolenceTests" */;
+			buildPhases = (
+				A13F8F20B670EE2CECBD87BB7F0F22CD /* Headers */,
+				AE2C72B112643E37D2E34C835AD514DF /* Sources */,
+				A214C2850128CBF38A49757791D2E676 /* Frameworks */,
+				E5A02925BB001914D2302FE2497A203A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6158A0C293D70B110A98135FC7CF1154 /* PBXTargetDependency */,
+			);
+			name = "Pods-Ebotti_ViolenceTests";
+			productName = Pods_Ebotti_ViolenceTests;
+			productReference = DDC95AFB527BA6FCB7706E69DC289682 /* Pods-Ebotti_ViolenceTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		ADA65E3E2B8AC7193A13AD2CDFDFF8C2 /* Pods-Ebotti_Violence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22ED0017B0AB42C10247D42E13D7C575 /* Build configuration list for PBXNativeTarget "Pods-Ebotti_Violence" */;
+			buildPhases = (
+				2C61AD97495FA523B8705E8EEA6AB034 /* Headers */,
+				31AFBF88486A269F383B54BCEC2ED07A /* Sources */,
+				D383ACCA0CF07B0196A4D5F64AAD53DC /* Frameworks */,
+				5B4A49C9887364159FCC2392300A39F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB9C601D6805212C582722D9BD30C9A4 /* PBXTargetDependency */,
+				360D6595CFDB4570CFFB496E945548AA /* PBXTargetDependency */,
+				5CBAD9239AAAB594048EA197F0826D35 /* PBXTargetDependency */,
+				A80580F5005D0ED9DA90C47B206BFB1E /* PBXTargetDependency */,
+				B5DBBE451DE0DA56685E6AC05AE7BAEC /* PBXTargetDependency */,
+			);
+			name = "Pods-Ebotti_Violence";
+			productName = Pods_Ebotti_Violence;
+			productReference = ACA0D7BC5125532C47C375F951E55A72 /* Pods-Ebotti_Violence */;
+			productType = "com.apple.product-type.framework";
+		};
+		BED8F38B6D4A3AD6DFF85D18F9F09435 /* DLRadioButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7874750D41DB4C79CE8774C9CCDF386E /* Build configuration list for PBXNativeTarget "DLRadioButton" */;
+			buildPhases = (
+				3DD921E0111869872AE7B86316889FB3 /* Headers */,
+				BE172C3DB2CE6966A4D532550BE47AC4 /* Sources */,
+				B16E5E11A310921C0EFB86BAD8AA26F5 /* Frameworks */,
+				E3A38AA479335008FF1F0207AA860900 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DLRadioButton;
+			productName = DLRadioButton;
+			productReference = 3E26BA03994713FBEB9C3406695782F1 /* DLRadioButton */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */;
+			buildPhases = (
+				97CE91431E229797751455423C79CA4F /* Headers */,
+				48864C435B3DB37698CF568C638CF98F /* Sources */,
+				808BE4E171BD75B6477EC2B77490C2B1 /* Frameworks */,
+				EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropDown;
+			productName = DropDown;
+			productReference = 9B6725B782188F18CB76A740433F14E4 /* DropDown */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6F42BE0FF385A07E951E465FEA2A66E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BED8F38B6D4A3AD6DFF85D18F9F09435 /* DLRadioButton */,
+				E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */,
+				E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */,
+				0C1885900810601510E0C632060FAF26 /* GooglePlaces */,
+				ADA65E3E2B8AC7193A13AD2CDFDFF8C2 /* Pods-Ebotti_Violence */,
+				4C196D3BACDAEDDD9ADD53A9937D4EF5 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests */,
+				7A9B4CB1654B340D9CFE4F5C831D315A /* Pods-Ebotti_ViolenceTests */,
+				15AEBAFA43912F898FC2E1A73025C946 /* SwiftyGif */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C754ED82A1B7555EF8D85BA73D817D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B4A49C9887364159FCC2392300A39F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A38AA479335008FF1F0207AA860900 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5A02925BB001914D2302FE2497A203A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDE5B37A62BFF2F9A9BD2023B960CD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68E1653C561E14BBEAC9CF4873570D58 /* DropDownCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76858BC3579218524AE8B626C810CB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31AFBF88486A269F383B54BCEC2ED07A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2001B8AE3EB6EA8BAA8E5AA3FABC202 /* Pods-Ebotti_Violence-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48864C435B3DB37698CF568C638CF98F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74012B832FAF67F8D62A2B27CDAFE8B5 /* DPDConstants.swift in Sources */,
+				89A72A55273CE358DC4E7600F785C37B /* DPDKeyboardListener.swift in Sources */,
+				B73E510E851686F8184E26986A470458 /* DPDUIView+Extension.swift in Sources */,
+				84459C4824533C9C4FD12AFC941F3CE1 /* DropDown.swift in Sources */,
+				515E22E4255B6073C1897BDDB091A2B8 /* DropDown+Appearance.swift in Sources */,
+				907338727C09F65DB75AA7AB9E10C3B4 /* DropDown-dummy.m in Sources */,
+				BDC10974A8641F01C5665C61EA37A153 /* DropDownCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C9163F077D902445607969C1DAF1FB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				647ECDA615BB52EDDBA58D6182099416 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE2C72B112643E37D2E34C835AD514DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB18002044C2E2DB3054C5C1E5A370AA /* Pods-Ebotti_ViolenceTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE172C3DB2CE6966A4D532550BE47AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B2A3E1D8488055BCB009636F113B7C9 /* DLRadioButton.m in Sources */,
+				8DC27195BA1C54FC949AD1AB3D66B226 /* DLRadioButton-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0AE9A395D326A6C08DFB5657455BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2456C6011E7720EF0B61C36AB5B774 /* NSImage+SwiftyGif.swift in Sources */,
+				12C043525A25252B692AB7089BD72D51 /* NSImageView+SwiftyGif.swift in Sources */,
+				8A66DA13F49FDF9AC6E90A3F0E7DBCE2 /* ObjcAssociatedWeakObject.swift in Sources */,
+				E0BD10140EF6EB02E9238595F78DA5DB /* SwiftyGif-dummy.m in Sources */,
+				1E0F83CE320F1651CB12A8AB1CBD19D9 /* SwiftyGifManager.swift in Sources */,
+				D34E39CEB1FDD7AC45E4FBB408016703 /* UIImage+SwiftyGif.swift in Sources */,
+				FD42DF521EA338F958833869A844E603 /* UIImageView+SwiftyGif.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1014A582CC1891C157FD41213A7CDD52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = B3DC86F07CE4103A9D323BF845599AF2 /* PBXContainerItemProxy */;
+		};
+		360D6595CFDB4570CFFB496E945548AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = 70CFC3838B8F79533E2344EEEDF31796 /* PBXContainerItemProxy */;
+		};
+		467A62E1C0913163523369C680EF8CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DropDown;
+			target = E9F9401E9C74C0C393164FD8D86D0068 /* DropDown */;
+			targetProxy = D28B2A0AB08BED9387DF246A5A2B2245 /* PBXContainerItemProxy */;
+		};
+		5CBAD9239AAAB594048EA197F0826D35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = FB00C5B0398CBCB60B069CAC3BC2474F /* PBXContainerItemProxy */;
+		};
+		6158A0C293D70B110A98135FC7CF1154 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Ebotti_Violence";
+			target = ADA65E3E2B8AC7193A13AD2CDFDFF8C2 /* Pods-Ebotti_Violence */;
+			targetProxy = BE222ABCCD1604C14283B6EADE4BE318 /* PBXContainerItemProxy */;
+		};
+		9CDEEE485293440CCE3B483E706ECABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyGif;
+			target = 15AEBAFA43912F898FC2E1A73025C946 /* SwiftyGif */;
+			targetProxy = 1AB7FE1D723ED12040C6F9980F2593BD /* PBXContainerItemProxy */;
+		};
+		A80580F5005D0ED9DA90C47B206BFB1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GooglePlaces;
+			target = 0C1885900810601510E0C632060FAF26 /* GooglePlaces */;
+			targetProxy = E309F77770C5C48CC745445BF2221CFD /* PBXContainerItemProxy */;
+		};
+		B5DBBE451DE0DA56685E6AC05AE7BAEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyGif;
+			target = 15AEBAFA43912F898FC2E1A73025C946 /* SwiftyGif */;
+			targetProxy = 72460F8CDF983EC2CF94F1BA71D55E92 /* PBXContainerItemProxy */;
+		};
+		CFA02DE6B17219DBBA415D029E471B54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DLRadioButton;
+			target = BED8F38B6D4A3AD6DFF85D18F9F09435 /* DLRadioButton */;
+			targetProxy = ABE88BAE34A470855A73E9E44B2D911B /* PBXContainerItemProxy */;
+		};
+		E654F6792CE45EDB76F8F438C10614B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleMaps;
+			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
+			targetProxy = A865D3CA606BDDDD7BD5F98CBA4D21B2 /* PBXContainerItemProxy */;
+		};
+		EB9C601D6805212C582722D9BD30C9A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DLRadioButton;
+			target = BED8F38B6D4A3AD6DFF85D18F9F09435 /* DLRadioButton */;
+			targetProxy = 27AA9CCC4E41CB852DB031FFBE57A398 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AB09BC073DF050B1120B82E288A2BC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F8057FD32290808A6A8B1112383B16 /* DLRadioButton.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/DLRadioButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				PRODUCT_MODULE_NAME = DLRadioButton;
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1AC7B915D20758332722DE0E1F05A3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC3E74E217FC4D1AF3A749EA39E85E8F /* SwiftyGif.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/SwiftyGif-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyGif;
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2DB280362A0C4923E2D4B3BD7317AC8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6D069439017140AF832F97EF14F9868 /* DLRadioButton.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DLRadioButton/DLRadioButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DLRadioButton/DLRadioButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DLRadioButton/DLRadioButton.modulemap";
+				PRODUCT_MODULE_NAME = DLRadioButton;
+				PRODUCT_NAME = DLRadioButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		50D3ED62B5DAA7C7E0B062C52867BC32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32D4F027AF6358E100634D85D6A54A20 /* Pods-Ebotti_ViolenceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		67730DFC613B2D40EE52CFD8107EFC56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 807200757FA9642A8226EDFEF4661274 /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		88BF77687BFC2BC2FB3F8F329A47B311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE77A4285DEA6B552A1D66C681BF1B8 /* GooglePlaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95B15EA51344576E12F42C6E7C5C8B86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15EF7A3C902891AAEEF4C77984F3B1CB /* Pods-Ebotti_Violence-Ebotti_ViolenceUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB9F138D6BE5B0B420804AA4F837BD74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03385B63E5E89AA21DBB25E0EC1957D6 /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C06E9328BFFC87DD127B1AC1BF5945A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52D244C1EA7F16ACCDAAFD5A8087A0D1 /* Pods-Ebotti_ViolenceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebotti_ViolenceTests/Pods-Ebotti_ViolenceTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C24518E891FAA59668669823639498EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD6FA10EB94119A8762A69D094BF1200 /* DropDown.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C328EB6A9839E4AA5F9202344E3D8D7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 512BE022D77822C283BCD697FA7FF15C /* SwiftyGif.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyGif/SwiftyGif-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyGif/SwiftyGif-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftyGif/SwiftyGif.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyGif;
+				PRODUCT_NAME = SwiftyGif;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C83515DAD2EF5CB5B1F46DDA61B41B4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1231C2C92B553EEDF2B4962F35DC922 /* Pods-Ebotti_Violence.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD85FD90473CFBE797E4264E7BBC70AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E2C5D149DE277CA85397A039B337B44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBCF63C30FBEB63803A6EEBB40E833CD /* GooglePlaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33E812D2E0B5DA971B8DED423218CD9 /* DropDown.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DropDown/DropDown-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DropDown/DropDown-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/DropDown/DropDown.modulemap";
+				PRODUCT_MODULE_NAME = DropDown;
+				PRODUCT_NAME = DropDown;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E56D79190DC0670C19E7B2A56DB509C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ED634AB0DAA468B124A297BD15FA7C0 /* Pods-Ebotti_Violence.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FAD95AA7CDFAD96FA4035B88B54EA6F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84918B9BDA508EAEB313062F0F06E3CF /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22ED0017B0AB42C10247D42E13D7C575 /* Build configuration list for PBXNativeTarget "Pods-Ebotti_Violence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E56D79190DC0670C19E7B2A56DB509C9 /* Debug */,
+				C83515DAD2EF5CB5B1F46DDA61B41B4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB9F138D6BE5B0B420804AA4F837BD74 /* Debug */,
+				FAD95AA7CDFAD96FA4035B88B54EA6F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4214E6946993DF02ED98D89047C64016 /* Debug */,
+				CD85FD90473CFBE797E4264E7BBC70AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53052E6CBA1E65D6EF818199E617AC68 /* Build configuration list for PBXNativeTarget "DropDown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CDE7BD114C532701D2E79C5CB4CAA8 /* Debug */,
+				C24518E891FAA59668669823639498EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7874750D41DB4C79CE8774C9CCDF386E /* Build configuration list for PBXNativeTarget "DLRadioButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB280362A0C4923E2D4B3BD7317AC8E /* Debug */,
+				1AB09BC073DF050B1120B82E288A2BC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C94FBBEEFB700C4478289AF59ED693A /* Build configuration list for PBXAggregateTarget "GooglePlaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2C5D149DE277CA85397A039B337B44C /* Debug */,
+				88BF77687BFC2BC2FB3F8F329A47B311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1BCC2D39396C4D952185F7F1872DE36 /* Build configuration list for PBXNativeTarget "Pods-Ebotti_ViolenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50D3ED62B5DAA7C7E0B062C52867BC32 /* Debug */,
+				C06E9328BFFC87DD127B1AC1BF5945A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C85AA0F0544EAD3AE14169D9696687BE /* Build configuration list for PBXNativeTarget "Pods-Ebotti_Violence-Ebotti_ViolenceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95B15EA51344576E12F42C6E7C5C8B86 /* Debug */,
+				67730DFC613B2D40EE52CFD8107EFC56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C867C5A40F81096D616EDC7F38540A72 /* Build configuration list for PBXNativeTarget "SwiftyGif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C328EB6A9839E4AA5F9202344E3D8D7F /* Debug */,
+				1AC7B915D20758332722DE0E1F05A3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
