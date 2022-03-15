@@ -230,12 +230,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func color_setting(){
         if #available(iOS 15.0, *) {
             let barAppearance = UINavigationBarAppearance()
-            barAppearance.backgroundColor = UIColor.clear
+            barAppearance.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
             barAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
             navigationController?.navigationBar.standardAppearance = barAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
         } else {
-            self.navigationController?.navigationBar.barTintColor = UIColor.clear
+            self.navigationController?.navigationBar.barTintColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
             self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         }
     }
@@ -302,7 +302,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @objc func record_audio(){
         if(recording_stand_by){
-            // self.audio_record_permission() - > THIS STATEMENT IS FOR TESTING TO JUMP SMS
+            // self.audio_record_permission() - > THIS STATEMENT IS FOR TESTING TO JUMP SMSs
             self.send_sms()
         }else{
             // Stop the audio
@@ -347,8 +347,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else{
             obj.person_name = [String]()
         }
-        
-       
     
         do{
             try self.context.save()
@@ -419,7 +417,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         guard MFMessageComposeViewController.canSendText() else { return }
         // Create new Controller
         messageVC = MFMessageComposeViewController()
-        messageVC.body = "Sending SMS to the registered audiences";
+        messageVC.body = "Sending SMS to the registered audiencess";
         messageVC.recipients = mobile
         messageVC.messageComposeDelegate = self;
         messageVC.isEditing = false

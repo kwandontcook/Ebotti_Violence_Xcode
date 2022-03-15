@@ -313,7 +313,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    // Function - To play the next song in the list
+    // Function - To play the next song in the lists
     @objc func play_next_song(){
         if let c = currentIndex{
             if(c+1 == self.audio_history.count){
