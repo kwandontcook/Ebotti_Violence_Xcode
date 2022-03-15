@@ -20,8 +20,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 print("Error : Message cant deliever to the recipients")
             case MessageComposeResult.sent:
                 print("Message sent successfully")
-                // Activate the recording function after 2 seconds
-                self.audio_record_permission()
+                dismiss(animated: true, completion: {
+                    self.audio_record_permission()
+                })
             default:
                 return
         }
@@ -94,7 +95,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set title
-        self.title = "Main Page"
+        self.title = ""
         self.init_loading()
         // register colllection view
         self.collection_view.register(Main_page_col_cell_1.self, forCellWithReuseIdentifier: "main_page_cell_1")
@@ -199,17 +200,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var audioRecord: AVAudioRecorder?
     var recordingSession: AVAudioSession?
     var recording_stand_by = true
+    var messageVC = MFMessageComposeViewController()
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var last_stored_file = ""
     
     func init_loading(){
         // Load background image
         self.collection_view.backgroundView = generate_background_image()
         // Set constraint for collection_adv_view
         self.view.addSubview(collection_view)
-        collection_view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        collection_view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         collection_view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         collection_view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        collection_view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.80).isActive = true
+        collection_view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.90).isActive = true
         collection_view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         // Add menu area
         self.view.addSubview(menu_area)
@@ -222,6 +225,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.adding_button_for_stack_view()
         self.color_setting()
     }
+
     
     func color_setting(){
         if #available(iOS 15.0, *) {
@@ -261,9 +265,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Add button - manual_button
         stack_view.addSubview(mainAlert_button)
-        mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 5).isActive = true
-        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 15).isActive = true
-        mainAlert_button.heightAnchor.constraint(equalTo: menu_area.heightAnchor, multiplier: 0.6).isActive = true
+        mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 10).isActive = true
+        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 20).isActive = true
+        mainAlert_button.heightAnchor.constraint(equalTo: menu_area.heightAnchor, multiplier: 0.52).isActive = true
         mainAlert_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.45).isActive = true
         
         // Bind action
@@ -298,13 +302,62 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @objc func record_audio(){
         if(recording_stand_by){
+            // self.audio_record_permission() - > THIS STATEMENT IS FOR TESTING TO JUMP SMS
             self.send_sms()
         }else{
+            // Stop the audio
             self.audioRecord?.stop()
             self.recording_stand_by = true
             print("Finished Recording")
+            // Save the audio into the coreData
+            self.create_audio_instance()
         }
     }
+    
+    func retrieve_person_name(mobiles:[String]) -> [String]{
+        var person_list = [String]()
+        var cached_friend_list = [Emergency_C]()
+        
+        do{
+            cached_friend_list = try self.context.fetch(.init(entityName: "Emergency_C"))
+        }catch{
+            print ("failed to fetch data")
+        }
+        
+        for friend in cached_friend_list{
+            for m in mobiles{
+                if (m == friend.mobile){
+                    person_list.append(friend.name!)
+                }
+            }
+        }
+        
+        return person_list
+    }
+    
+    func create_audio_instance(){
+        let obj = AudioHistory(context: self.context)
+        obj.message = messageVC.body ?? ""
+        obj.file_name = self.last_stored_file
+        obj.history_date_time = date_picker.string(from: Date())
+        obj.mobile = messageVC.recipients ?? [String]()
+        
+        if let c = messageVC.recipients{
+            obj.person_name = self.retrieve_person_name(mobiles: c)
+        }else{
+            obj.person_name = [String]()
+        }
+        
+       
+    
+        do{
+            try self.context.save()
+            print("Saved Successfully")
+        }catch{
+            print("Error to Save Data")
+        }
+    }
+    
 
     func audio_record_permission(){
         recordingSession = AVAudioSession.sharedInstance()
@@ -349,7 +402,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if(i+1 <= sos_list.count){
                 // Retrieve sos_property
                 if(sos_list[i].sos_status){
-                    print(cached_friend_list[i].mobile!)
                     phone_list.append(cached_friend_list[i].mobile!)
                 }else{
                     print("dont send sms")
@@ -361,20 +413,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         sms_controller_present(mobile: phone_list)
     }
     
+    
     func sms_controller_present(mobile: [String]){
         // Check whether we can open this viewController
         guard MFMessageComposeViewController.canSendText() else { return }
         // Create new Controller
-        let messageVC = MFMessageComposeViewController()
-        messageVC.body = "Hi, it is a message for asking help";
+        messageVC = MFMessageComposeViewController()
+        messageVC.body = "Sending SMS to the registered audiences";
         messageVC.recipients = mobile
         messageVC.messageComposeDelegate = self;
+        messageVC.isEditing = false
+        messageVC.disableUserAttachments()
         self.present(messageVC, animated: true, completion: nil)
     }
     
     
     func audio_record(){
-        
         let current_dateTime = date_picker.string(from: Date()).replacingOccurrences(of: " ", with: "_").replacingOccurrences(of: "-", with: "_").replacingOccurrences(of: ":", with: "_")
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(current_dateTime)
  
@@ -391,6 +445,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.audioRecord!.delegate = self
             self.audioRecord!.prepareToRecord()
             self.audioRecord!.record()
+            self.last_stored_file = url.lastPathComponent
             print("recording")
         }catch{
             print("error")

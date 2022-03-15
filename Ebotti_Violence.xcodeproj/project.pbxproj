@@ -11,6 +11,8 @@
 		7922B50D27DD656C00E9A9B0 /* reveil2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7922B50A27DD656B00E9A9B0 /* reveil2x.png */; };
 		7922B50E27DD656C00E9A9B0 /* reveil3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7922B50B27DD656C00E9A9B0 /* reveil3x.png */; };
 		7922B50F27DD656C00E9A9B0 /* reveil.png in Resources */ = {isa = PBXBuildFile; fileRef = 7922B50C27DD656C00E9A9B0 /* reveil.png */; };
+		793D0C0E27E017B000DE6372 /* MusicPlayer_tab_cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D0C0D27E017B000DE6372 /* MusicPlayer_tab_cell.swift */; };
+		793D0C1127E0334400DE6372 /* AudioHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D0C0F27E0334400DE6372 /* AudioHistory+CoreDataClass.swift */; };
 		79C69E6527DA425B0020E55F /* SOS+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C69E6427DA425B0020E55F /* SOS+CoreDataClass.swift */; };
 		7B255C3927CB58CE001D5D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3827CB58CE001D5D61 /* AppDelegate.swift */; };
 		7B255C3B27CB58CE001D5D61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3A27CB58CE001D5D61 /* SceneDelegate.swift */; };
@@ -136,6 +138,8 @@
 		7922B50A27DD656B00E9A9B0 /* reveil2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveil2x.png; sourceTree = "<group>"; };
 		7922B50B27DD656C00E9A9B0 /* reveil3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveil3x.png; sourceTree = "<group>"; };
 		7922B50C27DD656C00E9A9B0 /* reveil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reveil.png; sourceTree = "<group>"; };
+		793D0C0D27E017B000DE6372 /* MusicPlayer_tab_cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer_tab_cell.swift; sourceTree = "<group>"; };
+		793D0C0F27E0334400DE6372 /* AudioHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		79C69E6427DA425B0020E55F /* SOS+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SOS+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B255C3527CB58CE001D5D61 /* Ebotti_Violence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ebotti_Violence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B255C3827CB58CE001D5D61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,7 +208,6 @@
 		7B746B7127D6F6080004B3FC /* Developer_page_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer_page_view.swift; sourceTree = "<group>"; };
 		7B746B7327D6F9B80004B3FC /* Developer_thx_cell_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer_thx_cell_1.swift; sourceTree = "<group>"; };
 		7B75283E27D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Emergency_C+CoreDataClass.swift"; path = "Ebotti_Violence/Emergency_C+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7B75284627D5A1D300EBDFA0 /* SOS+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SOS+CoreDataClass.swift"; path = "/Users/mvmobile/Desktop/Ebotti_Violence/SOS+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		7B752BBF27CC7C11003C88B5 /* Main_page_col_cell_8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_page_col_cell_8.swift; sourceTree = "<group>"; };
 		7B752BC327CCC8BE003C88B5 /* Help_Lines_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help_Lines_View.swift; sourceTree = "<group>"; };
 		7B752BC627CCCE3E003C88B5 /* Place_C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place_C.swift; sourceTree = "<group>"; };
@@ -269,7 +272,7 @@
 		7B255C2C27CB58CE001D5D61 = {
 			isa = PBXGroup;
 			children = (
-				7B75284627D5A1D300EBDFA0 /* SOS+CoreDataClass.swift */,
+				793D0C0F27E0334400DE6372 /* AudioHistory+CoreDataClass.swift */,
 				79C69E6427DA425B0020E55F /* SOS+CoreDataClass.swift */,
 				7B75283E27D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift */,
 				7B255C3727CB58CE001D5D61 /* Ebotti_Violence */,
@@ -484,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				7BB0A34727D86AB5004ACD48 /* MusicPlayerView.swift */,
+				793D0C0D27E017B000DE6372 /* MusicPlayer_tab_cell.swift */,
 			);
 			path = Audio_Table;
 			sourceTree = "<group>";
@@ -862,6 +866,7 @@
 				7BB85F7A27D441730096285F /* Contact_List_cell_1.swift in Sources */,
 				7B746B7227D6F6080004B3FC /* Developer_page_view.swift in Sources */,
 				7BB85F7E27D457080096285F /* Contact_Lists_footer.swift in Sources */,
+				793D0C0E27E017B000DE6372 /* MusicPlayer_tab_cell.swift in Sources */,
 				7B752BCC27CDACA8003C88B5 /* Map_page_view.swift in Sources */,
 				7B752BC027CC7C11003C88B5 /* Main_page_col_cell_8.swift in Sources */,
 				7B752BD327CE11BA003C88B5 /* Info_pages_view.swift in Sources */,
@@ -886,6 +891,7 @@
 				7B75284027D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift in Sources */,
 				7B752BC927CCD324003C88B5 /* Help_Line_table_cell.swift in Sources */,
 				7B752BDB27CE2666003C88B5 /* Info_Pdf_view.swift in Sources */,
+				793D0C1127E0334400DE6372 /* AudioHistory+CoreDataClass.swift in Sources */,
 				7BB85F7827D43E1C0096285F /* Contact_List_view.swift in Sources */,
 				7B752BCE27CDE70F003C88B5 /* MapView_sub_class.swift in Sources */,
 				7BB0A34827D86AB5004ACD48 /* MusicPlayerView.swift in Sources */,

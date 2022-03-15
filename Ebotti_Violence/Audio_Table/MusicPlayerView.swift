@@ -63,8 +63,10 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         return btn
     }()
     
+    var height_for_row = 160
     var playing_status = true
     var currentIndex: Int?
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func set_background_layer(){
         // Set Layer background
@@ -84,7 +86,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         main_view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
         // Calculate hight
-        var height_pro = CGFloat(self.file_arr.count*40)/view.frame.height + 0.1
+        var height_pro = CGFloat(self.audio_history.count*height_for_row)/view.frame.height + 0.1
         // Set contrainst to the height pro (It is possible that the threshold would go over 0.8)
         if(height_pro > 0.8){
             height_pro = 0.8
@@ -108,12 +110,12 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.read_recording_file_name()
+        self.fetch_core_data()
         self.init_component()
         self.set_background_layer()
         self.table_view.delegate = self
         self.table_view.dataSource = self
-        self.table_view.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.table_view.register(MusicPlayer_tab_cell.self, forCellReuseIdentifier: "cell")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(activiate_edit_bar_btn))
     }
     
@@ -126,50 +128,64 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return file_arr.count
+        return audio_history.count
     }
 
-    private func read_recording_file_name(){
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path
-        do {
-            self.file_arr = try FileManager.default.contentsOfDirectory(atPath: path)
-            self.file_arr.sort()
-            self.table_view.reloadData()
-        } catch {
-            print("Failed to fetch data from DB")
-        }
-    }
-    
-    var file_arr = [String]()
+    var audio_history = [AudioHistory]()
     var audio_player : AVAudioPlayer?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = file_arr[indexPath.row]
+        // Declare cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MusicPlayer_tab_cell
         cell.backgroundColor = .clear
+        cell.Rank_label.text = String(indexPath.row+1)
+        cell.Name_label.text = audio_history[indexPath.row].person_name?.joined(separator: ",")
+        cell.Mobile_text_view.text = audio_history[indexPath.row].mobile?.joined(separator: ",")
+        cell.History_label.text = audio_history[indexPath.row].history_date_time
+        cell.Message_text_view.text = audio_history[indexPath.row].message
         return cell
     }
    
+    // Click event - Start Playing Music
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let file_name = file_arr[indexPath.row]
         self.currentIndex = indexPath.row
-        self.play_function(file_name: file_name)
+        self.play_function(file_name: audio_history[indexPath.row].file_name!)
     }
     
+    // Fetch cached audio History for tableView display
+    func fetch_core_data(){
+        do{
+            self.audio_history = try context.fetch(.init(entityName: "AudioHistory"))
+        }catch{
+             print("Failed to fetch audio history")
+        }
+        
+        // Reload tableView
+        DispatchQueue.main.async {
+            self.table_view.reloadData()
+        }
+    }
+    
+    // Function to play the cached audio file -> Input is the fileName
     func play_function (file_name: String){
         do{
+            // Access to the folder that stored the file
             let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent(file_name)
-            
+            // Create AVAudio Session
             let session = AVAudioSession.sharedInstance()
+            // Set Category
             try session.setCategory(AVAudioSession.Category.playback)
             try session.setActive(true)
-            
+            // Define setting for audio Player
             self.audio_player = try AVAudioPlayer(contentsOf: path)
             self.audio_player?.delegate = self
-            self.audio_player?.play()
-            self.playing_status = true
-            self.set_btn_image()
             self.audio_player?.volume = 1.0
+            // Play Audio
+            self.audio_player?.play()
+            // Change button image and Update the status
+            self.set_btn_image()
+            self.playing_status = true
+            // Message to identify whether the app play audio successfully
             print("playing the audio")
         }catch let error{
             print(error)
@@ -177,6 +193,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
+    // Function - to delete audio file in the repository
     func delete_files_in_file_mangement(name: String){
         do{
             // Get the cached files
@@ -185,9 +202,29 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
             try FileManager.default.removeItem(at: path)
             // Done message
             print("deleted successful")
-            self.read_recording_file_name()
+            // Update coreData -> Refresh tableView
+            self.fetch_core_data()
         }catch{
             print("error")
+        }
+    }
+    
+    // Function - to delete the cached message details
+    func delete_fiels_in_core_data(name: String){
+        for audio in audio_history{
+            // Search the files
+            if audio.file_name == name{
+                // Delete the files after we find it
+                self.context.delete(audio)
+                print("delete data successful")
+                // Save the changes
+                do{
+                    try self.context.save()
+                    print("save data successful")
+                }catch{
+                    print("Failed to save data")
+                }
+            }
         }
     }
 
@@ -196,12 +233,16 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete element in the array
-            self.delete_files_in_file_mangement(name: file_arr[indexPath.row])
+            self.delete_files_in_file_mangement(name: audio_history[indexPath.row].history_date_time!)
+            self.delete_fiels_in_core_data(name: audio_history[indexPath.row].history_date_time!)
+            // Update the dataSet
+            self.fetch_core_data()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
     
+    // Sub function of the init_component function - Create the View for play/pause, rollback button
     func add_component_btn_view(){
         self.button_view.addSubview(last_audio_btn)
         last_audio_btn.topAnchor.constraint(equalTo: button_view.topAnchor, constant: 10).isActive = true
@@ -222,6 +263,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         next_audio_btn.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.3).isActive = true
     }
     
+    // Function - Set status for tableView Edit
     @objc func activiate_edit_bar_btn(){
         if (self.table_view.isEditing) {
             self.table_view.setEditing(false, animated: true)
@@ -230,7 +272,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    
+    // Update the play/pause btn image
     func set_btn_image(){
         if(!playing_status){
             self.play_pasue_audio_btn.setImage(UIImage(systemName: "play.fill"), for: .normal)
@@ -241,7 +283,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         }
     }
     
-    
+    // Function - TO play and pause the audio
     @objc func play_pause_function(){
         if(!playing_status){
             if let _ = self.audio_player?.url{
@@ -256,36 +298,39 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.set_btn_image()
     }
     
+    // Function - To play the previous song in the list
     @objc func play_last_song(){
-        
         if let c = currentIndex{
             if(c-1<0){
                 print("error happened : You are in the head")
             }else{
                 self.currentIndex = c-1
                 self.table_view.selectRow(at: IndexPath(row: c-1, section: 0), animated: true, scrollPosition: .none)
-                self.play_function(file_name: file_arr[c-1])
+                self.play_function(file_name: audio_history[c-1].file_name!)
                 self.playing_status = true
                 self.set_btn_image()
             }
         }
     }
     
+    // Function - To play the next song in the list
     @objc func play_next_song(){
-  
         if let c = currentIndex{
-            if(c+1 == self.file_arr.count){
+            if(c+1 == self.audio_history.count){
                 print("error happened : You are in the tail")
             }else{
                 self.currentIndex = c+1
                 self.table_view.selectRow(at: IndexPath(row: c+1, section: 0), animated: true, scrollPosition: .none)
-                self.play_function(file_name: file_arr[c+1])
+                self.play_function(file_name: audio_history[c+1].file_name!)
                 self.playing_status = true
                 self.set_btn_image()
             }
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(height_for_row)
+    }
     /*
     // MARK: - Navigation
 

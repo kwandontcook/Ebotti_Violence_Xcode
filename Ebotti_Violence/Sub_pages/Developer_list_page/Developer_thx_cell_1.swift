@@ -116,7 +116,6 @@ class Developer_thx_cell_1: UITableViewCell {
         self.contact_btn.removeFromSuperview()
         self.gouv_button.removeFromSuperview()
         self.sln_button.removeFromSuperview()
-    
     }
     
     
@@ -202,14 +201,14 @@ class Developer_thx_cell_1: UITableViewCell {
         self.contentView.addSubview(gouv_button)
         gouv_button.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
         gouv_button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        gouv_button.heightAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
+        gouv_button.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.8).isActive = true
         gouv_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
         
         self.contentView.addSubview(sln_button)
-        sln_button.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
+        sln_button.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
         sln_button.leadingAnchor.constraint(equalTo: gouv_button.trailingAnchor, constant: 10).isActive = true
-        sln_button.heightAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
-        sln_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.6).isActive = true
+        sln_button.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.7).isActive = true
+        sln_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.55).isActive = true
     }
 
     func init_component_cell_5(){
