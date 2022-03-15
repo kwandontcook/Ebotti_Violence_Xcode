@@ -9,3 +9,8 @@ If it does not work after this setting, please follow below of steps
 2. pod deintegrate
 3. pod install
 4. Re-open the application
+
+If you have issue with the signIn 
+
+Please go to the application target -> signing & capabilities -> add your Apple Account into the team 
+Then compile the source code again
