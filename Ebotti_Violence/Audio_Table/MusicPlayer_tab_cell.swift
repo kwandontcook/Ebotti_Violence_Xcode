@@ -160,7 +160,7 @@ class MusicPlayer_tab_cell: UITableViewCell {
         History_icon.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.18).isActive = true
         
         self.main_view.addSubview(History_label)
-        History_label.topAnchor.constraint(equalTo: Rank_label.bottomAnchor, constant: 3).isActive = true
+        History_label.topAnchor.constraint(equalTo: Rank_label.bottomAnchor).isActive = true
         History_label.leadingAnchor.constraint(equalTo: History_icon.trailingAnchor, constant: 10).isActive = true
         History_label.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.18).isActive = true
         History_label.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.8).isActive = true
@@ -173,7 +173,7 @@ class MusicPlayer_tab_cell: UITableViewCell {
         Message_icon.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.18).isActive = true
         
         self.main_view.addSubview(Message_text_view)
-        Message_text_view.topAnchor.constraint(equalTo: History_label.bottomAnchor, constant: 3).isActive = true
+        Message_text_view.topAnchor.constraint(equalTo: History_label.bottomAnchor).isActive = true
         Message_text_view.leadingAnchor.constraint(equalTo: Message_icon.trailingAnchor, constant: 10).isActive = true
         Message_text_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.18).isActive = true
         Message_text_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.8).isActive = true
@@ -186,7 +186,7 @@ class MusicPlayer_tab_cell: UITableViewCell {
         Name_icon.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.18).isActive = true
         
         self.main_view.addSubview(Name_label)
-        Name_label.topAnchor.constraint(equalTo: Message_text_view.bottomAnchor, constant: 3).isActive = true
+        Name_label.topAnchor.constraint(equalTo: Message_text_view.bottomAnchor).isActive = true
         Name_label.leadingAnchor.constraint(equalTo: Name_icon.trailingAnchor, constant: 10).isActive = true
         Name_label.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.18).isActive = true
         Name_label.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.8).isActive = true
@@ -199,7 +199,7 @@ class MusicPlayer_tab_cell: UITableViewCell {
         Mobile_icon.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.18).isActive = true
         
         self.main_view.addSubview(Mobile_text_view)
-        Mobile_text_view.topAnchor.constraint(equalTo: Name_label.bottomAnchor, constant: 3).isActive = true
+        Mobile_text_view.topAnchor.constraint(equalTo: Name_label.bottomAnchor).isActive = true
         Mobile_text_view.leadingAnchor.constraint(equalTo: Mobile_icon.trailingAnchor, constant: 10).isActive = true
         Mobile_text_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.18).isActive = true
         Mobile_text_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.8).isActive = true
