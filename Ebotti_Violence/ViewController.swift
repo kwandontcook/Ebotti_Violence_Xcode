@@ -304,8 +304,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Function - record audio
     @objc func record_audio(){
         if(recording_stand_by){
-            // self.audio_record_permission() - > THIS STATEMENT IS FOR TESTING TO JUMP SMSs
-            self.send_sms()
+            self.audio_record_permission()
+            // self.send_sms()
         }else{
             // Stop the audio
             self.audioRecord?.stop()

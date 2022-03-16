@@ -213,6 +213,9 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
     func delete_fiels_in_core_data(name: String){
         for audio in audio_history{
             // Search the files
+            print(audio.file_name)
+            print(name)
+            
             if audio.file_name == name{
                 // Delete the files after we find it
                 self.context.delete(audio)
@@ -227,14 +230,27 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
             }
         }
     }
-
+    
+    func relocate_index(indexPath: IndexPath){
+        if(indexPath.row == self.currentIndex){
+            //Check there is item for the next one
+            if let c = currentIndex{
+                if(c+1 < self.audio_history.count){
+                    self.currentIndex = c+1
+                }else if(c-1 > 0){
+                    self.currentIndex = c-1
+                }
+            }
+        }
+    }
   
     // Override to support editing the table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete element in the array
-            self.delete_files_in_file_mangement(name: audio_history[indexPath.row].history_date_time!)
-            self.delete_fiels_in_core_data(name: audio_history[indexPath.row].history_date_time!)
+            self.relocate_index(indexPath: indexPath)
+            self.delete_files_in_file_mangement(name: audio_history[indexPath.row].file_name!)
+            self.delete_fiels_in_core_data(name: audio_history[indexPath.row].file_name!)
             // Update the dataSet
             self.fetch_core_data()
         } else if editingStyle == .insert {
