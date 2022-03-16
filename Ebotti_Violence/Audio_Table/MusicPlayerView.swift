@@ -184,7 +184,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
             self.audio_player?.play()
             // Change button image and Update the status
             self.set_btn_image()
-            self.playing_status = true
+            self.playing_status = false
             // Message to identify whether the app play audio successfully
             print("playing the audio")
         }catch let error{
@@ -213,9 +213,6 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
     func delete_fiels_in_core_data(name: String){
         for audio in audio_history{
             // Search the files
-            print(audio.file_name)
-            print(name)
-            
             if audio.file_name == name{
                 // Delete the files after we find it
                 self.context.delete(audio)
@@ -235,10 +232,10 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
         if(indexPath.row == self.currentIndex){
             //Check there is item for the next one
             if let c = currentIndex{
-                if(c+1 < self.audio_history.count){
-                    self.currentIndex = c+1
-                }else if(c-1 > 0){
+                if(c-1 > 0){
                     self.currentIndex = c-1
+                }else if(c+1 < self.audio_history.count){
+                    self.currentIndex = c+1
                 }
             }
         }
@@ -301,6 +298,8 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     // Function - TO play and pause the audio
     @objc func play_pause_function(){
+        print(playing_status)
+        
         if(!playing_status){
             if let _ = self.audio_player?.url{
                 self.audio_player?.pause()
@@ -332,7 +331,7 @@ class MusicPlayerView: UIViewController, UITableViewDelegate, UITableViewDataSou
     // Function - To play the next song in the lists
     @objc func play_next_song(){
         if let c = currentIndex{
-            if(c+1 == self.audio_history.count){
+            if(c+1 >= self.audio_history.count){
                 print("error happened : You are in the tail")
             }else{
                 self.currentIndex = c+1
