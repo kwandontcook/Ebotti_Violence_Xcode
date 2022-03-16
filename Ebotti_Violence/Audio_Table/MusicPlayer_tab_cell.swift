@@ -204,6 +204,4 @@ class MusicPlayer_tab_cell: UITableViewCell {
         Mobile_text_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.18).isActive = true
         Mobile_text_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.8).isActive = true
     }
-    
-    
 }

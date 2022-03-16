@@ -194,6 +194,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.contentMode = .scaleAspectFit
         btn.setImage(UIImage(named: "share_icon_white"), for: .normal)
+        btn.addTarget(self, action: #selector(link_to_app_store), for: .touchUpInside)
         return btn
     }()
     
@@ -226,7 +227,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.color_setting()
     }
 
-    
+    // Function - Setting up nav bar color and bar button color
     func color_setting(){
         if #available(iOS 15.0, *) {
             let barAppearance = UINavigationBarAppearance()
@@ -240,6 +241,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    // Function - Setting up tabBar in view
     func adding_button_for_stack_view(){
         self.menu_area.addSubview(stack_view)
         stack_view.topAnchor.constraint(equalTo: menu_area.topAnchor).isActive = true
@@ -270,8 +272,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainAlert_button.heightAnchor.constraint(equalTo: menu_area.heightAnchor, multiplier: 0.52).isActive = true
         mainAlert_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.45).isActive = true
         
-        // Bind action
-        share_button.addTarget(self, action: #selector(link_to_app_store), for: .touchUpInside)
         // Add button - share_button
         stack_view.addSubview(share_button)
         share_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
@@ -280,14 +280,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         share_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
     }
     
-    
-    
+    // Function - Open the file
     @objc func guide_view(){
         let v = Info_Pdf_view()
         v.file_name = "guide3"
         self.navigationController?.pushViewController(v, animated: true)
     }
     
+    // Function - Share the app to others
     @objc func link_to_app_store(){
         let url = URL(string:"https://play.google.com/store/apps/details?id=nc.dignity")!
         let activity_c = UIActivityViewController(activityItems: [url], applicationActivities: nil)
@@ -295,11 +295,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.present(activity_c, animated: true)
     }
     
+    // Function - nav to audio list page
     @objc func link_to_play_audio_page(){
         let v = MusicPlayerView()
         self.navigationController?.pushViewController(v, animated: true)
     }
     
+    // Function - record audio
     @objc func record_audio(){
         if(recording_stand_by){
             // self.audio_record_permission() - > THIS STATEMENT IS FOR TESTING TO JUMP SMSs
@@ -314,6 +316,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    // Function - Fetch the cached person name by their mobile
     func retrieve_person_name(mobiles:[String]) -> [String]{
         var person_list = [String]()
         var cached_friend_list = [Emergency_C]()
@@ -335,6 +338,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return person_list
     }
     
+    // Store the audio data into cache
     func create_audio_instance(){
         let obj = AudioHistory(context: self.context)
         obj.message = messageVC.body ?? ""
@@ -377,7 +381,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func send_sms(){
         var cached_friend_list = [Emergency_C]()
-        var sos_list = [SOS]()
         var phone_list = [String]()
 
         // retrieve friend list
@@ -387,28 +390,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print ("failed to fetch data")
         }
         
-        // retrieve sos_list
-        do{
-            sos_list = try self.context.fetch(.init(entityName: "SOS"))
-        }catch{
-            print ("failed to fetch data")
-        }
-        
-        
-        for i in 0..<cached_friend_list.count{
-            // Check whether it exists in the sos_list
-            if(i+1 <= sos_list.count){
-                // Retrieve sos_property
-                if(sos_list[i].sos_status){
-                    phone_list.append(cached_friend_list[i].mobile!)
-                }else{
-                    print("dont send sms")
-                }
+        // Handle error - If no friend added in the contact
+        if(cached_friend_list.count == 0){
+            // Pop up error alerter
+            let error_alerter = UIAlertController(title: "ERROR", message: "Please add at least one person to contact", preferredStyle: .alert)
+            error_alerter.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(error_alerter, animated: true, completion: nil)
+        }else{
+            for i in 0..<cached_friend_list.count{
+                phone_list.append(cached_friend_list[i].mobile!)
             }
+            // present sms controller
+            sms_controller_present(mobile: phone_list)
         }
-        
-        // present sms controller
-        sms_controller_present(mobile: phone_list)
     }
     
     
