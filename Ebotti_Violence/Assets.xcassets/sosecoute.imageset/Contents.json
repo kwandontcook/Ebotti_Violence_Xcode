@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "sosecoute.png",
+      "filename" : "sosecoute@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "sosecoute@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "sosecoute@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
