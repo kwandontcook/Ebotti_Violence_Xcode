@@ -14,7 +14,7 @@ class Main_page_col_cell_2: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        init_component()
+        self.init_component()
     }
     
     required init?(coder aDecoder: NSCoder) {

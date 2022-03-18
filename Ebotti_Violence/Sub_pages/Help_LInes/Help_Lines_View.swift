@@ -42,6 +42,7 @@ class Help_Lines_View: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.table_view.register(Help_Line_table_cell.self, forCellReuseIdentifier: "cell")
         self.table_view.dataSource = self
         self.table_view.delegate = self
+        self.title = "Lignes d'aide"
     }
     
     let main_view :UIView = {

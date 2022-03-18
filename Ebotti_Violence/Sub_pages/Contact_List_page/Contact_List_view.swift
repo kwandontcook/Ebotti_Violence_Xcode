@@ -76,6 +76,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
         
         // Set components
         self.init_component()
+        self.title = "Message d'alerte"
     }
 
     /*

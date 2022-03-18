@@ -58,6 +58,7 @@ class Developer_page_view: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         self.init_component()
         self.table_view_setting()
+        self.title = "Remerciements"
     }
     
     let main_view :UIView = {

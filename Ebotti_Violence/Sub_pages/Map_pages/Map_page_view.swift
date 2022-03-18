@@ -196,6 +196,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         create_zoom_view()
         create_filter_view()
         create_dataSet_header_set()
+        self.title = "Centres d'accueil"
     }
     
 
