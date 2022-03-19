@@ -31,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Set section for collectionview
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 8
+        return 7
     }
     // Set row number for section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -58,10 +58,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_5", for: indexPath) as! Main_page_col_cell_5
             cell.navigationController = self.navigationController
             return cell
-        }else if(indexPath.section == 5){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_6", for: indexPath) as! Main_page_col_cell_6
-            return cell
-        }else if(indexPath.section == 6) {
+        }else if(indexPath.section == 5) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_7", for: indexPath) as! Main_page_col_cell_7
             return cell
         }else{
@@ -76,9 +73,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       {
           if(indexPath.section == 0){
               return CGSize(width: self.collection_view.frame.width-10, height: 150.0)
-          }else if(indexPath.section == 1 || indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 7){
+          }else if(indexPath.section == 1 || indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 6){
               return CGSize(width: self.collection_view.frame.width-10, height: 280.0)
-          }else if(indexPath.section == 6){
+          }else if(indexPath.section == 5){
               return CGSize(width: self.collection_view.frame.width-10, height: 220.0)
           }else{
               return CGSize(width: self.collection_view.frame.width-10, height: 140.0)
@@ -103,7 +100,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collection_view.register(Main_page_col_cell_3.self, forCellWithReuseIdentifier: "main_page_cell_3")
         self.collection_view.register(Main_page_col_cell_4.self, forCellWithReuseIdentifier: "main_page_cell_4")
         self.collection_view.register(Main_page_col_cell_5.self, forCellWithReuseIdentifier: "main_page_cell_5")
-        self.collection_view.register(Main_page_col_cell_6.self, forCellWithReuseIdentifier: "main_page_cell_6")
         self.collection_view.register(Main_page_col_cell_7.self, forCellWithReuseIdentifier: "main_page_cell_7")
         self.collection_view.register(Main_page_col_cell_8.self, forCellWithReuseIdentifier: "main_page_cell_8")
         // delegate and dataSource
