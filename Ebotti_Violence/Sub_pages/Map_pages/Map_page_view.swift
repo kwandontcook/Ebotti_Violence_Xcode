@@ -123,57 +123,93 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
     var medical_checkbox : DLRadioButton = {
         let btn = DLRadioButton()
+        // Set button title and wrapping line condition
         btn.setTitle("Aide médico-psychologique", for: .normal);
         btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.numberOfLines = 0
+        btn.titleLabel?.lineBreakMode = .byWordWrapping
+        btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        // Set checkbox setting
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
         btn.isIconSquare = true
-        btn.titleLabel!.font = UIFont.systemFont(ofSize: 13)
         btn.isSelected = true
+        // Set Edge for radioButton
+        btn.contentMode = .scaleAspectFit
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
+        // Bind action
         btn.addTarget(self, action: #selector(q1(_:)), for: .touchUpInside)
-        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     var psycho_checkbox : DLRadioButton = {
         let btn = DLRadioButton()
+        // Set button title and wrapping line condition
         btn.setTitle("Centres médico-sociaux/CCAS", for: .normal);
         btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.numberOfLines = 0
+        btn.titleLabel?.lineBreakMode = .byWordWrapping
+        btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        // Set checkbox setting
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
         btn.isIconSquare = true
-        btn.titleLabel!.font = UIFont.systemFont(ofSize: 13)
         btn.isSelected = true
+        // Set Edge for radioButton
+        btn.contentMode = .scaleAspectFit
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
+        // Bind action
         btn.addTarget(self, action: #selector(q2(_:)), for: .touchUpInside)
-        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     var asso_checkbox : DLRadioButton = {
         let btn = DLRadioButton()
+        // Set button title and wrapping line condition
         btn.setTitle("Aide psychologique et Asso", for: .normal);
         btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.numberOfLines = 0
+        btn.titleLabel?.lineBreakMode = .byWordWrapping
+        btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        // Set checkbox setting
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
         btn.isIconSquare = true
-        btn.titleLabel!.font = UIFont.systemFont(ofSize: 13)
         btn.isSelected = true
+        // Set Edge for radioButton
+        btn.contentMode = .scaleAspectFit
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
+        // Bind action
         btn.addTarget(self, action: #selector(q3(_:)), for: .touchUpInside)
-        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
     var force_checkbox : DLRadioButton = {
         let btn = DLRadioButton()
+        // Set button title and wrapping line condition
         btn.setTitle("Forces de l'Ordre", for: .normal);
         btn.setTitleColor(.white, for: .normal)
+        btn.titleLabel?.numberOfLines = 0
+        btn.titleLabel?.lineBreakMode = .byWordWrapping
+        btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        // Set checkbox setting
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
         btn.isIconSquare = true
-        btn.titleLabel!.font = UIFont.systemFont(ofSize: 13)
         btn.isSelected = true
+        // Set Edge for radioButton
+        btn.contentMode = .scaleAspectFit
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
+        // Bind action
         btn.addTarget(self, action: #selector(q4(_:)), for: .touchUpInside)
-        btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
@@ -270,27 +306,27 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
         self.filter_view.addSubview(medical_checkbox)
         medical_checkbox.topAnchor.constraint(equalTo: filter_view.topAnchor, constant: 5).isActive = true
-        medical_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor).isActive = true
+        medical_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
         medical_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
         medical_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
 
         self.filter_view.addSubview(psycho_checkbox)
         psycho_checkbox.topAnchor.constraint(equalTo: medical_checkbox.bottomAnchor, constant: 5).isActive = true
-        psycho_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: -3).isActive = true
+        psycho_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
         psycho_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
-        psycho_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.9).isActive = true
+        psycho_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
         
         self.filter_view.addSubview(asso_checkbox)
         asso_checkbox.topAnchor.constraint(equalTo: psycho_checkbox.bottomAnchor, constant: 5).isActive = true
-        asso_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor).isActive = true
+        asso_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
         asso_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
         asso_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
         
         self.filter_view.addSubview(force_checkbox)
         force_checkbox.topAnchor.constraint(equalTo: asso_checkbox.bottomAnchor, constant: 5).isActive = true
-        force_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor).isActive = true
+        force_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
         force_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
-        force_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.53).isActive = true
+        force_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
     func create_dataSet_header_set(){
