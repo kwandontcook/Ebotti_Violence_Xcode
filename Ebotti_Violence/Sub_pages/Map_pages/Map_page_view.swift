@@ -224,19 +224,19 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         
         self.button_view.addSubview(Hybride_button)
         Hybride_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
-        Hybride_button.leadingAnchor.constraint(equalTo: Base_button.trailingAnchor, constant: 5).isActive = true
+        Hybride_button.leadingAnchor.constraint(equalTo: Base_button.trailingAnchor, constant: 10).isActive = true
         Hybride_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
         Hybride_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
         
         self.button_view.addSubview(Satellite_button)
         Satellite_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
-        Satellite_button.leadingAnchor.constraint(equalTo: Hybride_button.trailingAnchor, constant: 5).isActive = true
+        Satellite_button.leadingAnchor.constraint(equalTo: Hybride_button.trailingAnchor, constant: 10).isActive = true
         Satellite_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
         Satellite_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
         
         self.button_view.addSubview(Terrain_button)
         Terrain_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
-        Terrain_button.leadingAnchor.constraint(equalTo: Satellite_button.trailingAnchor, constant: 5).isActive = true
+        Terrain_button.leadingAnchor.constraint(equalTo: Satellite_button.trailingAnchor, constant: 10).isActive = true
         Terrain_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
         Terrain_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
     }
@@ -244,7 +244,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     func create_zoom_view(){
         self.view.addSubview(zoom_view)
         zoom_view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
-        zoom_view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        zoom_view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15).isActive = true
         zoom_view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
         zoom_view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.1).isActive = true
         
@@ -255,7 +255,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         zoomIn_btn.widthAnchor.constraint(equalTo: zoom_view.widthAnchor).isActive = true
         
         self.zoom_view.addSubview(zoomOut_btn)
-        zoomOut_btn.topAnchor.constraint(equalTo: zoomIn_btn.bottomAnchor).isActive = true
+        zoomOut_btn.topAnchor.constraint(equalTo: zoomIn_btn.bottomAnchor, constant: 5).isActive = true
         zoomOut_btn.leadingAnchor.constraint(equalTo: zoom_view.leadingAnchor).isActive = true
         zoomOut_btn.heightAnchor.constraint(equalTo: zoom_view.heightAnchor, multiplier: 0.5).isActive = true
         zoomOut_btn.widthAnchor.constraint(equalTo: zoom_view.widthAnchor).isActive = true
