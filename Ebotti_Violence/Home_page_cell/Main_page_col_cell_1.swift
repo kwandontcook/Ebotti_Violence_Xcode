@@ -134,14 +134,12 @@ class Main_page_col_cell_1: UICollectionViewCell {
         v.layer.borderColor = UIColor.white.cgColor
         v.layer.cornerRadius = 5
         v.layer.borderWidth = 0.3
-        
-        // Setting for shadow - It needs client to confirm the shadow color
+        // Setting for shadow 
         v.layer.shadowColor = UIColor.black.cgColor
         v.layer.shadowOpacity = 1
         v.layer.shadowOffset = CGSize.zero
         v.layer.shadowRadius = 5
         v.layer.masksToBounds = false
-        
         return v
     }()
     

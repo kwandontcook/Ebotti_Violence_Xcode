@@ -75,8 +75,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
               return CGSize(width: self.collection_view.frame.width-10, height: 150.0)
           }else if(indexPath.section == 1 || indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 6){
               return CGSize(width: self.collection_view.frame.width-10, height: 280.0)
-          }else if(indexPath.section == 5){
-              return CGSize(width: self.collection_view.frame.width-10, height: 220.0)
           }else{
               return CGSize(width: self.collection_view.frame.width-10, height: 140.0)
           }
@@ -194,6 +192,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return btn
     }()
     
+    var app_icon = [App_Icon_C]()
     var audioRecord: AVAudioRecorder?
     var recordingSession: AVAudioSession?
     var recording_stand_by = true
@@ -228,12 +227,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if #available(iOS 15.0, *) {
             let barAppearance = UINavigationBarAppearance()
             barAppearance.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
-            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             navigationController?.navigationBar.standardAppearance = barAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
         } else {
             self.navigationController?.navigationBar.barTintColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
-            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         }
     }
     
@@ -439,7 +438,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("error")
         }
     }
-    
+
 
 }
 

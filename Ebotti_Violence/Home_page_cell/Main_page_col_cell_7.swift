@@ -8,6 +8,7 @@
 import UIKit
 import DropDown
 import DLRadioButton
+import CoreData
 
 class Main_page_col_cell_7: UICollectionViewCell {
     // Declare array for alert message for text
@@ -21,17 +22,25 @@ class Main_page_col_cell_7: UICollectionViewCell {
         "penderie","dorezik",
         "blackplane","ncphoto",
         "yogazen"]
-    
+    // Declare CoreData stuff
+    var app_icon = [App_Icon_C]()
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    // Declare the dropDown list variable
     let dropDown = DropDown()
     // UIColor.init(_colorLiteralRed: 248/255.0, green: 248/255.0, blue: 255/255.0, alpha: 1.0)
     let main_view :UIView = {
         let v = UIView()
         v.backgroundColor = UIColor.init(_colorLiteralRed: 248/255.0, green: 248/255.0, blue: 255/255.0, alpha: 1.0)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.layer.borderColor = UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
-        v.layer.borderWidth = 0.3
+        v.layer.borderColor = UIColor.white.cgColor
         v.layer.cornerRadius = 5
-        v.layer.masksToBounds = true
+        v.layer.borderWidth = 0.3
+        // Setting for shadow
+        v.layer.shadowColor = UIColor.black.cgColor
+        v.layer.shadowOpacity = 1
+        v.layer.shadowOffset = CGSize.zero
+        v.layer.shadowRadius = 5
+        v.layer.masksToBounds = false
         return v
     }()
     
@@ -69,14 +78,20 @@ class Main_page_col_cell_7: UICollectionViewCell {
     }()
     
     let list_btn : UIButton = {
-        let btn = UIButton()
-        btn.backgroundColor = .clear
+        var configuration = UIButton.Configuration.plain()
+        configuration.title = "\t"
+        configuration.image = UIImage(named: "sort_down")
+        configuration.imagePadding = 100
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+        
+        let btn = UIButton(configuration: configuration, primaryAction: nil)
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setTitle("               ", for: .normal)
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
         btn.semanticContentAttribute = .forceRightToLeft
         btn.setImage(UIImage(named: "sort_down"), for: .normal)
         btn.titleLabel?.textAlignment = .left
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
         btn.addTarget(self, action: #selector(drop_down_show), for: .touchUpInside)
         btn.setTitleColor(.black, for: .normal)
         return btn
@@ -139,6 +154,7 @@ class Main_page_col_cell_7: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.fetch_app_icon()
         init_component()
         // Set dropDownList
         dropDown.anchorView = list_view // UIView or UIBarButtonItem
@@ -147,9 +163,7 @@ class Main_page_col_cell_7: UICollectionViewCell {
         dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.direction = .bottom
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            list_btn.setTitle(item+"               ", for: .normal)
-            list_btn.titleLabel?.textAlignment = .left
-            list_icon.image = UIImage(named: alert_messages_array_image[index])
+            self.update_app_icon_if_needed(title: item, name: alert_messages_array_image[index])
             self.changeIcon(to: alert_messages_array_image[index])
         }
     }
@@ -170,12 +184,59 @@ class Main_page_col_cell_7: UICollectionViewCell {
     }
     
     
+    func fetch_app_icon(){
+        do{
+            try self.app_icon = context.fetch(.init(entityName: "App_Icon_C"))
+            print(self.app_icon.count)
+            // Update the appIcon
+            if(self.app_icon.count>0){
+                self.list_icon.image = UIImage(named: self.app_icon[0].image_name!)
+                self.list_btn.setTitle(self.app_icon[0].image_title!, for: .normal)
+            }else{
+                self.create_app_icon_if_needed()
+            }
+        }catch{
+            print("error")
+        }
+    }
     
+    func create_app_icon_if_needed(){
+        // If there is no cached data in default -> store the default icon1
+        if(self.app_icon.count == 0){
+            //Create new variable
+            let app_icon_t = App_Icon_C(context: self.context)
+            app_icon_t.image_name = "icon1"
+            app_icon_t.image_title = "Dignity"
+            // Save variable into the app_icon_t
+            do{
+                try self.context.save()
+            }catch{
+                print("failed to cache data")
+            }
+            self.fetch_app_icon()
+        }
+    }
+    
+    func update_app_icon_if_needed(title: String, name: String){
+        // If there is cached data already -> update the data and change the background icon
+        if(self.app_icon.count > 0){
+            self.app_icon[0].image_title = title
+            self.app_icon[0].image_name = name
+            // Update variable to coreData
+            do{
+                try self.context.save()
+            }catch{
+                print("failed to cache data")
+            }
+            self.fetch_app_icon()
+        }
+    }
     
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
     
     func init_component(){
         self.contentView.backgroundColor = .clear
@@ -190,7 +251,7 @@ class Main_page_col_cell_7: UICollectionViewCell {
         self.main_view.addSubview(header)
         header.topAnchor.constraint(equalTo: main_view.topAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 16).isActive = true
-        header.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.15).isActive = true
+        header.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.2).isActive = true
         header.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         // Setting for stack_view
@@ -201,7 +262,6 @@ class Main_page_col_cell_7: UICollectionViewCell {
         stack_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         stack_view_compoent_one()
-        stack_view_compoent_two()
 
     }
     
@@ -209,21 +269,29 @@ class Main_page_col_cell_7: UICollectionViewCell {
         self.stack_view.addSubview(list_view)
         list_view.topAnchor.constraint(equalTo: stack_view.topAnchor).isActive = true
         list_view.leadingAnchor.constraint(equalTo: stack_view.leadingAnchor).isActive = true
-        list_view.heightAnchor.constraint(equalTo: stack_view.heightAnchor, multiplier: 0.5).isActive = true
+        list_view.heightAnchor.constraint(equalTo: stack_view.heightAnchor, multiplier: 0.7).isActive = true
         list_view.widthAnchor.constraint(equalTo: stack_view.widthAnchor).isActive = true
         
         self.list_view.addSubview(list_btn)
-        list_btn.topAnchor.constraint(equalTo: list_view.topAnchor).isActive = true
-        list_btn.leadingAnchor.constraint(equalTo: list_view.leadingAnchor).isActive = true
-        list_btn.heightAnchor.constraint(equalTo: list_view.heightAnchor).isActive = true
-        list_btn.widthAnchor.constraint(equalTo: list_view.widthAnchor, multiplier: 0.7).isActive = true
+        list_btn.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 10).isActive = true
+        list_btn.leadingAnchor.constraint(equalTo: list_view.leadingAnchor,constant: 5).isActive = true
+        list_btn.heightAnchor.constraint(equalTo: list_view.heightAnchor, multiplier: 0.75).isActive = true
+        list_btn.widthAnchor.constraint(equalTo: list_view.widthAnchor, multiplier: 0.73).isActive = true
        
         self.list_view.addSubview(list_icon)
-        list_icon.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 15).isActive = true
-        list_icon.leadingAnchor.constraint(equalTo: list_btn.trailingAnchor).isActive = true
-        list_icon.heightAnchor.constraint(equalTo: list_view.heightAnchor, multiplier: 0.5).isActive = true
+        list_icon.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 20).isActive = true
+        list_icon.leadingAnchor.constraint(equalTo: list_btn.trailingAnchor,constant: 10).isActive = true
+        list_icon.heightAnchor.constraint(equalTo: list_view.heightAnchor, multiplier: 0.54).isActive = true
         list_icon.widthAnchor.constraint(equalTo: list_view.widthAnchor, multiplier: 0.2).isActive = true
     }
+    
+    /*
+     list_icon.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 10).isActive = true
+     list_icon.leadingAnchor.constraint(equalTo: list_btn.trailingAnchor,constant: 10).isActive = true
+     list_icon.heightAnchor.constraint(equalTo: list_view.heightAnchor, multiplier: 0.7).isActive = true
+     list_icon.widthAnchor.constraint(equalTo: list_view.widthAnchor, multiplier: 0.2).isActive = true
+     */
+    
     
     func stack_view_compoent_two(){
         self.stack_view.addSubview(frame_view_2)
@@ -239,6 +307,11 @@ class Main_page_col_cell_7: UICollectionViewCell {
         frame_view_2_radio_button.widthAnchor.constraint(equalTo: frame_view_2.widthAnchor, multiplier: 0.7).isActive = true
     }
     
+    func load_ios_apperance(){
+        
+    }
+    
+
     
     @objc func radio_btn_status(_ sender: DLRadioButton){
         if(bool_status == false){

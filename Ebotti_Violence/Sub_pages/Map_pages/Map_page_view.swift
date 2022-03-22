@@ -54,6 +54,11 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.setTitleColor(.white, for: .normal)
         btn.addTarget(self, action: #selector(set_base), for: .touchUpInside)
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
+        
+        // Setting for button round 
+        btn.layer.borderWidth = 0.5
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
         return btn
     }()
     
@@ -66,6 +71,11 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
         btn.setTitleColor(.white, for: .normal)
         btn.addTarget(self, action: #selector(set_hybride), for: .touchUpInside)
+        
+        // Setting for button round
+        btn.layer.borderWidth = 0.5
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
         return btn
     }()
     
@@ -78,6 +88,11 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14.0)
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
         btn.addTarget(self, action: #selector(set_satellite), for: .touchUpInside)
+        
+        // Setting for button round
+        btn.layer.borderWidth = 0.5
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
         return btn
     }()
     
@@ -90,6 +105,11 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.titleLabel!.font = UIFont.boldSystemFont(ofSize: 14.0)
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
         btn.addTarget(self, action: #selector(set_terrain), for: .touchUpInside)
+        
+        // Setting for button round
+        btn.layer.borderWidth = 0.5
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
         return btn
     }()
     
@@ -121,6 +141,15 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         return zoom_out
     }()
     
+    
+    
+    /*
+     load_data_in_view(header_location_text: c.create_dataSet_header_set_aidePyschologique(), header_description_text: c.create_dataSet_description_set_aidePyschologique(), marker_color: UIColor(red: 238/255, green: 130/255, blue: 238/255, alpha: 1.0), category: "aide")
+     load_data_in_view(header_location_text: c.create_dataSet_header_set_ccas(), header_description_text: c.create_dataSet_description_set_ccas(), marker_color: UIColor.systemYellow, category: "ccas")
+     load_data_in_view(header_location_text: c.create_dataSet_header_set_helpToVictims(), header_description_text: c.create_dataSet_description_set_helpToVictims(), marker_color: UIColor(red: 0, green: 127/255, blue: 1, alpha: 1), category: "victims")
+     load_data_in_view(header_location_text: c.create_dataSet_header_set_medicoPyschologique(), header_description_text: c.create_dataSet_description_set_medicoPyschologique(), marker_color: UIColor.systemPink , category: "medi")
+     */
+    
     var medical_checkbox : DLRadioButton = {
         let btn = DLRadioButton()
         // Set button title and wrapping line condition
@@ -131,14 +160,15 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
         btn.translatesAutoresizingMaskIntoConstraints = false
         // Set checkbox setting
-        btn.iconColor = .systemGray;
-        btn.indicatorColor = .red;
+        btn.iconColor = .systemPink;
+        btn.indicatorColor = .systemPink;
         btn.isIconSquare = true
         btn.isSelected = true
         // Set Edge for radioButton
         btn.contentMode = .scaleAspectFit
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
+        btn.marginWidth = 8.0
         // Bind action
         btn.addTarget(self, action: #selector(q1(_:)), for: .touchUpInside)
         return btn
@@ -154,14 +184,15 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
         btn.translatesAutoresizingMaskIntoConstraints = false
         // Set checkbox setting
-        btn.iconColor = .systemGray;
-        btn.indicatorColor = .red;
+        btn.iconColor = .systemYellow;
+        btn.indicatorColor = .systemYellow;
         btn.isIconSquare = true
         btn.isSelected = true
         // Set Edge for radioButton
         btn.contentMode = .scaleAspectFit
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
+        btn.marginWidth = 8.0
         // Bind action
         btn.addTarget(self, action: #selector(q2(_:)), for: .touchUpInside)
         return btn
@@ -177,14 +208,15 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
         btn.translatesAutoresizingMaskIntoConstraints = false
         // Set checkbox setting
-        btn.iconColor = .systemGray;
-        btn.indicatorColor = .red;
+        btn.iconColor =  .systemPurple
+        btn.indicatorColor = .systemPurple
         btn.isIconSquare = true
         btn.isSelected = true
         // Set Edge for radioButton
         btn.contentMode = .scaleAspectFit
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
+        btn.marginWidth = 8.0
         // Bind action
         btn.addTarget(self, action: #selector(q3(_:)), for: .touchUpInside)
         return btn
@@ -200,10 +232,11 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14)
         btn.translatesAutoresizingMaskIntoConstraints = false
         // Set checkbox setting
-        btn.iconColor = .systemGray;
-        btn.indicatorColor = .red;
+        btn.iconColor = UIColor(red: 0, green: 127/255, blue: 1, alpha: 1);
+        btn.indicatorColor = UIColor(red: 0, green: 127/255, blue: 1, alpha: 1);
         btn.isIconSquare = true
         btn.isSelected = true
+        btn.marginWidth = 8.0
         // Set Edge for radioButton
         btn.contentMode = .scaleAspectFit
         btn.contentHorizontalAlignment = .left
@@ -254,7 +287,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         
         self.button_view.addSubview(Base_button)
         Base_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
-        Base_button.leadingAnchor.constraint(equalTo: button_view.leadingAnchor).isActive = true
+        Base_button.leadingAnchor.constraint(equalTo: button_view.leadingAnchor, constant: 5).isActive = true
         Base_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
         Base_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
         
@@ -306,32 +339,32 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
         self.filter_view.addSubview(medical_checkbox)
         medical_checkbox.topAnchor.constraint(equalTo: filter_view.topAnchor, constant: 5).isActive = true
-        medical_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
+        medical_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 7).isActive = true
         medical_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
         medical_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
 
         self.filter_view.addSubview(psycho_checkbox)
         psycho_checkbox.topAnchor.constraint(equalTo: medical_checkbox.bottomAnchor, constant: 5).isActive = true
-        psycho_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
+        psycho_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 7).isActive = true
         psycho_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
         psycho_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
         
         self.filter_view.addSubview(asso_checkbox)
         asso_checkbox.topAnchor.constraint(equalTo: psycho_checkbox.bottomAnchor, constant: 5).isActive = true
-        asso_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
+        asso_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 7).isActive = true
         asso_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
         asso_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
         
         self.filter_view.addSubview(force_checkbox)
         force_checkbox.topAnchor.constraint(equalTo: asso_checkbox.bottomAnchor, constant: 5).isActive = true
-        force_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 5).isActive = true
+        force_checkbox.leadingAnchor.constraint(equalTo: filter_view.leadingAnchor, constant: 7).isActive = true
         force_checkbox.heightAnchor.constraint(equalTo: filter_view.heightAnchor, multiplier: 0.2).isActive = true
         force_checkbox.widthAnchor.constraint(equalTo: filter_view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
     func create_dataSet_header_set(){
         let c = MapView_sub_class()
-        load_data_in_view(header_location_text: c.create_dataSet_header_set_aidePyschologique(), header_description_text: c.create_dataSet_description_set_aidePyschologique(), marker_color: UIColor(red: 238/255, green: 130/255, blue: 238/255, alpha: 1.0), category: "aide")
+        load_data_in_view(header_location_text: c.create_dataSet_header_set_aidePyschologique(), header_description_text: c.create_dataSet_description_set_aidePyschologique(), marker_color: .systemPurple, category: "aide")
         load_data_in_view(header_location_text: c.create_dataSet_header_set_ccas(), header_description_text: c.create_dataSet_description_set_ccas(), marker_color: UIColor.systemYellow, category: "ccas")
         load_data_in_view(header_location_text: c.create_dataSet_header_set_helpToVictims(), header_description_text: c.create_dataSet_description_set_helpToVictims(), marker_color: UIColor(red: 0, green: 127/255, blue: 1, alpha: 1), category: "victims")
         load_data_in_view(header_location_text: c.create_dataSet_header_set_medicoPyschologique(), header_description_text: c.create_dataSet_description_set_medicoPyschologique(), marker_color: UIColor.systemPink , category: "medi")
@@ -424,7 +457,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
     @objc func q1(_ sender: DLRadioButton){
         if(bool_status_1 == false){
-            sender.indicatorColor = .red
+            sender.indicatorColor = .systemPink
             sender.isSelected = true
             bool_status_1 = true
             update_table_view(category: "medi", status: bool_status_1)
@@ -438,7 +471,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
     @objc func q2(_ sender: DLRadioButton){
         if(bool_status_2 == false){
-            sender.indicatorColor = .red
+            sender.indicatorColor = .systemYellow
             sender.isSelected = true
             bool_status_2 = true
             update_table_view(category: "ccas", status: bool_status_2)
@@ -452,7 +485,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
     @objc func q3(_ sender: DLRadioButton){
         if(bool_status_3 == false){
-            sender.indicatorColor = .red
+            sender.indicatorColor = UIColor(red: 238/255, green: 130/255, blue: 238/255, alpha: 1.0)
             sender.isSelected = true
             bool_status_3 = true
             update_table_view(category: "aide", status: bool_status_3)
@@ -466,7 +499,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
     
     @objc func q4(_ sender: DLRadioButton){
         if(bool_status_4 == false){
-            sender.indicatorColor = .red
+            sender.indicatorColor = UIColor(red: 0, green: 127/255, blue: 1, alpha: 1)
             sender.isSelected = true
             bool_status_4 = true
             update_table_view(category: "victims", status: bool_status_4)

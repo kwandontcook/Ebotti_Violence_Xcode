@@ -37,18 +37,18 @@ class Contact_List_cell_3: UICollectionViewCell {
     }
     
     func add_component(){
-        self.contentView.addSubview(firstContact_cbvoice)
-        firstContact_cbvoice.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        firstContact_cbvoice.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -20).isActive = true
-        firstContact_cbvoice.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.45).isActive = true
-        firstContact_cbvoice.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
+        self.main_view.addSubview(firstContact_cbvoice)
+        firstContact_cbvoice.topAnchor.constraint(equalTo: main_view.topAnchor).isActive = true
+        firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 5).isActive = true
+        firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
+        firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         
-        self.contentView.addSubview(twoContacts_cbvoice)
+        self.main_view.addSubview(twoContacts_cbvoice)
         twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor, constant: 5).isActive = true
-        twoContacts_cbvoice.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        twoContacts_cbvoice.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.45).isActive = true
-        twoContacts_cbvoice.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
+        twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 5).isActive = true
+        twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
+        twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
     }
     
     let main_view :UIView = {
@@ -71,8 +71,9 @@ class Contact_List_cell_3: UICollectionViewCell {
         btn.isIconSquare = true
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 12.0)
         btn.isSelected = true
-        btn.titleLabel?.textAlignment = .left
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
         btn.addTarget(self, action: #selector(q1), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -88,6 +89,8 @@ class Contact_List_cell_3: UICollectionViewCell {
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 12.0)
         btn.isSelected = true
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        btn.contentHorizontalAlignment = .left
+        btn.contentVerticalAlignment = .center
         btn.addTarget(self, action: #selector(q2), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
