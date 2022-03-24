@@ -244,13 +244,13 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         firstContact_cbvoice.topAnchor.constraint(equalTo: main_view.topAnchor,constant: 10).isActive = true
         firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
-        firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor).isActive = true
+        firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         self.main_view.addSubview(twoContacts_cbvoice)
         twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor,constant: 5).isActive = true
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
-        twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor).isActive = true
+        twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
     }
     
     func init_component_3(){

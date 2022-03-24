@@ -167,7 +167,9 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         cell.text_view.text = section_one_dict_header[indexPath.row]
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
             cell.firstContact_cbvoice.setTitle(dict_array[0], for: .normal)
+            cell.firstContact_cbvoice.titleLabel?.font = .systemFont(ofSize: 13.5)
             cell.twoContacts_cbvoice.setTitle(dict_array[1], for: .normal)
+            cell.twoContacts_cbvoice.titleLabel?.font = .systemFont(ofSize: 13.5)
         }
         
         return cell
@@ -194,7 +196,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
     func cell_two_s2_setting(cell: Alert_message_view_cell_2, indexPath:IndexPath) -> Alert_message_view_cell_2{
         cell.init_component_footer()
         cell.text_view.text = footer_contents
-        cell.text_view.font = .italicSystemFont(ofSize: 14.0)
+        cell.text_view.font = .italicSystemFont(ofSize: 12.0)
         return cell
     }
     
