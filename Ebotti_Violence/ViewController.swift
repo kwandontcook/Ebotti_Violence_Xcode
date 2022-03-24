@@ -60,6 +60,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             return cell
         }else if(indexPath.section == 5) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_6", for: indexPath) as! Main_page_col_cell_6
+            cell.navigationController = self.navigationController
             return cell
         }else if(indexPath.section == 6) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_7", for: indexPath) as! Main_page_col_cell_7

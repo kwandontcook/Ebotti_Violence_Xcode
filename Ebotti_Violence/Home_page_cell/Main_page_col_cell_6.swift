@@ -63,6 +63,8 @@ class Main_page_col_cell_6: UICollectionViewCell {
         return btn
     }()
     
+    var navigationController: UINavigationController?
+    
     override func awakeFromNib() {
        super.awakeFromNib()
     }
@@ -119,6 +121,6 @@ class Main_page_col_cell_6: UICollectionViewCell {
     }
     
     @objc func q1(){
-        print("1")
+        self.navigationController?.pushViewController(Alert_message_col_view(), animated: true)
     }
 }

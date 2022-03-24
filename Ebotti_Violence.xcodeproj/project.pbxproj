@@ -15,6 +15,10 @@
 		793D0C1127E0334400DE6372 /* AudioHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793D0C0F27E0334400DE6372 /* AudioHistory+CoreDataClass.swift */; };
 		7996C94427E9462B00925A92 /* App_Icon_C+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7996C94227E9462B00925A92 /* App_Icon_C+CoreDataClass.swift */; };
 		79A78B2127EC27180034EFD5 /* Alert_message_col_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2027EC27180034EFD5 /* Alert_message_col_view.swift */; };
+		79A78B2327EC2B530034EFD5 /* Alert_message_view_header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2227EC2B520034EFD5 /* Alert_message_view_header.swift */; };
+		79A78B2527EC2B710034EFD5 /* Alert_message_view_footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2427EC2B710034EFD5 /* Alert_message_view_footer.swift */; };
+		79A78B2727EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2627EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift */; };
+		79A78B2927EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2827EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift */; };
 		79C69E6527DA425B0020E55F /* SOS+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C69E6427DA425B0020E55F /* SOS+CoreDataClass.swift */; };
 		7B255C3927CB58CE001D5D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3827CB58CE001D5D61 /* AppDelegate.swift */; };
 		7B255C3B27CB58CE001D5D61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3A27CB58CE001D5D61 /* SceneDelegate.swift */; };
@@ -144,6 +148,10 @@
 		793D0C0F27E0334400DE6372 /* AudioHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7996C94227E9462B00925A92 /* App_Icon_C+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App_Icon_C+CoreDataClass.swift"; sourceTree = "<group>"; };
 		79A78B2027EC27180034EFD5 /* Alert_message_col_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_col_view.swift; sourceTree = "<group>"; };
+		79A78B2227EC2B520034EFD5 /* Alert_message_view_header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_view_header.swift; sourceTree = "<group>"; };
+		79A78B2427EC2B710034EFD5 /* Alert_message_view_footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_view_footer.swift; sourceTree = "<group>"; };
+		79A78B2627EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_view_cell_1.swift; sourceTree = "<group>"; };
+		79A78B2827EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_view_cell_2.swift; sourceTree = "<group>"; };
 		79C69E6427DA425B0020E55F /* SOS+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SOS+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B255C3527CB58CE001D5D61 /* Ebotti_Violence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ebotti_Violence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B255C3827CB58CE001D5D61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -276,17 +284,13 @@
 		79A78B1E27EC25F10034EFD5 /* Alert_message_page */ = {
 			isa = PBXGroup;
 			children = (
-				79A78B1F27EC265B0034EFD5 /* New Group */,
+				79A78B2227EC2B520034EFD5 /* Alert_message_view_header.swift */,
+				79A78B2427EC2B710034EFD5 /* Alert_message_view_footer.swift */,
 				79A78B2027EC27180034EFD5 /* Alert_message_col_view.swift */,
+				79A78B2627EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift */,
+				79A78B2827EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift */,
 			);
 			path = Alert_message_page;
-			sourceTree = "<group>";
-		};
-		79A78B1F27EC265B0034EFD5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		7B255C2C27CB58CE001D5D61 = {
@@ -882,8 +886,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A78B2327EC2B530034EFD5 /* Alert_message_view_header.swift in Sources */,
 				7B752BC727CCCE3E003C88B5 /* Place_C.swift in Sources */,
 				79C69E6527DA425B0020E55F /* SOS+CoreDataClass.swift in Sources */,
+				79A78B2727EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift in Sources */,
 				7B255C7527CC55A4001D5D61 /* Main_page_col_cell_4.swift in Sources */,
 				7BB85F7A27D441730096285F /* Contact_List_cell_1.swift in Sources */,
 				7B746B7227D6F6080004B3FC /* Developer_page_view.swift in Sources */,
@@ -895,6 +901,7 @@
 				7BB85F7C27D454BE0096285F /* Contact_Lists_header.swift in Sources */,
 				7B752BD827CE1D6B003C88B5 /* Info_pages_header.swift in Sources */,
 				7B255C7727CC5964001D5D61 /* Main_page_col_cell_6.swift in Sources */,
+				79A78B2927EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift in Sources */,
 				7B752BC427CCC8BE003C88B5 /* Help_Lines_View.swift in Sources */,
 				7BB85F8227D4605B0096285F /* Contact_List_cell_2.swift in Sources */,
 				7BB85F8627D468430096285F /* Contact_List_cell_5.swift in Sources */,
@@ -917,6 +924,7 @@
 				7B752BDB27CE2666003C88B5 /* Info_Pdf_view.swift in Sources */,
 				793D0C1127E0334400DE6372 /* AudioHistory+CoreDataClass.swift in Sources */,
 				7BB85F7827D43E1C0096285F /* Contact_List_view.swift in Sources */,
+				79A78B2527EC2B710034EFD5 /* Alert_message_view_footer.swift in Sources */,
 				7B752BCE27CDE70F003C88B5 /* MapView_sub_class.swift in Sources */,
 				7BB0A34827D86AB5004ACD48 /* MusicPlayerView.swift in Sources */,
 				7B752BD527CE183B003C88B5 /* Info_page_col.swift in Sources */,
