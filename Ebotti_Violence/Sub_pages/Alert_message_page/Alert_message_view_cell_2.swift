@@ -93,7 +93,7 @@ class Alert_message_view_cell_2: UICollectionViewCell {
         text_view_content.topAnchor.constraint(equalTo: main_view.topAnchor).isActive = true
         text_view_content.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         text_view_content.heightAnchor.constraint(equalTo: main_view.heightAnchor).isActive = true
-        text_view_content.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
+        text_view_content.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.92).isActive = true
     }
     
     func init_component_footer(){

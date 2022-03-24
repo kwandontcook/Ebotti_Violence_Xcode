@@ -175,13 +175,13 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         // Add component
         self.main_view.addSubview(firstContact_cbvoice)
         firstContact_cbvoice.topAnchor.constraint(equalTo: main_view.topAnchor,constant: 5).isActive = true
-        firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 24).isActive = true
+        firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
         
         self.main_view.addSubview(twoContacts_cbvoice)
         twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor).isActive = true
-        twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 24).isActive = true
+        twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
     }
@@ -272,7 +272,7 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         text_view_content.topAnchor.constraint(equalTo: main_view.topAnchor).isActive = true
         text_view_content.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         text_view_content.heightAnchor.constraint(equalTo: main_view.heightAnchor).isActive = true
-        text_view_content.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
+        text_view_content.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.92).isActive = true
     }
 
     
