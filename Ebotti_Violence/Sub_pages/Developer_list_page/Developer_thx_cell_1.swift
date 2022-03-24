@@ -216,8 +216,8 @@ class Developer_thx_cell_1: UITableViewCell {
         
         self.contentView.addSubview(contact_btn)
         contact_btn.backgroundColor = .red
-        contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 93).isActive = true
-        contact_btn.leadingAnchor.constraint(equalTo: description_block.trailingAnchor, constant: -200).isActive = true
+        contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 95).isActive = true
+        contact_btn.leadingAnchor.constraint(equalTo: description_block.trailingAnchor, constant: -195).isActive = true
         contact_btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
         contact_btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
