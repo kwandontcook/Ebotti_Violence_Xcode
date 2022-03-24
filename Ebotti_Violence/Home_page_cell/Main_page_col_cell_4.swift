@@ -73,7 +73,7 @@ class Main_page_col_cell_4: UICollectionViewCell {
     // Declare variables - header
     let header : UITextView = {
         let label = UITextView()
-        label.text = "Centres d'accueil"
+        label.text = "Documentation"
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = .white
         label.textAlignment = .center

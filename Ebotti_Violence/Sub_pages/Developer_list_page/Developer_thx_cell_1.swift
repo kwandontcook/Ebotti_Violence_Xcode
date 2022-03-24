@@ -11,7 +11,7 @@ class Developer_thx_cell_1: UITableViewCell {
 
     // Declare variables - header
     let header : UILabel = {
-        let label = UILabel()
+        let label = UILabel()               
         label.text = ""
         label.numberOfLines = 0
         label.contentMode = .scaleAspectFit
@@ -126,25 +126,19 @@ class Developer_thx_cell_1: UITableViewCell {
         header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
         header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
+        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.25).isActive = true
         
         self.contentView.addSubview(description_header)
         description_header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         description_header.leadingAnchor.constraint(equalTo: header.trailingAnchor).isActive = true
         description_header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        description_header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.7).isActive = true
-        
-        self.contentView.addSubview(header_contact)
-        header_contact.topAnchor.constraint(equalTo: description_header.bottomAnchor, constant: 10).isActive = true
-        header_contact.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -110).isActive = true
-        header_contact.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        header_contact.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
+        description_header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.54).isActive = true
         
         self.contentView.addSubview(contact_btn)
-        contact_btn.topAnchor.constraint(equalTo: description_header.bottomAnchor, constant: 0).isActive = true
-        contact_btn.leadingAnchor.constraint(equalTo: header_contact.trailingAnchor, constant: 5).isActive = true
-        contact_btn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        contact_btn.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 3).isActive = true
+        contact_btn.leadingAnchor.constraint(equalTo: description_header.trailingAnchor).isActive = true
+        contact_btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        contact_btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
     }
     
     func init_component_cell_2(){
@@ -153,7 +147,7 @@ class Developer_thx_cell_1: UITableViewCell {
         header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
         header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.15).isActive = true
+        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.10).isActive = true
         
         self.contentView.addSubview(description_header)
         description_header.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
@@ -167,26 +161,20 @@ class Developer_thx_cell_1: UITableViewCell {
         self.contentView.addSubview(header)
         header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
+        header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2   ).isActive = true
         header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.25).isActive = true
         
         self.contentView.addSubview(description_header)
         description_header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         description_header.leadingAnchor.constraint(equalTo: header.trailingAnchor).isActive = true
         description_header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        description_header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.6).isActive = true
-        
-        self.contentView.addSubview(header_contact)
-        header_contact.topAnchor.constraint(equalTo: description_header.bottomAnchor, constant: 10).isActive = true
-        header_contact.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -185).isActive = true
-        header_contact.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        header_contact.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
+        description_header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.35).isActive = true
         
         self.contentView.addSubview(contact_btn)
-        contact_btn.topAnchor.constraint(equalTo: description_header.bottomAnchor, constant: 0).isActive = true
-        contact_btn.leadingAnchor.constraint(equalTo: header_contact.trailingAnchor, constant: 5).isActive = true
-        contact_btn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        contact_btn.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        contact_btn.leadingAnchor.constraint(equalTo: description_header.trailingAnchor, constant: 2).isActive = true
+        contact_btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        contact_btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
        
     }
     
@@ -195,20 +183,21 @@ class Developer_thx_cell_1: UITableViewCell {
         self.contentView.addSubview(header)
         header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.35).isActive = true
+        header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.1).isActive = true
+        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
         
         self.contentView.addSubview(gouv_button)
-        gouv_button.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
+        gouv_button.backgroundColor = .systemGreen
+        gouv_button.topAnchor.constraint(equalTo: header.bottomAnchor).isActive = true
         gouv_button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        gouv_button.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.8).isActive = true
-        gouv_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3).isActive = true
+        gouv_button.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.7).isActive = true
+        gouv_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.25).isActive = true
         
         self.contentView.addSubview(sln_button)
-        sln_button.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
-        sln_button.leadingAnchor.constraint(equalTo: gouv_button.trailingAnchor, constant: 10).isActive = true
+        sln_button.topAnchor.constraint(equalTo: header.bottomAnchor).isActive = true
+        sln_button.leadingAnchor.constraint(equalTo: gouv_button.trailingAnchor, constant: 20).isActive = true
         sln_button.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.7).isActive = true
-        sln_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.55).isActive = true
+        sln_button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.6).isActive = true
     }
 
     func init_component_cell_5(){
@@ -216,21 +205,37 @@ class Developer_thx_cell_1: UITableViewCell {
         self.contentView.addSubview(header)
         header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
-        header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2).isActive = true
-        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.5).isActive = true
+        header.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.1).isActive = true
+        header.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.4).isActive = true
         
         self.contentView.addSubview(description_block)
         description_block.topAnchor.constraint(equalTo: header.bottomAnchor).isActive = true
         description_block.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
         description_block.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.7).isActive = true
-        description_block.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.8).isActive = true
+        description_block.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
         
         self.contentView.addSubview(contact_btn)
-        contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 100).isActive = true
-        contact_btn.leadingAnchor.constraint(equalTo: description_block.trailingAnchor, constant: 10).isActive = true
-        contact_btn.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        contact_btn.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        contact_btn.backgroundColor = .red
+        contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 93).isActive = true
+        contact_btn.leadingAnchor.constraint(equalTo: description_block.trailingAnchor, constant: -200).isActive = true
+        contact_btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        contact_btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
         
+        /*
+         contact_btn.backgroundColor = .red
+         contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 93).isActive = true
+         contact_btn.leadingAnchor.constraint(equalTo: description_block.trailingAnchor, constant: -200).isActive = true
+         contact_btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
+         contact_btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
+         */
+        
+        /*
+         contact_btn.backgroundColor = .red
+         contact_btn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 93).isActive = true
+         contact_btn.leadingAnchor.constraint(equalTo: description_block.trailingAnchor, constant: -60).isActive = true
+         contact_btn.heightAnchor.constraint(equalToConstant: 35).isActive = true
+         contact_btn.widthAnchor.constraint(equalToConstant: 35).isActive = true
+         */
     }
     
     @objc func send_email(){

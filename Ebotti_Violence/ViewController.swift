@@ -31,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Set section for collectionview
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 7
+        return 8
     }
     // Set row number for section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,6 +59,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.navigationController = self.navigationController
             return cell
         }else if(indexPath.section == 5) {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_6", for: indexPath) as! Main_page_col_cell_6
+            return cell
+        }else if(indexPath.section == 6) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_7", for: indexPath) as! Main_page_col_cell_7
             return cell
         }else{
@@ -73,7 +76,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
       {
           if(indexPath.section == 0){
               return CGSize(width: self.collection_view.frame.width-10, height: 150.0)
-          }else if(indexPath.section == 1 || indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 6){
+          }else if(indexPath.section == 1 || indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 7){
               return CGSize(width: self.collection_view.frame.width-10, height: 280.0)
           }else{
               return CGSize(width: self.collection_view.frame.width-10, height: 140.0)
@@ -98,6 +101,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collection_view.register(Main_page_col_cell_3.self, forCellWithReuseIdentifier: "main_page_cell_3")
         self.collection_view.register(Main_page_col_cell_4.self, forCellWithReuseIdentifier: "main_page_cell_4")
         self.collection_view.register(Main_page_col_cell_5.self, forCellWithReuseIdentifier: "main_page_cell_5")
+        self.collection_view.register(Main_page_col_cell_6.self, forCellWithReuseIdentifier: "main_page_cell_6")
         self.collection_view.register(Main_page_col_cell_7.self, forCellWithReuseIdentifier: "main_page_cell_7")
         self.collection_view.register(Main_page_col_cell_8.self, forCellWithReuseIdentifier: "main_page_cell_8")
         // delegate and dataSource
@@ -147,11 +151,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return d
     }()
     
-    var stack_view : UIView = {
-        let v = UIView()
+    var stack_view : UIStackView = {
+        let v = UIStackView()
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
+    
     
     var history_button: UIButton = {
         let btn = UIButton()
@@ -176,7 +181,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.contentMode = .scaleAspectFit
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 204/255.0, green: 0, blue: 0, alpha: 1)
-        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)  
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+        btn.layer.borderWidth = 0.5
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.init(_colorLiteralRed: 204/255.0, green: 0, blue: 0, alpha: 1).cgColor
         btn.setTitle("ALERTER", for: .normal)
         btn.addTarget(self, action: #selector(record_audio), for: .touchUpInside)
         return btn
@@ -189,6 +197,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         btn.contentMode = .scaleAspectFit
         btn.setImage(UIImage(named: "share_icon_white"), for: .normal)
         btn.addTarget(self, action: #selector(link_to_app_store), for: .touchUpInside)
+        return btn
+    }()
+    
+    var fake_button : UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.contentMode = .scaleAspectFit
         return btn
     }()
     
@@ -263,14 +278,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Add button - manual_button
         stack_view.addSubview(mainAlert_button)
         mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 10).isActive = true
-        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 20).isActive = true
+        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 15).isActive = true
         mainAlert_button.heightAnchor.constraint(equalTo: menu_area.heightAnchor, multiplier: 0.52).isActive = true
         mainAlert_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.45).isActive = true
+        
+        
+        stack_view.addSubview(fake_button)
+        fake_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
+        fake_button.leadingAnchor.constraint(equalTo: mainAlert_button.trailingAnchor).isActive = true
+        fake_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
+        fake_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         
         // Add button - share_button
         stack_view.addSubview(share_button)
         share_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
-        share_button.leadingAnchor.constraint(equalTo: mainAlert_button.trailingAnchor, constant: 25).isActive = true
+        share_button.leadingAnchor.constraint(equalTo: fake_button.trailingAnchor).isActive = true
         share_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         share_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
     }
@@ -299,8 +321,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Function - record audio
     @objc func record_audio(){
         if(recording_stand_by){
-            // self.audio_record_permission()
-            self.send_sms()
+            self.audio_record_permission()
+            // self.send_sms()
         }else{
             // Stop the audio
             self.audioRecord?.stop()

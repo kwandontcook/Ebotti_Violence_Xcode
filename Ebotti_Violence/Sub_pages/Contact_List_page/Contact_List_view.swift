@@ -17,7 +17,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
     // Declare section cell data
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var section_one_btn_loc = 0
-    var section_header = ["Personnes à prévenir", "", "", "ENREGISTREMENTS", ""]
+    var section_header = ["", "", "", "ENREGISTREMENTS", ""]
     var section_one_content = ["Nom:","Téléphone:"]
     var section_two_content = ["Dans le cas du lancement de l’alerte directement depuis l’application en appuyant sur le bouton ALERTER, il est possible d’autoriser le lancement automatiquement d’un appel vers vos contacts (en plus des SMS). Ainsi, voici vos options :"]
     var section_three_content = ["Lancer un appel vers le premier contact de référence uniquement","En cas de non réponse de mon premier contact, lancer automatiquement un deuxième appel vers mon deuxième contact de référence"]
@@ -76,7 +76,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
         
         // Set components
         self.init_component()
-        self.title = "Message d'alerte"
+        self.title = "Personnes à prévenir"
     }
 
     /*
@@ -154,19 +154,29 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         let cell = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header_cell", for: indexPath) as! Contact_Lists_header
-
-        if(section_header[indexPath.section] != ""){
-            cell.header_label.textAlignment = .center
-            cell.header_label.text = section_header[indexPath.section]
-            cell.header_label.font = UIFont.boldSystemFont(ofSize: 14.0)
-        }
+        
+            if(section_header[indexPath.section] != ""){
+                cell.header_label.textAlignment = .center
+                cell.header_label.text = section_header[indexPath.section]
+                cell.header_label.font = UIFont.boldSystemFont(ofSize: 14.0)
+            }else{
+                cell.header_label.text = ""
+            }
+        
         return cell
     }
+
     
     // Set size for each collection view cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        return CGSize(width: self.collection_view.frame.width-10, height: 85)
+        if(indexPath.section == 3){
+            return CGSize(width: self.collection_view.frame.width-10, height: 150)
+        }else if(indexPath.section == 2){
+            return CGSize(width: self.collection_view.frame.width-10, height: 120)
+        }else{
+            return CGSize(width: self.collection_view.frame.width-10, height: 85)
+        }
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {

@@ -96,7 +96,7 @@ class Main_page_col_cell_6: UICollectionViewCell {
         self.main_view.addSubview(stack_view)
         stack_view.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
         stack_view.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 16).isActive = true
-        stack_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.7).isActive = true
+        stack_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.6).isActive = true
         stack_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         // Setting for alertVoice_button
@@ -106,11 +106,13 @@ class Main_page_col_cell_6: UICollectionViewCell {
         stack_middle_view.centerYAnchor.constraint(equalTo: stack_view.centerYAnchor).isActive = true
         stack_middle_view.widthAnchor.constraint(equalTo: stack_view.widthAnchor, multiplier: 0.3).isActive = true
         
+        
         self.stack_middle_view.addSubview(alertSettings_button)
-        alertSettings_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor).isActive = true
-        alertSettings_button.centerXAnchor.constraint(equalTo: stack_middle_view.centerXAnchor).isActive = true
-        alertSettings_button.centerYAnchor.constraint(equalTo: stack_middle_view.centerYAnchor).isActive = true
-        alertSettings_button.widthAnchor.constraint(equalTo: stack_middle_view.heightAnchor).isActive = true
+        alertSettings_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor,constant: 10).isActive = true
+        alertSettings_button.leadingAnchor.constraint(equalTo: stack_middle_view.leadingAnchor, constant: 10).isActive = true
+        alertSettings_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.8).isActive = true
+        alertSettings_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.8).isActive = true
+
         
         // Bind action
         alertSettings_button.addTarget(self, action: #selector(q1), for: .touchUpInside)

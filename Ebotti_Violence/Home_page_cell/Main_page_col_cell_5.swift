@@ -28,7 +28,7 @@ class Main_page_col_cell_5: UICollectionViewCell {
     // Declare variables - header
     let header : UITextView = {
         let label = UITextView()
-        label.text = "Message d'alerte"
+        label.text = "Personnes à prévenir"
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = .white
         label.textAlignment = .center
@@ -111,8 +111,8 @@ class Main_page_col_cell_5: UICollectionViewCell {
         self.stack_middle_view.addSubview(alertVoice_button)
         alertVoice_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor,constant: 10).isActive = true
         alertVoice_button.leadingAnchor.constraint(equalTo: stack_middle_view.leadingAnchor, constant: 10).isActive = true
-        alertVoice_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.95).isActive = true
-        alertVoice_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.95).isActive = true
+        alertVoice_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.8).isActive = true
+        alertVoice_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.8).isActive = true
         
         // Bind action
         alertVoice_button.addTarget(self, action: #selector(q1), for: .touchUpInside)

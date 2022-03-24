@@ -89,7 +89,7 @@ class Info_pages_view: UIViewController, UICollectionViewDelegate, UICollectionV
         collection_view.register(Info_pages_header.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header_cell")
         // Set components
         self.init_component()
-        self.title = "Centres d'accueil"
+        self.title = "Documentation"
     }
     
     var collection_view : UICollectionView = {
