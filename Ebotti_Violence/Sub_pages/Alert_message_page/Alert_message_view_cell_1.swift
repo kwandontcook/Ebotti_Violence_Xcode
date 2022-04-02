@@ -60,11 +60,10 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14.0)
-        btn.isSelected = true
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
-        btn.addTarget(self, action: #selector(q1), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -76,11 +75,10 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14.0)
-        btn.isSelected = true
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
-        btn.addTarget(self, action: #selector(q2), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -174,12 +172,14 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         main_view.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
         // Add component
         self.main_view.addSubview(firstContact_cbvoice)
+        firstContact_cbvoice.isSelected = first_button_status
         firstContact_cbvoice.topAnchor.constraint(equalTo: main_view.topAnchor,constant: 5).isActive = true
         firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
         
         self.main_view.addSubview(twoContacts_cbvoice)
+        twoContacts_cbvoice.isSelected = second_button_status
         twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor).isActive = true
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
@@ -241,16 +241,18 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         main_view.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
         // Add component
         self.main_view.addSubview(firstContact_cbvoice)
-        firstContact_cbvoice.topAnchor.constraint(equalTo: main_view.topAnchor,constant: 10).isActive = true
+        firstContact_cbvoice.isSelected = first_button_status
+        firstContact_cbvoice.topAnchor.constraint(equalTo: main_view.topAnchor,constant: 5).isActive = true
         firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
-        firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
+        firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
         
         self.main_view.addSubview(twoContacts_cbvoice)
-        twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor,constant: 5).isActive = true
+        twoContacts_cbvoice.isSelected = second_button_status
+        twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor).isActive = true
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
-        twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
+        twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
     }
     
     func init_component_3(){
@@ -281,27 +283,19 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         self.dropDown.show()
     }
     
-    @objc func q1(){
-        // Set Q1 -> False/ True
-            if(first_button_status){
-                first_button_status = false
-                self.firstContact_cbvoice.isSelected = false
-            }else{
-                first_button_status = true
-                self.firstContact_cbvoice.isSelected = true
-        }
-    }
-    
-    
-    @objc func q2(){
-        // Set Q2 -> False/ Tru
-        if(second_button_status){
-            second_button_status = false
-            self.twoContacts_cbvoice.isSelected = false
-        }else{
-            second_button_status = true
+    @objc func radio_btn_control(){
+        if(first_button_status){
+            self.firstContact_cbvoice.isSelected = false
             self.twoContacts_cbvoice.isSelected = true
+            self.first_button_status = false
+            self.second_button_status = true
+        }else if(second_button_status){
+            self.firstContact_cbvoice.isSelected = true
+            self.twoContacts_cbvoice.isSelected = false
+            self.second_button_status = false
+            self.first_button_status = true
         }
     }
+
     
 }

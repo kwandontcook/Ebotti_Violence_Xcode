@@ -141,6 +141,8 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
     
     
     func cell_one_setting(cell: Alert_message_view_cell_1, indexPath: IndexPath) -> Alert_message_view_cell_1{
+        cell.first_button_status = false
+        cell.second_button_status = true
         cell.init_component()
         cell.text_view.text = section_one_dict_header[indexPath.row]
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
@@ -163,6 +165,8 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func cell_three_setting(cell: Alert_message_view_cell_1, indexPath: IndexPath) -> Alert_message_view_cell_1{
+        cell.first_button_status = true
+        cell.second_button_status = false
         cell.init_component_2()
         cell.text_view.text = section_one_dict_header[indexPath.row]
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {

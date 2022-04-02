@@ -112,8 +112,8 @@ class Main_page_col_cell_6: UICollectionViewCell {
         self.stack_middle_view.addSubview(alertSettings_button)
         alertSettings_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor,constant: 10).isActive = true
         alertSettings_button.leadingAnchor.constraint(equalTo: stack_middle_view.leadingAnchor, constant: 10).isActive = true
-        alertSettings_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.8).isActive = true
-        alertSettings_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.8).isActive = true
+        alertSettings_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.7).isActive = true
+        alertSettings_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.7).isActive = true
 
         
         // Bind action
