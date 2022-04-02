@@ -33,7 +33,6 @@ class Contact_List_cell_3: UICollectionViewCell {
         main_view.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
         // Add component
         self.add_component()
-        self.createTwo_Obj()
     }
     
     func add_component(){
@@ -80,7 +79,6 @@ class Contact_List_cell_3: UICollectionViewCell {
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
-        btn.addTarget(self, action: #selector(q1), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -97,80 +95,8 @@ class Contact_List_cell_3: UICollectionViewCell {
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
-        btn.addTarget(self, action: #selector(q2), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
-    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var sos_list = [SOS]()
-    
-    func createTwo_Obj(){
-        // Fetch data from coreData
-        self.fetchData_From_CoreData()
-        // Check if sos list count less than 2
-        if (sos_list.count < 2){
-            // Create two obj for sos
-            for _ in 0..<(2-sos_list.count){
-                let sos_temp = SOS(context: self.context)
-                sos_temp.sos_status = true
-                self.SaveData_To_CoreData()
-                self.fetchData_From_CoreData()
-            }
-        // Check if sos_list.count equals to 2
-        }else if(sos_list.count == 2){
-            self.firstContact_cbvoice.isSelected =  sos_list[0].sos_status
-            self.twoContacts_cbvoice.isSelected =  sos_list[1].sos_status
-        }
-    }
-    
-    
-    func fetchData_From_CoreData(){
-        do{
-            try self.sos_list = context.fetch(.init(entityName: "SOS"))
-        }catch{
-            print("error")
-        }
-    }
-    
-    func SaveData_To_CoreData(){
-        do{
-            try self.context.save()
-        }catch{
-            print("error")
-        }
-    }
-    
-    
-    @objc func q1(){
-        // Set Q1 -> False/ True
-        if let e = sos_list[0] as? SOS{
-            // Set bool status to false or true
-            if(e.sos_status){
-                e.sos_status = false
-            }else{
-                e.sos_status = true
-            }
-            self.firstContact_cbvoice.isSelected =  e.sos_status
-            // Save Data
-            self.SaveData_To_CoreData()
-            self.fetchData_From_CoreData()
-        }
-    }
-    
-    @objc func q2(){
-        // Set Q2 -> False/ True
-        if let e = sos_list[1] as? SOS{
-            // Set bool status to false or true
-            if(e.sos_status){
-                e.sos_status = false
-            }else{
-                e.sos_status = true
-            }
-            self.twoContacts_cbvoice.isSelected =  e.sos_status
-            // Save Data
-            self.SaveData_To_CoreData()
-            self.fetchData_From_CoreData()
-        }
-    }
 }
