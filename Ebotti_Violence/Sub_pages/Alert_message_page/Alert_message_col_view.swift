@@ -157,8 +157,9 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
 
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
             cell.drop_menu_option = dict_array
+            cell.list_btn.setTitle("7", for: .normal)
             cell.init_component_1()
-            cell.text_view.text = section_one_dict_header[indexPath.row]
+            cell.text_view.text = ""
         }
         
         return cell
@@ -215,7 +216,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
                 return CGSize(width: self.collection_view.frame.width-10, height: 180)
             }
             else if(indexPath.row == 2){
-                return CGSize(width: self.collection_view.frame.width-10, height: 150)
+                return CGSize(width: self.collection_view.frame.width-10, height: 70)
             }else if(indexPath.row == 3){
                 return CGSize(width: self.collection_view.frame.width-10, height: 250)
             }else{

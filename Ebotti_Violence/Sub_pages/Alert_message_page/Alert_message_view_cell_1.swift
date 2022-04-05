@@ -126,9 +126,9 @@ class Alert_message_view_cell_1: UICollectionViewCell {
     
     let list_btn : UIButton = {
         var configuration = UIButton.Configuration.plain()
-        configuration.title = "\t"
+        configuration.title = "\t\t\t"
         configuration.image = UIImage(named: "sort_down")
-        configuration.imagePadding = 100
+        configuration.imagePadding = 200
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
         
         let btn = UIButton(configuration: configuration, primaryAction: nil)
@@ -189,17 +189,10 @@ class Alert_message_view_cell_1: UICollectionViewCell {
     
     func init_component_1(){
         self.remove_component()
-        // Create mainView
-        self.contentView.addSubview(text_view)
-        text_view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-        text_view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        text_view.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.45).isActive = true
-        text_view.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
-        
         self.contentView.addSubview(main_view)
-        main_view.topAnchor.constraint(equalTo: text_view.bottomAnchor, constant: 5).isActive = true
+        main_view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5).isActive = true
         main_view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
-        main_view.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.5).isActive = true
+        main_view.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.9).isActive = true
         main_view.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
         // Add component
         self.main_view.addSubview(list_view)
@@ -209,8 +202,8 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         list_view.bottomAnchor.constraint(equalTo: main_view.bottomAnchor).isActive = true
         
         self.list_view.addSubview(list_btn)
-        list_btn.topAnchor.constraint(equalTo: list_view.topAnchor).isActive = true
-        list_btn.leadingAnchor.constraint(equalTo: list_view.leadingAnchor).isActive = true
+        list_btn.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 5).isActive = true
+        list_btn.leadingAnchor.constraint(equalTo: list_view.leadingAnchor,constant: 10).isActive = true
         list_btn.trailingAnchor.constraint(equalTo: list_view.trailingAnchor).isActive = true
         list_btn.bottomAnchor.constraint(equalTo: list_view.bottomAnchor).isActive = true
         

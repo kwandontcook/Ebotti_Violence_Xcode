@@ -187,7 +187,6 @@ class Main_page_col_cell_7: UICollectionViewCell {
     func fetch_app_icon(){
         do{
             try self.app_icon = context.fetch(.init(entityName: "App_Icon_C"))
-            print(self.app_icon.count)
             // Update the appIcon
             if(self.app_icon.count>0){
                 self.list_icon.image = UIImage(named: self.app_icon[0].image_name!)
