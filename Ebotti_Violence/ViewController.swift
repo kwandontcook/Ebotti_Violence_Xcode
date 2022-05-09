@@ -177,8 +177,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     
-    var mainAlert_button: UIButton = {
-        let btn = UIButton()
+    var mainAlert_button: Circle_Btn = {
+        let btn = Circle_Btn(frame: .zero)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.contentMode = .scaleAspectFit
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 204/255.0, green: 0, blue: 0, alpha: 1)
@@ -186,7 +186,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         btn.layer.borderWidth = 0.5
         btn.layer.cornerRadius = 5
         btn.layer.borderColor = UIColor.init(_colorLiteralRed: 204/255.0, green: 0, blue: 0, alpha: 1).cgColor
-        btn.setTitle("ALERTER", for: .normal)
+        btn.setTitle("SOS", for: .normal)
         btn.addTarget(self, action: #selector(record_audio), for: .touchUpInside)
         return btn
     }()
@@ -272,28 +272,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Add button - manual_button
         stack_view.addSubview(manual_button)
         manual_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
-        manual_button.leadingAnchor.constraint(equalTo: history_button.trailingAnchor, constant: 15).isActive = true
+        manual_button.leadingAnchor.constraint(equalTo: history_button.trailingAnchor, constant: 23).isActive = true
         manual_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         manual_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         
         // Add button - manual_button
         stack_view.addSubview(mainAlert_button)
         mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 10).isActive = true
-        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 15).isActive = true
-        mainAlert_button.heightAnchor.constraint(equalTo: menu_area.heightAnchor, multiplier: 0.52).isActive = true
-        mainAlert_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.45).isActive = true
+        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 60).isActive = true
+        mainAlert_button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        mainAlert_button.widthAnchor.constraint(equalToConstant:50).isActive = true
         
         
         stack_view.addSubview(fake_button)
         fake_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
         fake_button.leadingAnchor.constraint(equalTo: mainAlert_button.trailingAnchor).isActive = true
-        fake_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
-        fake_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
+        fake_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.25).isActive = true
+        fake_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.25).isActive = true
         
         // Add button - share_button
         stack_view.addSubview(share_button)
         share_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
-        share_button.leadingAnchor.constraint(equalTo: fake_button.trailingAnchor).isActive = true
+        share_button.leadingAnchor.constraint(equalTo: fake_button.trailingAnchor, constant: 10).isActive = true
         share_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         share_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
     }
