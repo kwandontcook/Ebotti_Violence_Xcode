@@ -419,11 +419,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else{
             for i in 0..<cached_friend_list.count{
                 do {
-                    phone_list.append("+61468928715")
-                    /*
                      let phoneNumber = try phoneNumberKit.parse(cached_friend_list[i].mobile!, withRegion: "GB", ignoreType: true)
                      phone_list.append("+"+String(phoneNumber.countryCode)+String(phoneNumber.nationalNumber))
-                     */
                 }
                 catch {
                     print("Generic parser error")
