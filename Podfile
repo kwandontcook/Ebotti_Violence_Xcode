@@ -11,6 +11,8 @@ target 'Ebotti_Violence' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'SwiftyGif'
+  pod 'Alamofire' 
+  pod 'PhoneNumberKit'
 
   target 'Ebotti_ViolenceTests' do
     inherit! :search_paths

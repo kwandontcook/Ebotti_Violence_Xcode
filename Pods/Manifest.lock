@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.6.1)
   - DLRadioButton (1.4.12)
   - DropDown (2.3.13)
   - GoogleMaps (6.0.1):
@@ -7,30 +8,42 @@ PODS:
   - GoogleMaps/Maps (6.0.1):
     - GoogleMaps/Base
   - GooglePlaces (6.0.0)
+  - PhoneNumberKit (3.3.4):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.4)
+    - PhoneNumberKit/UIKit (= 3.3.4)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.4)
+  - PhoneNumberKit/UIKit (3.3.4):
+    - PhoneNumberKit/PhoneNumberKitCore
   - SwiftyGif (5.4.3)
 
 DEPENDENCIES:
+  - Alamofire
   - DLRadioButton
   - DropDown
   - GoogleMaps
   - GooglePlaces
+  - PhoneNumberKit
   - SwiftyGif
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - DLRadioButton
     - DropDown
     - GoogleMaps
     - GooglePlaces
+    - PhoneNumberKit
     - SwiftyGif
 
 SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
   GooglePlaces: c97d96ae68594acb64035c9ca9f26fbfc1d23af1
+  PhoneNumberKit: 441e8b26ec88d598e3591de9061eff18f5dd12e8
   SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
 
-PODFILE CHECKSUM: 7983cb36e32bd06d9ce01200fdb6575542589614
+PODFILE CHECKSUM: b6887371f45f9d6fbf9edcf197cabe1d78374731
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

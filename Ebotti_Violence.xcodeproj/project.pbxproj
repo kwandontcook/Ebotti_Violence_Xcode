@@ -20,6 +20,7 @@
 		79A78B2727EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2627EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift */; };
 		79A78B2927EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A78B2827EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift */; };
 		79B48B652829C3300026EE2C /* Circle_Btn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B48B642829C3300026EE2C /* Circle_Btn.swift */; };
+		79B48B682829C74C0026EE2C /* SOS_C+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B48B662829C74C0026EE2C /* SOS_C+CoreDataClass.swift */; };
 		7B255C3927CB58CE001D5D61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3827CB58CE001D5D61 /* AppDelegate.swift */; };
 		7B255C3B27CB58CE001D5D61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3A27CB58CE001D5D61 /* SceneDelegate.swift */; };
 		7B255C3D27CB58CE001D5D61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B255C3C27CB58CE001D5D61 /* ViewController.swift */; };
@@ -108,7 +109,6 @@
 		7BB85F7A27D441730096285F /* Contact_List_cell_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F7927D441730096285F /* Contact_List_cell_1.swift */; };
 		7BB85F7C27D454BE0096285F /* Contact_Lists_header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F7B27D454BD0096285F /* Contact_Lists_header.swift */; };
 		7BB85F7E27D457080096285F /* Contact_Lists_footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F7D27D457080096285F /* Contact_Lists_footer.swift */; };
-		7BB85F8027D45B910096285F /* Contact_List_cell_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F7F27D45B910096285F /* Contact_List_cell_3.swift */; };
 		7BB85F8227D4605B0096285F /* Contact_List_cell_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */; };
 		7BB85F8427D4625F0096285F /* Contact_List_cell_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */; };
 		7BB85F8627D468430096285F /* Contact_List_cell_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8527D468430096285F /* Contact_List_cell_5.swift */; };
@@ -153,6 +153,7 @@
 		79A78B2627EC2C0E0034EFD5 /* Alert_message_view_cell_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_view_cell_1.swift; sourceTree = "<group>"; };
 		79A78B2827EC3F8D0034EFD5 /* Alert_message_view_cell_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert_message_view_cell_2.swift; sourceTree = "<group>"; };
 		79B48B642829C3300026EE2C /* Circle_Btn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle_Btn.swift; sourceTree = "<group>"; };
+		79B48B662829C74C0026EE2C /* SOS_C+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SOS_C+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7B255C3527CB58CE001D5D61 /* Ebotti_Violence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ebotti_Violence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B255C3827CB58CE001D5D61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B255C3A27CB58CE001D5D61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -245,7 +246,6 @@
 		7BB85F7927D441730096285F /* Contact_List_cell_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_1.swift; sourceTree = "<group>"; };
 		7BB85F7B27D454BD0096285F /* Contact_Lists_header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_Lists_header.swift; sourceTree = "<group>"; };
 		7BB85F7D27D457080096285F /* Contact_Lists_footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_Lists_footer.swift; sourceTree = "<group>"; };
-		7BB85F7F27D45B910096285F /* Contact_List_cell_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_3.swift; sourceTree = "<group>"; };
 		7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_2.swift; sourceTree = "<group>"; };
 		7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_4.swift; sourceTree = "<group>"; };
 		7BB85F8527D468430096285F /* Contact_List_cell_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_5.swift; sourceTree = "<group>"; };
@@ -296,6 +296,7 @@
 		7B255C2C27CB58CE001D5D61 = {
 			isa = PBXGroup;
 			children = (
+				79B48B662829C74C0026EE2C /* SOS_C+CoreDataClass.swift */,
 				798E14AB27F7DD6200D06FC7 /* AudioHistory+CoreDataClass.swift */,
 				7996C94227E9462B00925A92 /* App_Icon_C+CoreDataClass.swift */,
 				7B75283E27D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift */,
@@ -524,7 +525,6 @@
 				7BB85F7727D43E1C0096285F /* Contact_List_view.swift */,
 				7BB85F7927D441730096285F /* Contact_List_cell_1.swift */,
 				7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */,
-				7BB85F7F27D45B910096285F /* Contact_List_cell_3.swift */,
 				7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */,
 				7BB85F8527D468430096285F /* Contact_List_cell_5.swift */,
 				7BB85F7B27D454BD0096285F /* Contact_Lists_header.swift */,
@@ -913,9 +913,9 @@
 				7B255C6D27CB79F0001D5D61 /* Main_page_col_cell_1.swift in Sources */,
 				7B746B7427D6F9B80004B3FC /* Developer_thx_cell_1.swift in Sources */,
 				7B255C7127CBAAA9001D5D61 /* Main_page_col_cell_3.swift in Sources */,
+				79B48B682829C74C0026EE2C /* SOS_C+CoreDataClass.swift in Sources */,
 				7B255C3B27CB58CE001D5D61 /* SceneDelegate.swift in Sources */,
 				7B255C7327CC4A0E001D5D61 /* Main_page_col_cell_5.swift in Sources */,
-				7BB85F8027D45B910096285F /* Contact_List_cell_3.swift in Sources */,
 				7B752BD027CDFB6B003C88B5 /* Map_Info_view.swift in Sources */,
 				7996C94427E9462B00925A92 /* App_Icon_C+CoreDataClass.swift in Sources */,
 				7B255C4327CB58CE001D5D61 /* Ebotti_Violence.xcdatamodeld in Sources */,

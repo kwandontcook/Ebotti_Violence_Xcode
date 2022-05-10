@@ -123,4 +123,5 @@ class Main_page_col_cell_6: UICollectionViewCell {
     @objc func q1(){
         self.navigationController?.pushViewController(Alert_message_col_view(), animated: true)
     }
+    
 }

@@ -59,11 +59,11 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         btn.setTitleColor(.black, for: .normal)
         btn.iconColor = .systemGray;
         btn.indicatorColor = .red;
+        btn.tag = 0
         btn.titleLabel!.font = UIFont.systemFont(ofSize: 14.0)
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
-        btn.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -78,13 +78,17 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         btn.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
         btn.contentHorizontalAlignment = .left
         btn.contentVerticalAlignment = .center
-        btn.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
+        btn.tag = 1
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
     
-    var first_button_status = true
+    // Bool variable - Check first section button status
+    var first_button_status = false
     var second_button_status = true
+    // Variable - For retrieving the access to CoreData
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var sos_list = [SOS_C]()
     
     let text_view : UITextView = {
         let label = UITextView()
@@ -184,6 +188,9 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
+        
+        firstContact_cbvoice.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
+        twoContacts_cbvoice.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
     }
     
     
@@ -246,6 +253,10 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
+        
+        self.reload_sos_status()
+        self.firstContact_cbvoice.addTarget(self, action: #selector(chat_radio_btn_control), for: .touchUpInside)
+        self.twoContacts_cbvoice.addTarget(self, action: #selector(chat_radio_btn_control), for: .touchUpInside)
     }
     
     func init_component_3(){
@@ -270,7 +281,21 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         text_view_content.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.92).isActive = true
     }
 
+    func reload_sos_status(){
+        do{
+            sos_list = try self.context.fetch(.init(entityName: "SOS_C"))
+        }catch{
+            print ("failed to fetch data")
+        }
+    }
     
+    func save_context(){
+        do{
+            try context.save()
+        }catch{
+            print("Failed to save the content")
+        }
+    }
     
     @objc func drop_down_show(){
         self.dropDown.show()
@@ -289,6 +314,34 @@ class Alert_message_view_cell_1: UICollectionViewCell {
             self.first_button_status = true
         }
     }
-
     
+    @objc func chat_radio_btn_control(){
+        if(sos_list.count == 2){
+            if(sos_list[0].status){
+                print("123")
+                // Update the button's selected status in CoreData
+                self.sos_list[0].status = false
+                self.sos_list[1].status = true
+                // Update the button's selected status in UI
+                self.firstContact_cbvoice.isSelected = false
+                self.twoContacts_cbvoice.isSelected = true
+                // Save and Reload Context in CoreData
+                save_context()
+                reload_sos_status()
+            }else if(sos_list[1].status){
+                print("here")
+                // Update the button's selected status in CoreData
+                self.sos_list[0].status = true
+                self.sos_list[1].status = false
+                // Update the button's selected status in UI
+                self.firstContact_cbvoice.isSelected = true
+                self.twoContacts_cbvoice.isSelected = false
+                // Save and Reload Context in CoreData
+                save_context()
+                reload_sos_status()
+            }
+        }else{
+            print(sos_list.count)
+        }
+    }
 }

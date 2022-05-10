@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import CoreData
 
 private let reuseIdentifier = "Cell"
 
 class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
+    var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var sos_list = [SOS_C]()
     var section_header = ["Lors du lancement d’une alerte, en plus de l’appel téléphonique, un message sera automatiquement envoyé à votre (ou vos) contact(s) de référence.", "Localisation GPS"]
 
     var section_one_dict_header = ["","Vous pouvez choisir si vous voulez envoyer ce message uniquement à votre premier contact de référence, ou aux deux :", "Choisissez le nombre de pressions nécessaires sur le bouton d’allumage du téléphone pour lancer une alerte" , "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :","Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" ]
@@ -72,6 +75,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         self.collection_view.register(Alert_message_view_cell_2.self, forCellWithReuseIdentifier: "cell_2")
         // Set components
         self.init_component()
+        self.reload_sos_status()
         self.title = "Appels d'urgence"
     }
 
@@ -145,6 +149,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         cell.second_button_status = true
         cell.init_component()
         cell.text_view.text = section_one_dict_header[indexPath.row]
+        
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
             cell.firstContact_cbvoice.setTitle(dict_array[0], for: .normal)
             cell.twoContacts_cbvoice.setTitle(dict_array[1], for: .normal)
@@ -166,16 +171,25 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func cell_three_setting(cell: Alert_message_view_cell_1, indexPath: IndexPath) -> Alert_message_view_cell_1{
-        cell.first_button_status = true
-        cell.second_button_status = false
         cell.init_component_2()
         cell.text_view.text = section_one_dict_header[indexPath.row]
+        
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
             cell.firstContact_cbvoice.setTitle(dict_array[0], for: .normal)
             cell.firstContact_cbvoice.titleLabel?.font = .systemFont(ofSize: 13.5)
             cell.twoContacts_cbvoice.setTitle(dict_array[1], for: .normal)
             cell.twoContacts_cbvoice.titleLabel?.font = .systemFont(ofSize: 13.5)
+            
+            if sos_list.count == 2{
+                cell.firstContact_cbvoice.isSelected = self.sos_list[0].status
+                cell.twoContacts_cbvoice.isSelected = self.sos_list[1].status
+            }else if sos_list.count < 2{
+                cell.firstContact_cbvoice.isSelected = true
+                cell.twoContacts_cbvoice.isSelected = false
+            }
         }
+        
+        
         
         return cell
     }
@@ -225,6 +239,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
@@ -237,6 +252,20 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             
     }
+    
+    func reload_sos_status(){
+        do{
+            sos_list = try self.context.fetch(.init(entityName: "SOS_C"))
+        }catch{
+            print ("failed to fetch data")
+        }
+    }
+    
+    
+    
+    
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*

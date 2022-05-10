@@ -9,6 +9,7 @@ import UIKit
 import Contacts
 import ContactsUI
 import CoreData
+import DLRadioButton
 
 class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, CNContactPickerDelegate {
 
@@ -68,12 +69,10 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
         collection_view.dataSource = self
         collection_view.register(Contact_List_cell_1.self, forCellWithReuseIdentifier: "cell")
         collection_view.register(Contact_List_cell_2.self, forCellWithReuseIdentifier: "cell_2")
-        collection_view.register(Contact_List_cell_3.self, forCellWithReuseIdentifier: "cell_3")
         collection_view.register(Contact_List_cell_4.self, forCellWithReuseIdentifier: "cell_4")
         collection_view.register(Contact_List_cell_5.self, forCellWithReuseIdentifier: "cell_5")
         collection_view.register(Contact_Lists_header.self, forSupplementaryViewOfKind:UICollectionView.elementKindSectionHeader , withReuseIdentifier: "header_cell")
 
-        
         // Set components
         self.init_component()
         self.title = "Personnes à prévenir"
@@ -93,7 +92,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 4
     }
 
 
@@ -135,12 +134,6 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
             cell.text_view.text = section_two_content[indexPath.row]
             return cell
         }else if(indexPath.section == 2){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_3", for: indexPath) as! Contact_List_cell_3
-            cell.firstContact_cbvoice.setTitle(section_three_content[0], for: .normal)
-            cell.twoContacts_cbvoice.setTitle(section_three_content[1], for: .normal)
-            
-            return cell
-        }else if(indexPath.section == 3){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_4", for: indexPath) as! Contact_List_cell_4
             cell.text_view.text = section_four_content[indexPath.row]
             return cell
@@ -312,9 +305,6 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
         }
     }
     
- 
-   
-
     // MARK: UICollectionViewDelegate
 
     /*

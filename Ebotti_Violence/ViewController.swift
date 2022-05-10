@@ -7,27 +7,13 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 import CoreData
+import PhoneNumberKit
 import MessageUI
+import Alamofire
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, MFMessageComposeViewControllerDelegate {
-    
-    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        switch (result) {
-            case MessageComposeResult.cancelled:
-                print("User canceled to send email ")
-            case MessageComposeResult.failed:
-                print("Error : Message cant deliever to the recipients")
-            case MessageComposeResult.sent:
-                print("Message sent successfully")
-                dismiss(animated: true, completion: {
-                    self.audio_record_permission()
-                })
-            default:
-                return
-        }
-        dismiss(animated: true, completion: nil)
-    }
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, CLLocationManagerDelegate {
     
     // Set section for collectionview
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -209,12 +195,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     var app_icon = [App_Icon_C]()
+    var sos_status = [SOS_C]()
     var audioRecord: AVAudioRecorder?
     var recordingSession: AVAudioSession?
     var recording_stand_by = true
-    var messageVC = MFMessageComposeViewController()
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var last_stored_file = ""
+    let phoneNumberKit = PhoneNumberKit()
+    let locManager = CLLocationManager()
     
     func init_loading(){
         // Load background image
@@ -236,6 +224,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // adding button to stack view
         self.adding_button_for_stack_view()
         self.color_setting()
+        self.fetch_sos()
     }
 
     // Function - Setting up nav bar color and bar button color
@@ -280,9 +269,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         stack_view.addSubview(mainAlert_button)
         mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 10).isActive = true
         mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 60).isActive = true
-        mainAlert_button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        mainAlert_button.widthAnchor.constraint(equalToConstant:50).isActive = true
-        
+        mainAlert_button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        mainAlert_button.widthAnchor.constraint(equalToConstant:60).isActive = true
         
         stack_view.addSubview(fake_button)
         fake_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
@@ -321,9 +309,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Function - record audio
     @objc func record_audio(){
+        self.send_sms()
+        /*
         if(recording_stand_by){
             self.audio_record_permission()
-            // self.send_sms()
+            self.send_sms()
         }else{
             // Stop the audio
             self.audioRecord?.stop()
@@ -332,6 +322,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // Save the audio into the coreData
             self.create_audio_instance()
         }
+         */
     }
     
     // Function - Fetch the cached person name by their mobile
@@ -356,28 +347,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return person_list
     }
     
-    // Store the audio data into cache
-    func create_audio_instance(){
-        let obj = AudioHistory(context: self.context)
-        obj.message = messageVC.body ?? ""
-        obj.file_name = self.last_stored_file
-        obj.history_date_time = date_picker.string(from: Date())
-        obj.mobile = messageVC.recipients ?? [String]()
-        
-        if let c = messageVC.recipients{
-            obj.person_name = self.retrieve_person_name(mobiles: c)
-        }else{
-            obj.person_name = [String]()
-        }
-    
-        do{
-            try self.context.save()
-            print("Saved Successfully")
-        }catch{
-            print("Error to Save Data")
-        }
-    }
-    
 
     func audio_record_permission(){
         recordingSession = AVAudioSession.sharedInstance()
@@ -395,7 +364,37 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    func reload_sos_status(){
+        do{
+            sos_status = try self.context.fetch(.init(entityName: "SOS_C"))
+        }catch{
+            print ("failed to fetch data")
+        }
+    }
     
+    func fetch_sos(){
+        // Fetch SOS_C from coredata
+        reload_sos_status()
+        // If the size is smaller than 2
+        if(sos_status.count < 2){
+            for i in 0..<(2-sos_status.count){
+                let temp = SOS_C(context: self.context)
+                
+                if(i==0){
+                    temp.status = true
+                }else{
+                    temp.status = false
+                }
+                
+                do{
+                    try context.save()
+                    reload_sos_status()
+                }catch{
+                    print("Failed to save object")
+                }
+            }
+        }
+    }
     
     func send_sms(){
         var cached_friend_list = [Emergency_C]()
@@ -416,25 +415,81 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.present(error_alerter, animated: true, completion: nil)
         }else{
             for i in 0..<cached_friend_list.count{
-                phone_list.append(cached_friend_list[i].mobile!)
+                do {
+                    phone_list.append("+61468928715")
+                    /*
+                     let phoneNumber = try phoneNumberKit.parse(cached_friend_list[i].mobile!, withRegion: "GB", ignoreType: true)
+                     phone_list.append("+"+String(phoneNumber.countryCode)+String(phoneNumber.nationalNumber))
+                     */
+                }
+                catch {
+                    print("Generic parser error")
+                    break
+                }
             }
-            // present sms controller
-            sms_controller_present(mobile: phone_list)
+            
+            locManager.delegate = self
+            locManager.requestWhenInUseAuthorization()
+            
+            switch locManager.authorizationStatus{
+                case .authorizedWhenInUse , .authorizedAlways:
+                guard let location = locManager.location else{
+                    return
+                }
+                
+                let p = [URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
+                         URLQueryItem(name: "longitude", value: String(location.coordinate.longitude))]
+                sms_api(mobile: phone_list, default_parmater: p)
+            case .notDetermined , .restricted , .denied:
+                sms_api(mobile: phone_list, default_parmater: [])
+            @unknown default:
+                print()
+            }
         }
     }
     
     
-    func sms_controller_present(mobile: [String]){
-        // Check whether we can open this viewController
-        guard MFMessageComposeViewController.canSendText() else { return }
-        // Create new Controller
-        messageVC = MFMessageComposeViewController()
-        messageVC.body = "Sending SMS to the registered audiencess";
-        messageVC.recipients = mobile
-        messageVC.messageComposeDelegate = self;
-        messageVC.isEditing = false
-        messageVC.disableUserAttachments()
-        self.present(messageVC, animated: true, completion: nil)
+    func sms_api(mobile: [String], default_parmater : [URLQueryItem]){
+        if(mobile.count == 0){
+            print("error")
+        }else{
+            var parmater = default_parmater
+            // Reload SMS Status in case user updates the status in the subpage
+            self.reload_sos_status()
+            // Send SMS to the mobile
+            var message: String?
+            // Check the status
+            if(sos_status[0].status){
+               message = "Alerte, je suis en danger et je vous ai choisi comme contact référent pour me venir en aide. N'essayez pas de m'appeler en première intention, il se peut que je ne sois pas en mesure de vous répondre."
+            }else{
+               message = "Alerte, je suis dans une situation de danger. Appelez les secours si vous n’avez pas de nouvelles dans les 10 minutes. N’essayez pas de m’appeler directement."
+            }
+            // Define contact number
+            for i in 0..<mobile.count{
+                parmater.append(URLQueryItem(name: "contact"+String(i+1), value: mobile[i]))
+            }
+            // Define SMS message
+            parmater.append(URLQueryItem(name: "message", value: message))
+            print(parmater)
+            // Send AF request
+            var url = URLComponents(url: URL(string: "https://nve1lby161.execute-api.ap-southeast-2.amazonaws.com/v1/sms")!, resolvingAgainstBaseURL: false)!
+            url.queryItems = parmater
+            // Establish a URL request
+            var UrlRequest = URLRequest(url: url.url!)
+            UrlRequest.httpMethod = "GET"
+            // Send URL Request
+            let UrlTask = URLSession.shared.dataTask(
+                with: UrlRequest,
+                completionHandler: { (data, response, error) in
+                if let d = String(data: data!, encoding: .utf8){
+                    print(d)
+                }else{
+                    print("Failed to fetch data")
+                }
+            })
+            // Resume the task
+            UrlTask.resume()
+        }
     }
     
     
