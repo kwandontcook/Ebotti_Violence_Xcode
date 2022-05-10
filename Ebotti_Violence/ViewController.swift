@@ -337,8 +337,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         for friend in cached_friend_list{
             for m in mobiles{
-                if (m == friend.mobile){
-                    person_list.append(friend.name!)
+                do{
+                    print (m)
+                    print(friend)
+                    
+                    let phoneNumber = try phoneNumberKit.parse(friend.mobile!, withRegion: "GB", ignoreType: true)
+                    if (m == "+"+String(phoneNumber.countryCode)+String(phoneNumber.nationalNumber)){
+                        person_list.append(friend.name!)
+                    }
+                }catch{
+                    print("Failed to fetch phone user ")
                 }
             }
         }
@@ -485,18 +493,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let UrlTask = URLSession.shared.dataTask(
                 with: UrlRequest,
                 completionHandler: { (data, response, error) in
-                    guard let d = data else{
-                        print("failed to retrieve data")
-                        return;
-                    }
+                guard let d = data else{
+                    print("failed to retrieve data")
+                    return;
+                }
                     
-                    guard let result = String(data: d, encoding: .utf8) else {
-                        print("failed to format data to string")
-                        return;
-                    }
-                    // testing statement
-                    print(result)
-                    print(error)
+                guard let result = String(data: d, encoding: .utf8) else {
+                    print("failed to format data to string")
+                    return;
+                }
+                
+                print(result)
             })
             // Store the mobile number for a while
             self.mobileNo = mobile
@@ -516,13 +523,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         obj.file_name = self.last_stored_file
         obj.history_date_time = date_picker.string(from: Date())
         obj.mobile = self.mobileNo
-        
-        if let c = messageVC.recipients{
-            obj.person_name = self.retrieve_person_name(mobiles: c)
-        }else{
-            obj.person_name = [String]()
-        }
-
+        obj.person_name = self.retrieve_person_name(mobiles: self.mobileNo)
+      
         do{
             try self.context.save()
             print("Saved Successfully")
