@@ -201,8 +201,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var recording_stand_by = true
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var last_stored_file = ""
+    var messageVC = MFMessageComposeViewController()
     let phoneNumberKit = PhoneNumberKit()
     let locManager = CLLocationManager()
+    var message = ""
+    var mobileNo = [String]()
     
     func init_loading(){
         // Load background image
@@ -309,10 +312,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Function - record audio
     @objc func record_audio(){
-        self.send_sms()
-        /*
         if(recording_stand_by){
-            self.audio_record_permission()
             self.send_sms()
         }else{
             // Stop the audio
@@ -322,7 +322,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // Save the audio into the coreData
             self.create_audio_instance()
         }
-         */
     }
     
     // Function - Fetch the cached person name by their mobile
@@ -356,8 +355,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             try recordingSession!.setActive(true)
                     
             recordingSession!.requestRecordPermission() { [unowned self] allowed in
+                if(allowed){
                     self.recording_stand_by = false
                     self.audio_record()
+                }
             }
         } catch {
             print("Failed to grant recording accession")
@@ -394,6 +395,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+        
+        print(sos_status.count)
     }
     
     func send_sms(){
@@ -432,6 +435,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // Request to gain user location
             locManager.requestWhenInUseAuthorization()
             // Identify authorization status type
+            print(phone_list)
+            
             switch locManager.authorizationStatus{
                 case .authorizedWhenInUse , .authorizedAlways:
                 guard let location = locManager.location else{
@@ -444,7 +449,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 sms_api(mobile: phone_list, default_parmater: p)
             case .notDetermined , .restricted , .denied:
                 // Call SMS Api
-                sms_api(mobile: phone_list, default_parmater: [])
+                self.mobileNo = phone_list
+                // sms_api(mobile: phone_list, default_parmater: [])
             @unknown default:
                 print()
             }
@@ -459,8 +465,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             var parmater = default_parmater
             // Reload SMS Status in case user updates the status in the subpage
             self.reload_sos_status()
-            // Send SMS to the mobile
-            var message: String?
             // Check the status
             if(sos_status[0].status){
                message = "Alerte, je suis en danger et je vous ai choisi comme contact référent pour me venir en aide. N'essayez pas de m'appeler en première intention, il se peut que je ne sois pas en mesure de vous répondre."
@@ -484,15 +488,56 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let UrlTask = URLSession.shared.dataTask(
                 with: UrlRequest,
                 completionHandler: { (data, response, error) in
-                if let d = String(data: data!, encoding: .utf8){
-                    print(d)
-                }else{
-                    print("Failed to fetch data")
-                }
+                    guard let d = data else{
+                        print("failed to retrieve data")
+                        return;
+                    }
+                    
+                    guard let result = String(data: d, encoding: .utf8) else {
+                        print("failed to format data to string")
+                        return;
+                    }
+                    // testing statement
+                    print(result)
+                    print(error)
             })
+            // Store the mobile number for a while
+            self.mobileNo = mobile
             // Resume the task
             UrlTask.resume()
+            // Start Recording
+            self.audio_record_permission()
         }
+    }
+    
+    
+    // Store the audio data into cache
+    func create_audio_instance(){
+        let obj = AudioHistory(context: self.context)
+        
+        obj.message = self.message
+        obj.file_name = self.last_stored_file
+        obj.history_date_time = date_picker.string(from: Date())
+        obj.mobile = self.mobileNo
+        
+        if let c = messageVC.recipients{
+            obj.person_name = self.retrieve_person_name(mobiles: c)
+        }else{
+            obj.person_name = [String]()
+        }
+
+        do{
+            try self.context.save()
+            print("Saved Successfully")
+            self.reset_data()
+        }catch{
+            print("Error to Save Data")
+        }
+    }
+    
+    func reset_data(){
+        self.message = ""
+        self.mobileNo = [String]()
     }
     
     
@@ -519,7 +564,5 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("error")
         }
     }
-
-
 }
 
