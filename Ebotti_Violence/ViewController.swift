@@ -267,7 +267,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Add button - manual_button
         stack_view.addSubview(mainAlert_button)
-        mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 10).isActive = true
+        mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 5).isActive = true
         mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 60).isActive = true
         mainAlert_button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         mainAlert_button.widthAnchor.constraint(equalToConstant:60).isActive = true
@@ -281,7 +281,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Add button - share_button
         stack_view.addSubview(share_button)
         share_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
-        share_button.leadingAnchor.constraint(equalTo: fake_button.trailingAnchor, constant: 10).isActive = true
+        share_button.leadingAnchor.constraint(equalTo: fake_button.trailingAnchor, constant: 5).isActive = true
         share_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         share_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
     }
@@ -427,20 +427,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     break
                 }
             }
-            
+            // Set delegation
             locManager.delegate = self
+            // Request to gain user location
             locManager.requestWhenInUseAuthorization()
-            
+            // Identify authorization status type
             switch locManager.authorizationStatus{
                 case .authorizedWhenInUse , .authorizedAlways:
                 guard let location = locManager.location else{
                     return
                 }
-                
+                // Array that store the current user location's data
                 let p = [URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
                          URLQueryItem(name: "longitude", value: String(location.coordinate.longitude))]
+                // Call SMS Api
                 sms_api(mobile: phone_list, default_parmater: p)
             case .notDetermined , .restricted , .denied:
+                // Call SMS Api
                 sms_api(mobile: phone_list, default_parmater: [])
             @unknown default:
                 print()
