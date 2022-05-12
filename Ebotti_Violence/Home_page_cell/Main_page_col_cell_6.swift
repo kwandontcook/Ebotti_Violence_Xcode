@@ -13,10 +13,15 @@ class Main_page_col_cell_6: UICollectionViewCell {
         let v = UIView()
         v.backgroundColor = UIColor.init(_colorLiteralRed: 248/255.0, green: 248/255.0, blue: 255/255.0, alpha: 1.0)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.layer.borderColor = UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
-        v.layer.borderWidth = 0.3
+        v.layer.borderColor = UIColor.white.cgColor
         v.layer.cornerRadius = 5
-        v.layer.masksToBounds = true
+        v.layer.borderWidth = 0.3
+        // Setting for shadow
+        v.layer.shadowColor = UIColor.black.cgColor
+        v.layer.shadowOpacity = 1
+        v.layer.shadowOffset = CGSize.zero
+        v.layer.shadowRadius = 5
+        v.layer.masksToBounds = false
         return v
     }()
     
@@ -58,6 +63,8 @@ class Main_page_col_cell_6: UICollectionViewCell {
         return btn
     }()
     
+    var navigationController: UINavigationController?
+    
     override func awakeFromNib() {
        super.awakeFromNib()
     }
@@ -91,7 +98,7 @@ class Main_page_col_cell_6: UICollectionViewCell {
         self.main_view.addSubview(stack_view)
         stack_view.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
         stack_view.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 16).isActive = true
-        stack_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.7).isActive = true
+        stack_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.6).isActive = true
         stack_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         // Setting for alertVoice_button
@@ -101,17 +108,20 @@ class Main_page_col_cell_6: UICollectionViewCell {
         stack_middle_view.centerYAnchor.constraint(equalTo: stack_view.centerYAnchor).isActive = true
         stack_middle_view.widthAnchor.constraint(equalTo: stack_view.widthAnchor, multiplier: 0.3).isActive = true
         
+        
         self.stack_middle_view.addSubview(alertSettings_button)
-        alertSettings_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor).isActive = true
-        alertSettings_button.centerXAnchor.constraint(equalTo: stack_middle_view.centerXAnchor).isActive = true
-        alertSettings_button.centerYAnchor.constraint(equalTo: stack_middle_view.centerYAnchor).isActive = true
-        alertSettings_button.widthAnchor.constraint(equalTo: stack_middle_view.heightAnchor).isActive = true
+        alertSettings_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor,constant: 10).isActive = true
+        alertSettings_button.leadingAnchor.constraint(equalTo: stack_middle_view.leadingAnchor, constant: 10).isActive = true
+        alertSettings_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.7).isActive = true
+        alertSettings_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.7).isActive = true
+
         
         // Bind action
         alertSettings_button.addTarget(self, action: #selector(q1), for: .touchUpInside)
     }
     
     @objc func q1(){
-        print("1")
+        self.navigationController?.pushViewController(Alert_message_col_view(), animated: true)
     }
+    
 }

@@ -68,62 +68,62 @@ class Main_page_col_cell_1: UICollectionViewCell {
         // Setting for police button
         self.police_view.addSubview(police_button)
         police_button.topAnchor.constraint(equalTo: police_view.topAnchor).isActive = true
-        police_button.leadingAnchor.constraint(equalTo: police_view.leadingAnchor).isActive = true
+        police_button.leadingAnchor.constraint(equalTo: police_view.leadingAnchor, constant: 10).isActive = true
         police_button.heightAnchor.constraint(equalTo: police_view.heightAnchor, multiplier: 0.8).isActive = true
-        police_button.widthAnchor.constraint(equalTo: police_view.widthAnchor).isActive = true
+        police_button.widthAnchor.constraint(equalTo: police_view.widthAnchor, multiplier: 0.8).isActive = true
         
         // Setting for police text
         self.police_view.addSubview(police_text)
-        police_text.topAnchor.constraint(equalTo: police_button.bottomAnchor).isActive = true
-        police_text.leadingAnchor.constraint(equalTo: police_view.leadingAnchor).isActive = true
+        police_text.topAnchor.constraint(equalTo: police_button.bottomAnchor    ).isActive = true
+        police_text.leadingAnchor.constraint(equalTo: police_view.leadingAnchor, constant: 10.0).isActive = true
         police_text.heightAnchor.constraint(equalTo: police_view.heightAnchor, multiplier: 0.2).isActive = true
-        police_text.widthAnchor.constraint(equalTo: police_view.widthAnchor).isActive = true
+        police_text.widthAnchor.constraint(equalTo: police_view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
     func add_fireman_block(){
         // Setting for police button view
         self.stack_view.addSubview(fireman_view)
         fireman_view.topAnchor.constraint(equalTo: stack_view.topAnchor).isActive = true
-        fireman_view.leadingAnchor.constraint(equalTo: police_view.trailingAnchor, constant: 10).isActive = true
+        fireman_view.leadingAnchor.constraint(equalTo: police_view.trailingAnchor, constant: 15).isActive = true
         fireman_view.heightAnchor.constraint(equalTo: stack_view.heightAnchor).isActive = true
         fireman_view.widthAnchor.constraint(equalTo: stack_view.widthAnchor, multiplier: 0.3).isActive = true
         
         // Setting for police button button
         self.fireman_view.addSubview(fireman_button)
         fireman_button.topAnchor.constraint(equalTo: fireman_view.topAnchor).isActive = true
-        fireman_button.leadingAnchor.constraint(equalTo: fireman_view.leadingAnchor).isActive = true
+        fireman_button.leadingAnchor.constraint(equalTo: fireman_view.leadingAnchor, constant: 10).isActive = true
         fireman_button.heightAnchor.constraint(equalTo: fireman_view.heightAnchor, multiplier: 0.8).isActive = true
-        fireman_button.widthAnchor.constraint(equalTo: fireman_view.widthAnchor).isActive = true
+        fireman_button.widthAnchor.constraint(equalTo: fireman_view.widthAnchor, multiplier: 0.8).isActive = true
         
         // Setting for police text
         self.fireman_view.addSubview(fireman_text)
         fireman_text.topAnchor.constraint(equalTo: fireman_button.bottomAnchor).isActive = true
-        fireman_text.leadingAnchor.constraint(equalTo: fireman_view.leadingAnchor).isActive = true
+        fireman_text.leadingAnchor.constraint(equalTo: fireman_view.leadingAnchor, constant: 10).isActive = true
         fireman_text.heightAnchor.constraint(equalTo: fireman_view.heightAnchor, multiplier: 0.2).isActive = true
-        fireman_text.widthAnchor.constraint(equalTo: fireman_view.widthAnchor).isActive = true
+        fireman_text.widthAnchor.constraint(equalTo: fireman_view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
     func add_samu_block(){
         // Setting for police button view
         self.stack_view.addSubview(samu_view)
         samu_view.topAnchor.constraint(equalTo: stack_view.topAnchor).isActive = true
-        samu_view.leadingAnchor.constraint(equalTo: fireman_view.trailingAnchor, constant: 10).isActive = true
+        samu_view.leadingAnchor.constraint(equalTo: fireman_view.trailingAnchor, constant: 15).isActive = true
         samu_view.heightAnchor.constraint(equalTo: stack_view.heightAnchor).isActive = true
         samu_view.widthAnchor.constraint(equalTo: stack_view.widthAnchor, multiplier: 0.3).isActive = true
         
         // Setting for police button button
         self.samu_view.addSubview(samu_button)
-        samu_button.topAnchor.constraint(equalTo: samu_view.topAnchor).isActive = true
-        samu_button.leadingAnchor.constraint(equalTo: samu_view.leadingAnchor).isActive = true
-        samu_button.heightAnchor.constraint(equalTo: samu_view.heightAnchor, multiplier: 0.8).isActive = true
-        samu_button.widthAnchor.constraint(equalTo: fireman_view.widthAnchor).isActive = true
+        samu_button.topAnchor.constraint(equalTo: samu_view.topAnchor,constant: 5).isActive = true
+        samu_button.leadingAnchor.constraint(equalTo: samu_view.leadingAnchor, constant: 10).isActive = true
+        samu_button.heightAnchor.constraint(equalTo: samu_view.heightAnchor, multiplier: 0.7).isActive = true
+        samu_button.widthAnchor.constraint(equalTo: samu_view.widthAnchor, multiplier: 0.8).isActive = true
         
         // Setting for police text
         self.samu_view.addSubview(samu_text)
-        samu_text.topAnchor.constraint(equalTo: samu_button.bottomAnchor).isActive = true
-        samu_text.leadingAnchor.constraint(equalTo: samu_view.leadingAnchor).isActive = true
+        samu_text.topAnchor.constraint(equalTo: samu_button.bottomAnchor,constant: 4).isActive = true
+        samu_text.leadingAnchor.constraint(equalTo: samu_view.leadingAnchor,constant: 10).isActive = true
         samu_text.heightAnchor.constraint(equalTo: samu_view.heightAnchor, multiplier: 0.2).isActive = true
-        samu_text.widthAnchor.constraint(equalTo: samu_view.widthAnchor).isActive = true
+        samu_text.widthAnchor.constraint(equalTo: samu_view.widthAnchor, multiplier: 0.8).isActive = true
     }
     
     // UIColor.init(_colorLiteralRed: 248/255.0, green: 248/255.0, blue: 255/255.0, alpha: 1.0)
@@ -131,10 +131,15 @@ class Main_page_col_cell_1: UICollectionViewCell {
         let v = UIView()
         v.backgroundColor = UIColor.init(_colorLiteralRed: 248/255.0, green: 248/255.0, blue: 255/255.0, alpha: 1.0)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.layer.borderColor = UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
-        v.layer.borderWidth = 0.3
+        v.layer.borderColor = UIColor.white.cgColor
         v.layer.cornerRadius = 5
-        v.layer.masksToBounds = true
+        v.layer.borderWidth = 0.3
+        // Setting for shadow 
+        v.layer.shadowColor = UIColor.black.cgColor
+        v.layer.shadowOpacity = 1
+        v.layer.shadowOffset = CGSize.zero
+        v.layer.shadowRadius = 5
+        v.layer.masksToBounds = false
         return v
     }()
     
@@ -214,13 +219,14 @@ class Main_page_col_cell_1: UICollectionViewCell {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.contentMode = .scaleAspectFit
+        btn.contentHorizontalAlignment = .fill;
+        btn.contentVerticalAlignment = .fill;
         btn.setImage(UIImage(named: "sosecoute"), for: .normal)
         return btn
     }()
     
     var samu_view: UIView = {
         let v = UIView()
-
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()

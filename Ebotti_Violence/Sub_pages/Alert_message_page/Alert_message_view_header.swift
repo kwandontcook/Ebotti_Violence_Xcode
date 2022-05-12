@@ -1,21 +1,22 @@
 //
-//  Info_pages_header.swift
+//  Alert_message_view_header.swift
 //  Ebotti_Violence
 //
-//  Created by Mv Mobile on 1/3/22.
+//  Created by kwok chung  kwan on 24/3/2022.
 //
 
 import UIKit
 
-class Info_pages_header: UICollectionReusableView {
-
+class Alert_message_view_header: UICollectionReusableView {
+        
+    
     let header_label : UILabel = {
         let label = UILabel()
         label.text = ""
-        label.contentMode = .scaleAspectFit
         label.font = UIFont.boldSystemFont(ofSize: 14.0)
         label.textColor = .black
-        label.textAlignment = .left
+        label.numberOfLines = 0
+        label.lineBreakMode  = NSLineBreakMode.byWordWrapping; 
         return label
     }()
     
@@ -24,7 +25,5 @@ class Info_pages_header: UICollectionReusableView {
         backgroundColor = .clear
         addSubview(header_label)
         header_label.frame = bounds
-        // move text frame
-        // header_label.frame.origin.x+=10
     }
 }

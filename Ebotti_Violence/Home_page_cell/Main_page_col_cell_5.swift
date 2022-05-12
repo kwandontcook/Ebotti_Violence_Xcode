@@ -14,17 +14,21 @@ class Main_page_col_cell_5: UICollectionViewCell {
         let v = UIView()
         v.backgroundColor = UIColor.init(_colorLiteralRed: 248/255.0, green: 248/255.0, blue: 255/255.0, alpha: 1.0)
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.layer.borderColor = UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1).cgColor
-        v.layer.borderWidth = 0.3
+        v.layer.borderColor = UIColor.white.cgColor
         v.layer.cornerRadius = 5
-        v.layer.masksToBounds = true
+        v.layer.borderWidth = 0.3
+        // Setting for shadow
+        v.layer.shadowColor = UIColor.black.cgColor
+        v.layer.shadowOpacity = 1
+        v.layer.shadowOffset = CGSize.zero
+        v.layer.shadowRadius = 5
+        v.layer.masksToBounds = false
         return v
     }()
-    
     // Declare variables - header
     let header : UITextView = {
         let label = UITextView()
-        label.text = "Message d'alerte"
+        label.text = "Personnes à prévenir"
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = .white
         label.textAlignment = .center
@@ -94,7 +98,7 @@ class Main_page_col_cell_5: UICollectionViewCell {
         self.main_view.addSubview(stack_view)
         stack_view.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 10).isActive = true
         stack_view.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 16).isActive = true
-        stack_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.7).isActive = true
+        stack_view.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.6).isActive = true
         stack_view.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.9).isActive = true
         
         // Setting for alertVoice_button
@@ -105,10 +109,10 @@ class Main_page_col_cell_5: UICollectionViewCell {
         stack_middle_view.widthAnchor.constraint(equalTo: stack_view.widthAnchor, multiplier: 0.3).isActive = true
         
         self.stack_middle_view.addSubview(alertVoice_button)
-        alertVoice_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor).isActive = true
-        alertVoice_button.centerXAnchor.constraint(equalTo: stack_middle_view.centerXAnchor).isActive = true
-        alertVoice_button.centerYAnchor.constraint(equalTo: stack_middle_view.centerYAnchor).isActive = true
-        alertVoice_button.widthAnchor.constraint(equalTo: stack_middle_view.heightAnchor).isActive = true
+        alertVoice_button.topAnchor.constraint(equalTo: stack_middle_view.topAnchor,constant: 10).isActive = true
+        alertVoice_button.leadingAnchor.constraint(equalTo: stack_middle_view.leadingAnchor, constant: 10).isActive = true
+        alertVoice_button.heightAnchor.constraint(equalTo: stack_middle_view.heightAnchor, multiplier: 0.8).isActive = true
+        alertVoice_button.widthAnchor.constraint(equalTo: stack_middle_view.widthAnchor, multiplier: 0.8).isActive = true
         
         // Bind action
         alertVoice_button.addTarget(self, action: #selector(q1), for: .touchUpInside)

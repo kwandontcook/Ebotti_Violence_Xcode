@@ -7,27 +7,13 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 import CoreData
+import PhoneNumberKit
 import MessageUI
+import Alamofire
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, MFMessageComposeViewControllerDelegate {
-    
-    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        switch (result) {
-            case MessageComposeResult.cancelled:
-                print("User canceled to send email ")
-            case MessageComposeResult.failed:
-                print("Error : Message cant deliever to the recipients")
-            case MessageComposeResult.sent:
-                print("Message sent successfully")
-                dismiss(animated: true, completion: {
-                    self.audio_record_permission()
-                })
-            default:
-                return
-        }
-        dismiss(animated: true, completion: nil)
-    }
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, CLLocationManagerDelegate {
     
     // Set section for collectionview
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -58,8 +44,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_5", for: indexPath) as! Main_page_col_cell_5
             cell.navigationController = self.navigationController
             return cell
-        }else if(indexPath.section == 5){
+        }else if(indexPath.section == 5) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_6", for: indexPath) as! Main_page_col_cell_6
+            cell.navigationController = self.navigationController
             return cell
         }else if(indexPath.section == 6) {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "main_page_cell_7", for: indexPath) as! Main_page_col_cell_7
@@ -78,8 +65,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
               return CGSize(width: self.collection_view.frame.width-10, height: 150.0)
           }else if(indexPath.section == 1 || indexPath.section == 2 || indexPath.section == 3 || indexPath.section == 7){
               return CGSize(width: self.collection_view.frame.width-10, height: 280.0)
-          }else if(indexPath.section == 6){
-              return CGSize(width: self.collection_view.frame.width-10, height: 220.0)
           }else{
               return CGSize(width: self.collection_view.frame.width-10, height: 140.0)
           }
@@ -153,11 +138,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return d
     }()
     
-    var stack_view : UIView = {
-        let v = UIView()
+    var stack_view : UIStackView = {
+        let v = UIStackView()
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
+    
     
     var history_button: UIButton = {
         let btn = UIButton()
@@ -177,13 +163,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }()
     
     
-    var mainAlert_button: UIButton = {
-        let btn = UIButton()
+    var mainAlert_button: Circle_Btn = {
+        let btn = Circle_Btn(frame: .zero)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.contentMode = .scaleAspectFit
         btn.backgroundColor = UIColor.init(_colorLiteralRed: 204/255.0, green: 0, blue: 0, alpha: 1)
-        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)  
-        btn.setTitle("ALERTER", for: .normal)
+        btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18.0)
+        btn.layer.borderWidth = 0.5
+        btn.layer.cornerRadius = 5
+        btn.layer.borderColor = UIColor.init(_colorLiteralRed: 204/255.0, green: 0, blue: 0, alpha: 1).cgColor
+        btn.setTitle("SOS", for: .normal)
         btn.addTarget(self, action: #selector(record_audio), for: .touchUpInside)
         return btn
     }()
@@ -198,12 +187,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return btn
     }()
     
+    var fake_button : UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.contentMode = .scaleAspectFit
+        return btn
+    }()
+    
+    var app_icon = [App_Icon_C]()
+    var sos_status = [SOS_C]()
     var audioRecord: AVAudioRecorder?
     var recordingSession: AVAudioSession?
     var recording_stand_by = true
-    var messageVC = MFMessageComposeViewController()
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var last_stored_file = ""
+    var messageVC = MFMessageComposeViewController()
+    let phoneNumberKit = PhoneNumberKit()
+    let locManager = CLLocationManager()
+    var message = ""
+    var mobileNo = [String]()
     
     func init_loading(){
         // Load background image
@@ -225,6 +227,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // adding button to stack view
         self.adding_button_for_stack_view()
         self.color_setting()
+        self.fetch_sos()
     }
 
     // Function - Setting up nav bar color and bar button color
@@ -232,12 +235,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if #available(iOS 15.0, *) {
             let barAppearance = UINavigationBarAppearance()
             barAppearance.backgroundColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
-            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+            barAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             navigationController?.navigationBar.standardAppearance = barAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = barAppearance
         } else {
             self.navigationController?.navigationBar.barTintColor = UIColor.init(_colorLiteralRed: 243/255, green: 156/255, blue: 18/255, alpha: 1)
-            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+            self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         }
     }
     
@@ -261,21 +264,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Add button - manual_button
         stack_view.addSubview(manual_button)
         manual_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
-        manual_button.leadingAnchor.constraint(equalTo: history_button.trailingAnchor, constant: 15).isActive = true
+        manual_button.leadingAnchor.constraint(equalTo: history_button.trailingAnchor, constant: 23).isActive = true
         manual_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         manual_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         
         // Add button - manual_button
         stack_view.addSubview(mainAlert_button)
-        mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 10).isActive = true
-        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 20).isActive = true
-        mainAlert_button.heightAnchor.constraint(equalTo: menu_area.heightAnchor, multiplier: 0.52).isActive = true
-        mainAlert_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.45).isActive = true
+        mainAlert_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 5).isActive = true
+        mainAlert_button.leadingAnchor.constraint(equalTo: manual_button.trailingAnchor, constant: 60).isActive = true
+        mainAlert_button.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        mainAlert_button.widthAnchor.constraint(equalToConstant:60).isActive = true
+        
+        stack_view.addSubview(fake_button)
+        fake_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
+        fake_button.leadingAnchor.constraint(equalTo: mainAlert_button.trailingAnchor).isActive = true
+        fake_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.25).isActive = true
+        fake_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.25).isActive = true
         
         // Add button - share_button
         stack_view.addSubview(share_button)
         share_button.topAnchor.constraint(equalTo: menu_area.topAnchor, constant: 11).isActive = true
-        share_button.leadingAnchor.constraint(equalTo: mainAlert_button.trailingAnchor, constant: 25).isActive = true
+        share_button.leadingAnchor.constraint(equalTo: fake_button.trailingAnchor, constant: 5).isActive = true
         share_button.heightAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
         share_button.widthAnchor.constraint(equalTo: menu_area.widthAnchor, multiplier: 0.1).isActive = true
     }
@@ -304,7 +313,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Function - record audio
     @objc func record_audio(){
         if(recording_stand_by){
-            // self.audio_record_permission()
             self.send_sms()
         }else{
             // Stop the audio
@@ -329,35 +337,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         for friend in cached_friend_list{
             for m in mobiles{
-                if (m == friend.mobile){
-                    person_list.append(friend.name!)
+                do{
+                    print (m)
+                    print(friend)
+                    
+                    let phoneNumber = try phoneNumberKit.parse(friend.mobile!, withRegion: "GB", ignoreType: true)
+                    if (m == "+"+String(phoneNumber.countryCode)+String(phoneNumber.nationalNumber)){
+                        person_list.append(friend.name!)
+                    }
+                }catch{
+                    print("Failed to fetch phone user ")
                 }
             }
         }
         
         return person_list
-    }
-    
-    // Store the audio data into cache
-    func create_audio_instance(){
-        let obj = AudioHistory(context: self.context)
-        obj.message = messageVC.body ?? ""
-        obj.file_name = self.last_stored_file
-        obj.history_date_time = date_picker.string(from: Date())
-        obj.mobile = messageVC.recipients ?? [String]()
-        
-        if let c = messageVC.recipients{
-            obj.person_name = self.retrieve_person_name(mobiles: c)
-        }else{
-            obj.person_name = [String]()
-        }
-    
-        do{
-            try self.context.save()
-            print("Saved Successfully")
-        }catch{
-            print("Error to Save Data")
-        }
     }
     
 
@@ -369,15 +363,49 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             try recordingSession!.setActive(true)
                     
             recordingSession!.requestRecordPermission() { [unowned self] allowed in
+                if(allowed){
                     self.recording_stand_by = false
                     self.audio_record()
+                }
             }
         } catch {
             print("Failed to grant recording accession")
         }
     }
     
+    func reload_sos_status(){
+        do{
+            sos_status = try self.context.fetch(.init(entityName: "SOS_C"))
+        }catch{
+            print ("failed to fetch data")
+        }
+    }
     
+    func fetch_sos(){
+        // Fetch SOS_C from coredata
+        reload_sos_status()
+        // If the size is smaller than 2
+        if(sos_status.count < 2){
+            for i in 0..<(2-sos_status.count){
+                let temp = SOS_C(context: self.context)
+                
+                if(i==0){
+                    temp.status = true
+                }else{
+                    temp.status = false
+                }
+                
+                do{
+                    try context.save()
+                    reload_sos_status()
+                }catch{
+                    print("Failed to save object")
+                }
+            }
+        }
+        
+        print(sos_status.count)
+    }
     
     func send_sms(){
         var cached_friend_list = [Emergency_C]()
@@ -398,25 +426,117 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.present(error_alerter, animated: true, completion: nil)
         }else{
             for i in 0..<cached_friend_list.count{
-                phone_list.append(cached_friend_list[i].mobile!)
+                do {
+                     let phoneNumber = try phoneNumberKit.parse(cached_friend_list[i].mobile!, withRegion: "GB", ignoreType: true)
+                     phone_list.append("+"+String(phoneNumber.countryCode)+String(phoneNumber.nationalNumber))
+                }
+                catch {
+                    print("Generic parser error")
+                    break
+                }
             }
-            // present sms controller
-            sms_controller_present(mobile: phone_list)
+            // Set delegation
+            locManager.delegate = self
+            // Request to gain user location
+            locManager.requestWhenInUseAuthorization()
+            // Identify authorization status type
+            print(phone_list)
+            
+            switch locManager.authorizationStatus{
+                case .authorizedWhenInUse , .authorizedAlways:
+                guard let location = locManager.location else{
+                    return
+                }
+                // Array that store the current user location's data
+                let p = [URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
+                         URLQueryItem(name: "longitude", value: String(location.coordinate.longitude))]
+                // Call SMS Api
+                sms_api(mobile: phone_list, default_parmater: p)
+            case .notDetermined , .restricted , .denied:
+                // Call SMS Api
+                self.mobileNo = phone_list
+                // sms_api(mobile: phone_list, default_parmater: [])
+            @unknown default:
+                print()
+            }
         }
     }
     
     
-    func sms_controller_present(mobile: [String]){
-        // Check whether we can open this viewController
-        guard MFMessageComposeViewController.canSendText() else { return }
-        // Create new Controller
-        messageVC = MFMessageComposeViewController()
-        messageVC.body = "Sending SMS to the registered audiencess";
-        messageVC.recipients = mobile
-        messageVC.messageComposeDelegate = self;
-        messageVC.isEditing = false
-        messageVC.disableUserAttachments()
-        self.present(messageVC, animated: true, completion: nil)
+    func sms_api(mobile: [String], default_parmater : [URLQueryItem]){
+        if(mobile.count == 0){
+            print("error")
+        }else{
+            var parmater = default_parmater
+            // Reload SMS Status in case user updates the status in the subpage
+            self.reload_sos_status()
+            // Check the status
+            if(sos_status[0].status){
+               message = "Alerte, je suis en danger et je vous ai choisi comme contact référent pour me venir en aide. N'essayez pas de m'appeler en première intention, il se peut que je ne sois pas en mesure de vous répondre."
+            }else{
+               message = "Alerte, je suis dans une situation de danger. Appelez les secours si vous n’avez pas de nouvelles dans les 10 minutes. N’essayez pas de m’appeler directement."
+            }
+            // Define contact number
+            for i in 0..<mobile.count{
+                parmater.append(URLQueryItem(name: "contact"+String(i+1), value: mobile[i]))
+            }
+            // Define SMS message
+            parmater.append(URLQueryItem(name: "message", value: message))
+            print(parmater)
+            // Send AF request
+            var url = URLComponents(url: URL(string: "https://nve1lby161.execute-api.ap-southeast-2.amazonaws.com/v1/sms")!, resolvingAgainstBaseURL: false)!
+            url.queryItems = parmater
+            // Establish a URL request
+            var UrlRequest = URLRequest(url: url.url!)
+            UrlRequest.httpMethod = "GET"
+            // Send URL Request
+            let UrlTask = URLSession.shared.dataTask(
+                with: UrlRequest,
+                completionHandler: { (data, response, error) in
+                guard let d = data else{
+                    print("failed to retrieve data")
+                    return;
+                }
+                    
+                guard let result = String(data: d, encoding: .utf8) else {
+                    print("failed to format data to string")
+                    return;
+                }
+                
+                print(result)
+            })
+            // Store the mobile number for a while
+            self.mobileNo = mobile
+            // Resume the task
+            UrlTask.resume()
+            // Start Recording
+            self.audio_record_permission()
+        }
+    }
+    
+    
+    // Store the audio data into cache
+    func create_audio_instance(){
+        let obj = AudioHistory(context: self.context)
+        
+        obj.message = self.message
+        obj.file_name = self.last_stored_file
+        obj.history_date_time = date_picker.string(from: Date())
+        obj.mobile = self.mobileNo
+        obj.person_name = self.retrieve_person_name(mobiles: self.mobileNo)
+      
+        do{
+            try self.context.save()
+            print("Saved Successfully")
+            self.reset_data()
+        }catch{
+            print("Error to Save Data")
+        }
+    }
+    
+    func reset_data(){
+        self.message = ""
+        self.mobileNo = [String]()
     }
     
     
@@ -443,7 +563,5 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("error")
         }
     }
-    
-
 }
 

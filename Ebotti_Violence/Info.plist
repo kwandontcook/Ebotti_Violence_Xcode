@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationUsageDescription</key>
+	<string>Location only retrieved when the users sends sos signal by pressing the alert button</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location only retrieved when the users sends sos signal by pressing the alert button</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location only retrieved when the users sends sos signal by pressing the alert button</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone is only triggered when the user presses the alert button for recording purpose.</string>
 	<key>CFBundleIcons</key>

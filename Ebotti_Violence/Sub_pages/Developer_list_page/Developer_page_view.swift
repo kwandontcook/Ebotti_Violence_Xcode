@@ -49,7 +49,7 @@ class Developer_page_view: UIViewController, UITableViewDataSource, UITableViewD
     
     var section_header = ["Conception : ", "Dév: ", "Bienfaiteurs: ", "Contributeurs: ", "Association Dignity"]
     var section_content = ["Steve Corroyer, Daphné Bailly", "Jean-Luc Descombes et Nicolas Foata \nKwok Chung Kwan",
-     "Angélique Renucci", "", "Association à but non lucratif luttant contre tous les types de violences et à l’origine de cette application Pour la soutenir, vous pouvez faire un don en les contactant à :\ndignity.asso@gmail.com \nVous pouvez également soumettre vos idées et améliorations afin de faire évoluer l'application continuellement."
+     "Angélique Renucci", "", "Association à but non lucratif luttant contre tous les types de violences et à l’origine de cette application. \nPour la soutenir, vous pouvez faire un don en \nles contactant à :\ndignity.asso@gmail.com \n\nVous pouvez également soumettre vos idées et améliorations afin de faire évoluer l'application continuellement."
     ]
     var section_email = [0 : "dignity.asso@gmail.com", 2: "mimotheshop@gmail.com", 4: "dignity.asso@gmail.com"]
     
@@ -58,13 +58,19 @@ class Developer_page_view: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         self.init_component()
         self.table_view_setting()
+        self.title = "Remerciements"
     }
     
     let main_view :UIView = {
         let v = UIView()
         v.backgroundColor = UIColor.clear
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.layer.masksToBounds = true
+        // Setting for shadow
+        v.layer.shadowColor = UIColor.black.cgColor
+        v.layer.shadowOpacity = 1
+        v.layer.shadowOffset = CGSize.zero
+        v.layer.shadowRadius = 5
+        v.layer.masksToBounds = false
         return v
     }()
     

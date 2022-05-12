@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Ebotti_Violence-Ebotti_ViolenceUITests/Pods-Ebotti_Violence-Ebotti_ViolenceUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework
 ${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework
+${BUILT_PRODUCTS_DIR}/PhoneNumberKit/PhoneNumberKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework
