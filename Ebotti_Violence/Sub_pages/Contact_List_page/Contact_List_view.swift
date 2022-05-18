@@ -54,7 +54,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
     
     func init_component(){
         self.view.addSubview(collection_view)
-        collection_view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        collection_view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
         collection_view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         collection_view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         collection_view.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
@@ -167,6 +167,8 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
             return CGSize(width: self.collection_view.frame.width-10, height: 150)
         }else if(indexPath.section == 2){
             return CGSize(width: self.collection_view.frame.width-10, height: 120)
+        }else if(indexPath.section == 1){
+            return CGSize(width: self.collection_view.frame.width-10, height: 110)
         }else{
             return CGSize(width: self.collection_view.frame.width-10, height: 85)
         }

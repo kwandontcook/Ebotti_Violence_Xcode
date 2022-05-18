@@ -25,6 +25,6 @@ class Info_pages_header: UICollectionReusableView {
         addSubview(header_label)
         header_label.frame = bounds
         // move text frame
-        // header_label.frame.origin.x+=10
+        header_label.frame.origin.x+=20
     }
 }

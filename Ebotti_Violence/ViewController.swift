@@ -502,8 +502,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     print("failed to format data to string")
                     return;
                 }
-                
-                print(result)
             })
             // Store the mobile number for a while
             self.mobileNo = mobile
