@@ -92,13 +92,13 @@ class Map_Info_view: UIViewController {
         header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
         header.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15).isActive = true
         header.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        
         // Add header
         self.view.addSubview(description_block)
         description_block.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
         description_block.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
         description_block.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
         description_block.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        
     }
     
     
