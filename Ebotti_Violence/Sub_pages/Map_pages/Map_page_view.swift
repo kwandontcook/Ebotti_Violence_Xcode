@@ -271,7 +271,7 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
 
     func create_map_view(){
         // Set MapView
-        mapView = GMSMapView.map(withFrame: main_view.frame, camera: GMSCameraPosition.camera(withLatitude: -22.264035869032245, longitude: 166.45688236672396, zoom: Float(zoom)))
+        mapView = GMSMapView.map(withFrame: main_view.frame, camera: GMSCameraPosition.camera(withLatitude: -19.264035869032245, longitude: 166.45688236672396, zoom: Float(5.8)))
         mapView?.delegate = self
         mapView?.setMinZoom(4.0, maxZoom: 14.0)
         self.main_view.addSubview(mapView!)
