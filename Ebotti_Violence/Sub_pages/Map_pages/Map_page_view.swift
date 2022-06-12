@@ -289,25 +289,25 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         Base_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
         Base_button.leadingAnchor.constraint(equalTo: button_view.leadingAnchor, constant: 5).isActive = true
         Base_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
-        Base_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
+        Base_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.21).isActive = true
         
         self.button_view.addSubview(Hybride_button)
         Hybride_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
         Hybride_button.leadingAnchor.constraint(equalTo: Base_button.trailingAnchor, constant: 10).isActive = true
         Hybride_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
-        Hybride_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
+        Hybride_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.21).isActive = true
         
         self.button_view.addSubview(Satellite_button)
         Satellite_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
         Satellite_button.leadingAnchor.constraint(equalTo: Hybride_button.trailingAnchor, constant: 10).isActive = true
         Satellite_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
-        Satellite_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
+        Satellite_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.21).isActive = true
         
         self.button_view.addSubview(Terrain_button)
         Terrain_button.topAnchor.constraint(equalTo: button_view.topAnchor).isActive = true
         Terrain_button.leadingAnchor.constraint(equalTo: Satellite_button.trailingAnchor, constant: 10).isActive = true
         Terrain_button.heightAnchor.constraint(equalTo: button_view.heightAnchor).isActive = true
-        Terrain_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.2).isActive = true
+        Terrain_button.widthAnchor.constraint(equalTo: button_view.widthAnchor, multiplier: 0.21).isActive = true
     }
     
     func create_zoom_view(){

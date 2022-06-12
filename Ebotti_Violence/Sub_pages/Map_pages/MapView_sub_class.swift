@@ -329,6 +329,11 @@ class MapView_sub_class{
         // Create data object
         var header_location_text = [String:CLLocationCoordinate2D]()
     
+        header_location_text["Brigade du Pont-des-Français"] = CLLocationCoordinate2D(latitude:-22.206390792537682, longitude:166.49042396004688);
+        header_location_text["Bureau de Police de Magenta"] = CLLocationCoordinate2D(latitude:-22.269641495756602, longitude:166.46400419365293)
+        header_location_text["Bureau de Police de Montravel"] = CLLocationCoordinate2D(latitude:-22.25108081859773, longitude:166.453976610983)
+        header_location_text["Bureau de Police de Tuband"] = CLLocationCoordinate2D(latitude:-22.270822190468696, longitude:166.44539379820475)
+      
         header_location_text["Brigade de Plum"] = CLLocationCoordinate2D(latitude: -22.27333403423604, longitude:166.63172222587073);
         header_location_text["Brigade des Pins"] = CLLocationCoordinate2D(latitude: -22.663464347682844, longitude:167.44013699977745);
         header_location_text["Brigade de Tadine"] = CLLocationCoordinate2D(latitude: -21.55257961216032, longitude:167.8789080681866);
@@ -369,6 +374,83 @@ class MapView_sub_class{
     
     func create_dataSet_description_set_helpToVictims() -> [String:String]{
         var header_description_text = [String:String]()
+        
+        header_description_text["Brigade du Pont-des-Français"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Route de Yahoué, MONT DORE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 26 / FAX : 44 87 33\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/\n" +
+        "Pièces jointes:\n" +
+        "Aucune pièce jointe n’a été trouvée";
+        
+        header_description_text["Bureau de Police de Rivière-salée"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences : Du lundi au vendredi : 08h00-16h00\n" +
+        "Adresse : 03, rue Raphael Ménard, NOUMEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 41 37 00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non"
+        
+        header_description_text["Bureau de Police de Magenta"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences : Du lundi au vendredi : 08h00-16h00\n" +
+        "Adresse : 39, rue du 18 Juin, NOUMEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 24.33.00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non"
+        
+        header_description_text["Bureau de Police de Montravel"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences : Du lundi au vendredi : 08h00-16h00\n" +
+        "Adresse : 44, rue du Dr Collard, NOUMEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 27 27 22\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non"
+        
+        header_description_text["Bureau de Police de Tuband"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences : Du lundi au vendredi : 08h00-16h00\n" +
+        "Adresse : 33 rue Louis BOUCHER, NOUMEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 23.26.00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non"
+        
+        
         header_description_text["Brigade de Plum"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
         "Informations sur les permanences :\n" +
         "Adresse : 1124 Route du Sud\n" +
@@ -709,6 +791,11 @@ class MapView_sub_class{
         header_location_text["Centre communal d'action sociale de Nouméa"] = CLLocationCoordinate2D(latitude: -22.271, longitude:166.439);
         header_location_text["Direction Provinciale de l'Action Sanitaire et Sociale"] = CLLocationCoordinate2D(latitude: -22.268, longitude:166.439);
         header_location_text["Centre Hospitalier Spécialisé Albert Bousquet"] = CLLocationCoordinate2D(latitude: -22.271, longitude:166.439);
+        header_location_text["Foyer Bethani"] = CLLocationCoordinate2D(latitude: -22.279417052860104, longitude:166.44867804740616);
+        header_location_text["Mission de la condition féminine province sud"] = CLLocationCoordinate2D(latitude: -22.273875802969965, longitude:166.44438575161544);
+        header_location_text["PMI Montravel"] = CLLocationCoordinate2D(latitude: -22.245546863966776, longitude:166.47284159008788);
+        
+        
         return header_location_text
     }
     
@@ -752,6 +839,30 @@ class MapView_sub_class{
         "Pour plus d'informations, suivre le lien : \n" +
         "Pièces jointes:\n" +
         "Aucune pièce jointe n’a été trouvée\n"
+        
+        header_description_text["Foyer Bethani"] = "Foyer d'accueil temporaire pour les femmes et enfants victimes de violences en attente de trouver un relogement (orientation par une assistante sociale de secteur qui fait le signalement et la demande d'admission)\n" +
+        "adresse : 4 rue du Dr Guégan 98800 Nouméa\n" +
+        "Le foyer «Béthanie Centre-ville», situé 4, rue du Dr Guégan à Nouméa, qui assure l’hébergement, la restauration et l’accompagnement social des femmes victimes ou non de violences conjugales ou intrafamiliales, en grande précarité avec ou sans enfants (limite d’âge de 12 ans pour les garçons).\n" +
+        "Le foyer est ouvert tous les jours de l’année 24h/24. Il a une capacité d’accueil de 38 places, enfants compris.\n" +
+        "La «Résidence Béthanie», située 80, route de l’Anse-Vata à Nouméa, qui assure l’hébergement et l’accompagnement social des femmes avec ou sans enfants, en difficulté sociales temporaires ou durables, déjà engagées dans un processus d’insertion professionnelle. \nLe foyer est ouvert tous les jours de l’année 24h/24. Il a une capacité d’accueil de 53 places répartis sur douze 12 logements."
+        
+        header_description_text["Mission de la condition féminine province sud"] = "Rue Frédéric Surleau 98800\n" +
+        "Mission à la condition féminine de la province Sud Horaires d’ouverture : du lundi au jeudi de 8h à 16H\n" +
+        "La Mission à la Condition Féminine de la province Sud coordonne la mise en œuvre de la politique provinciale en faveur de l’égalité entre les femmes et les hommes, en articulation avec les politiques publiques sectorielles.\n" +
+        "Les objectifs : Accueillir, écouter, informer les femmes quant à leurs droits et aux dispositifs d’aides mobilisables en fonction de leurs besoins.\n" +
+        "Promouvoir l’égalité entre les femmes et les hommes, afin de réduire les inégalités et les discriminations.\n" +
+        "Impulser des actions visant à favoriser et soutenir l’implication dans la vie sociale, économique et citoyenne.\n" +
+        "Egalement, la Mission à la Condition Féminine de la province Sud accompagne et soutient les projets des partenaires qui concourent à l’égalité. (Cf. appel à projet Objectif Egalité)\n" +
+        "Tel : 20 37 40\n" +
+        "missionfemmes@province-sud.nc https://www.province-sud.nc/page-votre-province/mission-condition-feminine\n" +
+        "possède un service d'aide juridique gratuit pour des conseils"
+        
+        header_description_text["PMI Montravel"] = "https://www.google.fr/search?q=adresse+pmi+montravel+nc&client=safari&hl=fr-fr&ei=CTx2 Yv7sF8S1mge7vpCIAw#\n" +
+        "à coté de la GBNC\n" +
+        "qui dispose de l'aide d'une juriste (à confirmer si cela n'a pas changer) conseil gratuit écoute et conseils en toute anonymat (dans le respect de la dignity)"
+        
+        
+        
         
         return header_description_text
     }

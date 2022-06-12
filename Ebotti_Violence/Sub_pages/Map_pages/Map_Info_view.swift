@@ -13,8 +13,6 @@ class Map_Info_view: UIViewController {
         super.viewDidLoad()
     }
     
-    var data : String = ""
-    
     // Declare variables - header
     let header : UILabel = {
         let label = UILabel()
@@ -88,6 +86,8 @@ class Map_Info_view: UIViewController {
         self.view.addSubview(header)
         header.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
         header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
+        header.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.12).isActive = true
+        header.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85).isActive = true
         // Add header
         self.view.addSubview(description_block)
         description_block.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
@@ -106,20 +106,8 @@ class Map_Info_view: UIViewController {
     func estimateFrameForText(_ text: String) -> CGRect {
         let size = CGSize(width: UIScreen.main.bounds.width*0.8, height: 350)
         let options = NSStringDrawingOptions.usesLineFragmentOrigin.union(.usesFontLeading)
-        return NSString(string: text).boundingRect(with: size, options: options, attributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont.systemFont(ofSize: 14)]), context: nil)
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)], context: nil)
     }
-    
-    // Helper function inserted by Swift 4.2 migrator.
-    fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
-        guard let input = input else { return nil }
-        return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
-    }
-    
-    // Helper function inserted by Swift 4.2 migrator.
-    fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
-        return input.rawValue
-    }
-    
 
     /*
     // MARK: - Navigation
