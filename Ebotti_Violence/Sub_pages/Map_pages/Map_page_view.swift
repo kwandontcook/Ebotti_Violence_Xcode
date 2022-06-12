@@ -380,10 +380,12 @@ class Map_page_view: UIViewController, GMSMapViewDelegate {
         }
         // Declare obj
         let obj = (dict["obj"] as! Place_C)
-        
+        // For calculation
+
         if(obj.Description == ""){
             v.init_component()
         }else{
+            v.setFrame_Size(obj.Description!)
             v.init_component_with_text_block()
         }
         // Set data for header & description_block

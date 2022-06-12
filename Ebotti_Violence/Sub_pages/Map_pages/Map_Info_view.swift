@@ -13,6 +13,8 @@ class Map_Info_view: UIViewController {
         super.viewDidLoad()
     }
     
+    var data : String = ""
+    
     // Declare variables - header
     let header : UILabel = {
         let label = UILabel()
@@ -28,18 +30,16 @@ class Map_Info_view: UIViewController {
     }()
     
     // Declare variables - description_block
-    let description_block : UITextView = {
-        let label = UITextView()
+    let description_block : UILabel = {
+        let label = UILabel()
         label.text = ""
+        label.numberOfLines = 0
+        label.contentMode = .scaleAspectFit
         label.font = UIFont.systemFont(ofSize: 14.0)
         label.textColor = .black
         label.textAlignment = .left
-        label.backgroundColor = .clear
+        label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.isScrollEnabled = false
-        label.isEditable = false
-        label.contentMode = .scaleAspectFit
-        label.isUserInteractionEnabled = false
         return label
     }()
     
@@ -80,8 +80,6 @@ class Map_Info_view: UIViewController {
     func init_component_with_text_block(){
         // Delete element
         remove_component()
-        // Adjust view setting
-        self.view.frame = CGRect(x: 5, y: 5, width: UIScreen.main.bounds.width*0.8, height: 400)
         self.view.backgroundColor = .white
         self.view.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
         self.view.layer.borderWidth = 0.5
@@ -90,17 +88,37 @@ class Map_Info_view: UIViewController {
         self.view.addSubview(header)
         header.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
         header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
-        header.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15).isActive = true
-        header.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         // Add header
         self.view.addSubview(description_block)
         description_block.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 5).isActive = true
         description_block.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
-        description_block.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
-        description_block.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        
+        description_block.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5).isActive = true
+        description_block.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -5).isActive = true
     }
     
+    func setFrame_Size(_ text: String){
+        //get estimated height somehow????
+        let estimatedSize = estimateFrameForText(text)
+        self.view.frame = CGRect(x: 0, y: 0, width: estimatedSize.width+40, height: estimatedSize.height+40)
+    }
+    
+    
+    func estimateFrameForText(_ text: String) -> CGRect {
+        let size = CGSize(width: UIScreen.main.bounds.width*0.8, height: 350)
+        let options = NSStringDrawingOptions.usesLineFragmentOrigin.union(.usesFontLeading)
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: convertToOptionalNSAttributedStringKeyDictionary([convertFromNSAttributedStringKey(NSAttributedString.Key.font): UIFont.systemFont(ofSize: 14)]), context: nil)
+    }
+    
+    // Helper function inserted by Swift 4.2 migrator.
+    fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+        guard let input = input else { return nil }
+        return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+    }
+    
+    // Helper function inserted by Swift 4.2 migrator.
+    fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+        return input.rawValue
+    }
     
 
     /*

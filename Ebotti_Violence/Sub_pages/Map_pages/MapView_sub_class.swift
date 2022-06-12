@@ -343,24 +343,340 @@ class MapView_sub_class{
         header_location_text["Brigade de Kaala-Gomen"] = CLLocationCoordinate2D(latitude: -20.667647320410406, longitude:164.39663334464424);
         header_location_text["Brigade de Hienghène"] = CLLocationCoordinate2D(latitude: -20.6889608320638, longitude:164.94786764140463);
 
+        // new dataSet
+        header_location_text["Brigade de Thio"] = CLLocationCoordinate2D(latitude: -21.60863223427484, longitude : 166.21691287062);
+        header_location_text["Brigade de Koné"] = CLLocationCoordinate2D(latitude: -21.0588174097751, longitude: 164.86415390622724);
+        header_location_text["Brigade de Bourail"] = CLLocationCoordinate2D(latitude: -21.56709068302095, longitude: 165.498208124908027);
+        header_location_text["Brigade de Poya"] = CLLocationCoordinate2D(latitude: -21.34687760883291, longitude : 165.15808792368935);
+        header_location_text["Brigade de Canala"] = CLLocationCoordinate2D(latitude: -21.523069721030254, longitude : 165.96118117014302);
+        header_location_text["Brigade de Ponérihouen"] = CLLocationCoordinate2D(latitude: -21.071160074796893, longitude : 165.40409586766283);
+        header_location_text["Brigade de Touho"] = CLLocationCoordinate2D(latitude: -20.79130802980237, longitude : 165.25322554340755);
+        header_location_text["Brigade de Kouaoua"] = CLLocationCoordinate2D(latitude: -21.394227198602856, longitude : 165.82656090121503);
+        header_location_text["Brigade de Fayaoue"] = CLLocationCoordinate2D(latitude: -20.654717421520477, longitude : 166.5353021426726);
+        header_location_text["Brigade de Yaté"] = CLLocationCoordinate2D(latitude: -22.160331705384987, longitude : 166.94340474345287);
+        header_location_text["Brigade de Dumbéa"] = CLLocationCoordinate2D(latitude: -22.20749773763127, longitude : 166.46829378986837);
+        header_location_text["Brigade de Voh"] = CLLocationCoordinate2D(latitude: -20.9554613094739, longitude : 164.6839538442974);
+        header_location_text["Brigade de Mont-Doré"] = CLLocationCoordinate2D(latitude: -22.271314100546995,longitude : 166.61630909023253);
+        header_location_text["Brigade de Boulouparis"] = CLLocationCoordinate2D(latitude: -22.225540843951002, longitude : 166.48027236723397);
+        header_location_text["Brigade de Houailou"] = CLLocationCoordinate2D(latitude: -21.279262295644674, longitude : 165.63552740743012);
+        header_location_text["Brigade de Paita"] = CLLocationCoordinate2D(latitude: -22.14637174444429, longitude : 166.38711633840546);
+        header_location_text["Brigade de la Foa"] = CLLocationCoordinate2D(latitude: -21.709922876908564, longitude : 165.8274526711809);
+        header_location_text["Brigade de Pouébo"] = CLLocationCoordinate2D(latitude: -20.391858076512477, longitude : 164.57489736897446);
+        header_location_text["Brigade de Poindimié"] = CLLocationCoordinate2D(latitude: -20.93534271212428, longitude : 165.33039932144983);
+        
         return header_location_text
     }
     
     func create_dataSet_description_set_helpToVictims() -> [String:String]{
         var header_description_text = [String:String]()
-        header_description_text["Brigade de Plum"] = ""
-        header_description_text["Brigade des Pins"] =  ""
-        header_description_text["Brigade de Tadine"] =  ""
-        header_description_text["Brigade de We"] =  ""
-        header_description_text["Brigade de Xepenehe"] =  ""
-        header_description_text["Brigade de Fayaoué"] =  ""
+        header_description_text["Brigade de Plum"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : 1124 Route du Sud\n" +
+        "Plum, MONT DORE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 70\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Territoire\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non"
+        
+        header_description_text["Brigade des Pins"] =  "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "BP 82, 98832 Ile des Pins S'Y RENDRE :\n" +
+        "Kuto, 98832 Ile des Pins TÉLÉPHONE :\n" +
+        "44.87.85\n" +
+        "EMAIL :\n" +
+        "bta.l-ile-des-pins@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 8h30 à 11h30 et de 14h30 à 17h30"
+        
+        
+        header_description_text["Brigade de Tadine"] =  "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "Tadine, 98828 Maré S'Y RENDRE : Tadine, 98828 Maré TÉLÉPHONE : 45.53.00\n" +
+        "EMAIL :\n" +
+        "bta.tadine@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 8h30 à 11h30 et de 14h30 à 17h30"
+        
+        header_description_text["Brigade de We"] =  "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "BP 181, 98820 Lifou\n" +
+        "S'Y RENDRE :\n" +
+        "Route territoriale 2, Wé, 98820 Lifou\n" +
+        "TÉLÉPHONE :\n" +
+        "44.87.95\n" +
+        "EMAIL :\n" +
+        "bta.we@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 8h30 à 11h30 et de 14h30 à 17h30"
+        
+        header_description_text["Brigade de Xepenehe"] =  "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Tribu de Xepenehe, LIFOU\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44.88.00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/\n" +
+        "Pièces jointes:\n" +
+        "Aucune pièce jointe n’a été trouvée"
+        
+        header_description_text["Brigade de Fayaoué"] =  "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Tribu de Fayaoué, OUVEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 45 53 10\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/"
+        
+        
         header_description_text["Brigade de Poum - Poste provisoire de Bélep"] =  ""
         header_description_text["Brigade de Poum"] =  ""
-        header_description_text["Brigade de Ouégoa"] = ""
+        header_description_text["Brigade de Ouégoa"] = "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "Voie Urbaine 12, 98821 Ouégoa S'Y RENDRE :\n" +
+        "Voie Urbaine 12, 98821 Ouégoa TÉLÉPHONE :\n" +
+        "47.89.60\n" +
+        "EMAIL : bta.ouegoa@gendarmerie.interieur.gouv.fr HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h à 11h30 et de 14h à 17h30 Dimanche et jours fériés de 8h30 à 11h30 et de 14h30 à 17h30"
+        
+        
         header_description_text["Brigade de Pouébo"] = ""
-        header_description_text["Brigade de Koumac"] =  ""
-        header_description_text["Brigade de Kaala-Gomen"] =  ""
-        header_description_text["Brigade de Hienghène"] =  ""
+        header_description_text["Brigade de Koumac"] =  "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences : Du lundi au vendredi : 08h00-16h00\n" +
+        "Adresse : 03, rue Raphael Ménard, NOUMEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 41 37 00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/policenationale988/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/"
+        
+        
+        header_description_text["Brigade de Kaala-Gomen"] =  "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "928 avenue Bwapanu, 98817 Kaala Gomen\n" +
+        "S'Y RENDRE :\n" +
+        "928 avenue Bwapanu, 98817 Kaala Gomen\n" +
+        "TÉLÉPHONE :\n" +
+        "47.89.55\n" +
+        "EMAIL :\n" +
+        "cob.koumac@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h à 11h30 et de 14h à 17h30 Dimanche et jours fériés de 8h30 à 11h30 et de 14h30 à 17h30"
+        
+        header_description_text["Brigade de Hienghène"] =  "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Village\n" +
+        "Route Provinciale nord 3, HIENGHENE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 47 89 80\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr"
+        
+        header_description_text["Brigade de Thio"] = ""
+        header_description_text["Brigade de Koné"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Rue du Grand chef Noel, KONE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 47 89 15\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Territoire\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/"
+        
+        header_description_text["Brigade de Bourail"] = ""
+        header_description_text["Brigade de Poya"] = ""
+        header_description_text["Brigade de Canala"] = ""
+        header_description_text["Brigade de Ponérihouen"] = ""
+        header_description_text["Brigade de Touho"] = ""
+        header_description_text["Brigade de Kouaoua"] = ""
+        header_description_text["Brigade de Fayaoue - Ouvéa"] = ""
+        header_description_text["Brigade de Yaté"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : , YATE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 80\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/"
+        
+        header_description_text["Brigade de Dumbéa"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Avenue Numa Joubert, DUMBEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/\n" +
+        "Pièces jointes:\n" +
+        "Aucune pièce jointe n’a été trouvée\n"
+        
+        header_description_text["Brigade de Voh"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : , VOH\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 47 89 70\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/"
+        
+        header_description_text["Brigade du Mont-Doré"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Route de Yahoué, MONT DORE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 26 / FAX : 44 87 33\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
+        "\n" +
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/"
+        
+        header_description_text["Brigade de Boulouparis"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Avenue Numa Joubert, DUMBEA\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 00\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Commune\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non"
+        
+        header_description_text["Brigade de Houailou"] = ""
+        
+        header_description_text["Brigade de Paita"] = "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "BP 87, 98889 Païta\n" +
+        "S'Y RENDRE :\n" +
+        "16 route territoriale 1, 98889 Païta\n" +
+        "TÉLÉPHONE :\n" +
+        "44.87.36\n" +
+        "EMAIL :\n" +
+        "bta.paita@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 9h à 12h et de 15h à 18h"
+        
+        header_description_text["Brigade de la Foa"] = "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "BP 1060, 98880 La Foa\n" +
+        "S'Y RENDRE :\n" +
+        "95 route territoriale 1, 98880 La Foa\n" +
+        "TÉLÉPHONE :\n" +
+        "44.87.50\n" +
+        "EMAIL :\n" +
+        "bta.la-foa@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 8h30 à 11h30 et de 14h30 à 17h30"
+        
+        header_description_text["Brigade de Pouébo"] = "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "BP 3, 98824 Pouébo S'Y RENDRE : Village, 98824 Pouébo TÉLÉPHONE : 47.89.65\n" +
+        "EMAIL :\n" +
+        "bta.pouebo@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 9h à 12h et de 14h30 à 17h30"
+        
+        header_description_text["Brigade de Poindimié"] = "Brigades de gendarmerie\n" +
+        "(Etat)\n" +
+        "ECRIRE :\n" +
+        "BP 15, 98822 Poindimié\n" +
+        "S'Y RENDRE :\n" +
+        "68 Voie Urbaine 13, 98822 Poindimié\n" +
+        "TÉLÉPHONE :\n" +
+        "47.89.00\n" +
+        "EMAIL :\n" +
+        "bta.poindimie@gendarmerie.interieur.gouv.fr\n" +
+        "HORAIRES D'OUVERTURE :\n" +
+        "Du lundi au samedi de 7h30 à 11h30 et de 13h30 à 17h30 Dimanche et jours fériés de 9h à 12h et de 14h30 à 17h30"
+        
+        
+        
         return header_description_text
     }
     
@@ -373,17 +689,16 @@ class MapView_sub_class{
     
     func create_dataSet_description_set_aidePyschologique() -> [String:String]{
         var header_description_text = [String:String]()
-        header_description_text["Associatif (Nouméa)"] = "Présentation : La mission principale de l'association Diversités NC est d'oeuvrer pour l'inclusion des diversités sexuelles, d'identités de genre et des pluralités familiales à l'échelle du territoire Calédonien. \n" +
-        "Informations sur les permanences : Mardi, mercredi, jeudi après midi de 13h30 à 17h 00 \n" +
-        "Adresse : 1, rue Gustave Flaubert (à côté de la Maison des associations), NOUMEA \n" +
-        "Référent : Le président et son conseil d'amnistration \n" +
-        "Numéro(s) de téléphone : 27 60 66 / 97 62 64 ligne d'écoute de 9h00 à 21h 7J/7 \n" +
-        "Mail : contact@diversitesnc.org \n" +
-        "Type de partenaire : Association \n" +
-        "Zone de compétence : Territoire \n" +
-        "\n" +
-        "Pour plus d'informations, suivre le lien : sur la page Facebook diversites nc\n" +
-        "Pièces jointes:\n" +
+        header_description_text["Associatif (Nouméa)"] = "Présentation : La mission principale de l'association Diversités NC est d'oeuvrer pour l'inclusion des diversités sexuelles, d'identités de genre et des pluralités familiales à l'échelle du territoire Calédonien." +
+        "Informations sur les permanences : Mardi, mercredi, jeudi après midi de 13h30 à 17h 00" +
+        "Adresse : 1, rue Gustave Flaubert (à côté de la Maison des associations), NOUMEA" +
+        "Référent : Le président et son conseil d'amnistration" +
+        "Numéro(s) de téléphone : 27 60 66 / 97 62 64 ligne d'écoute de 9h00 à 21h 7J/7" +
+        "Mail : contact@diversitesnc.org" +
+        "Type de partenaire : Association" +
+        "Zone de compétence : Territoire" +
+        "Pour plus d'informations, suivre le lien : sur la page Facebook diversites nc" +
+        "Pièces jointes:" +
         "Aucune pièce jointe n’a été trouvée"
         return header_description_text
     }
