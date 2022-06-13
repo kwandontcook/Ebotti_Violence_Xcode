@@ -47,281 +47,281 @@ class MapView_sub_class{
         var header_description_text = [String:String]()
         // Create data object
         header_description_text["Antenne médico-psychologique du CHS"] = "Province Lifou\n" +
-        "        Présentation : Consultations médico-psychologiques et sociales pour toute personne en souffrance psychique\n" +
-        "        Informations sur les permanences : Tous les jours de 7h30 à 16h30\n" +
-        "        Adresse : Quanono (à côté du dispensaire)RT2 Wé- LIFOU, LIFOU\n" +
-        "        Référent : Medecin psychiatre / Infirmier psy\n" +
-        "        Numéro(s) de téléphone : 06 87 45 06 23\n" +
-        "        Mail : sec.lifou@chs.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
+        "Présentation : Consultations médico-psychologiques et sociales pour toute personne en souffrance psychique\n" +
+        "Informations sur les permanences : Tous les jours de 7h30 à 16h30\n" +
+        "Adresse : Quanono (à côté du dispensaire)RT2 Wé- LIFOU, LIFOU\n" +
+        "Référent : Medecin psychiatre / Infirmier psy\n" +
+        "Numéro(s) de téléphone : 06 87 45 06 23\n" +
+        "Mail : sec.lifou@chs.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
         "\n" +
-        "        Pour plus d'informations, suivre le lien : \n" +
-        "        Pièces jointes:\n" +
-        "        Aucune pièce jointe n’a été trouvée";
-        
+        "Pour plus d'informations, suivre le lien : \n" +
+        "Pièces jointes:\n" +
+        "Aucune pièce jointe n’a été trouvée";
+
         header_description_text["Accueil et assistance aux victimes"] = "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
-        "        Informations sur les permanences :\n" +
-        "        Adresse : 1124 Route du Sud\n" +
-        "        Plum, MONT DORE\n" +
-        "        Référent :\n" +
-        "        Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 70\n" +
-        "        Mail :\n" +
-        "        Type de partenaire : Etat\n" +
-        "        Zone de compétence : Territoire\n" +
-        "        Compétent en :\n" +
-        "        - aide aux victimes : Oui\n" +
-        "        - droit commun : Non\n" +
-        "        - droit coutumier : Non\n" +
-        "        - autre(s) type(s) de droit(s) : Non\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : 1124 Route du Sud\n" +
+        "Plum, MONT DORE\n" +
+        "Référent :\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 44 87 70\n" +
+        "Mail :\n" +
+        "Type de partenaire : Etat\n" +
+        "Zone de compétence : Territoire\n" +
+        "Compétent en :\n" +
+        "- aide aux victimes : Oui\n" +
+        "- droit commun : Non\n" +
+        "- droit coutumier : Non\n" +
+        "- autre(s) type(s) de droit(s) : Non\n" +
         "\n" +
-        "        Page facebook : https://www.facebook.com/ComgendNC/\n" +
-        "        Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/\n" +
-        "        "
-    
+        "Page facebook : https://www.facebook.com/ComgendNC/\n" +
+        "Pour déposer une plainte, suivre le lien : https://www.pre-plainte-en-ligne.gouv.fr/\n" +
+        ""
+            
         header_description_text["Province Koumac"] = "Hôpital province Nord\n" +
-        "        Présentation : consultations médico-psychologiques et sociales pour toute personne en souffrance psychique\n" +
-        "        Informations sur les permanences : Tous les jours de 7h30 à 16h00\n" +
-        "        Adresse : Village RT1, KOUMAC\n" +
-        "        Référent : Médecin psychiatre / Infirmier psy\n" +
-        "        Numéro(s) de téléphone : 42 76 56\n" +
-        "        Mail : sec.koumac@chs.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune";
-        
+        "Présentation : consultations médico-psychologiques et sociales pour toute personne en souffrance psychique\n" +
+        "Informations sur les permanences : Tous les jours de 7h30 à 16h00\n" +
+        "Adresse : Village RT1, KOUMAC\n" +
+        "Référent : Médecin psychiatre / Infirmier psy\n" +
+        "Numéro(s) de téléphone : 42 76 56\n" +
+        "Mail : sec.koumac@chs.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune";
+
         header_description_text["Centre médico-social de Hienghène"] = "Présentation : Suivi psychiatrique\n" +
-        "        Informations sur les permanences : Visite à domicile jeudi tous les 15 jours\n" +
-        "        Adresse : 39 Lot municipal, HIENGHENE\n" +
-        "        Référent : Infirmier psy\n" +
-        "        Numéro(s) de téléphone : 47.75.00\n" +
-        "        Mail : cms-hienghene@province-nord.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
+        "Informations sur les permanences : Visite à domicile jeudi tous les 15 jours\n" +
+        "Adresse : 39 Lot municipal, HIENGHENE\n" +
+        "Référent : Infirmier psy\n" +
+        "Numéro(s) de téléphone : 47.75.00\n" +
+        "Mail : cms-hienghene@province-nord.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
         "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-hienghene-hyehen\n" +
-        "        Pièces jointes:\n" +
-        "        flyer-permanences CMS Hienghène.pdf\n" +
-        "        Zoom sur\n" +
-        "        Dispensaire de Hienghène\n" +
-        "        RPN3, Nouvelle-Calédonie";
-        
+        "Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-hienghene-hyehen\n" +
+        "Pièces jointes:\n" +
+        "flyer-permanences CMS Hienghène.pdf\n" +
+        "Zoom sur\n" +
+        "Dispensaire de Hienghène\n" +
+        "RPN3, Nouvelle-Calédonie";
+
         header_description_text["Centre médico-social de TOUHO"] = "Centre médico-social de TOUHO\n" +
-        "        Présentation :\n" +
-        "        Informations sur les permanences : Visite à domicile : 1 fois par mois\n" +
-        "        Adresse : Village - BP 68, TOUHO\n" +
-        "        Référent : Infirmier psychiatrique\n" +
-        "        Numéro(s) de téléphone : 47 75 10\n" +
-        "        Mail : cms-touho@province-nord.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-touho-tuo-cemuhi\n" +
-        "        Centre médico-social Touho";
-        
+        "Présentation :\n" +
+        "Informations sur les permanences : Visite à domicile : 1 fois par mois\n" +
+        "Adresse : Village - BP 68, TOUHO\n" +
+        "Référent : Infirmier psychiatrique\n" +
+        "Numéro(s) de téléphone : 47 75 10\n" +
+        "Mail : cms-touho@province-nord.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-touho-tuo-cemuhi\n" +
+        "Centre médico-social Touho";
+
         header_description_text["Antenne médico-psychologique (Poindimie)"] = "Province Poindimie\n" +
-        "        Présentation :\n" +
-        "        Informations sur les permanences :\n" +
-        "        Adresse : Antenne médico-psychologique (Poindimié)\n" +
-        "        Village RP3, POINDIMIE\n" +
-        "        Référent : Méd psychiatre ou Infirmier psy\n" +
-        "        Numéro(s) de téléphone : 42 60 34\n" +
-        "        Mail :\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune";
-        
+        "Présentation :\n" +
+        "Informations sur les permanences :\n" +
+        "Adresse : Antenne médico-psychologique (Poindimié)\n" +
+        "Village RP3, POINDIMIE\n" +
+        "Référent : Méd psychiatre ou Infirmier psy\n" +
+        "Numéro(s) de téléphone : 42 60 34\n" +
+        "Mail :\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune";
+
         header_description_text["Koné"] = "Présentation : Consultations médico-psychologiques et sociales pour toute personne en souffrance psychique.\n" +
-        "        Informations sur les permanences : Tous les jours de 7h30 à 16h00\n" +
-        "        Adresse : Lot 140, avenue J. Welepane, KONE\n" +
-        "        Référent : Médecin psychiatre / infirmier psy\n" +
-        "        Numéro(s) de téléphone : 42.10.00\n" +
-        "        Mail : secretmed.psn@chn.nc\n" +
+        "Informations sur les permanences : Tous les jours de 7h30 à 16h00\n" +
+        "Adresse : Lot 140, avenue J. Welepane, KONE\n" +
+        "Référent : Médecin psychiatre / infirmier psy\n" +
+        "Numéro(s) de téléphone : 42.10.00\n" +
+        "Mail : secretmed.psn@chn.nc\n" +
         "Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "        Pôle Sanitaire Koné\n" +
-        "        Nouvelle-Calédonie";
-        
+        "Zone de compétence : Commune\n" +
+        "Pôle Sanitaire Koné\n" +
+        "Nouvelle-Calédonie";
+
         header_description_text["Centre médico-social de Poya"] = "Centre médico-social de Poya\n" +
-        "        Présentation : Suivi psychiatrique\n" +
-        "        Informations sur les permanences : 1 fois par mois\n" +
-        "        Adresse : 26 Route Territoriale 1 Village, POYA\n" +
-        "        Référent : infirmière psychiatrique du CHS de Koné\n" +
-        "        Numéro(s) de téléphone : 26 Route Territoriale 1 Village\n" +
-        "        Mail : cms-poya@province-nord.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-poya-neko-nepoui\n" +
-        "        Dispensaire de Poya\n" +
-        "        RT1, Poya, Nouvelle-Calédonie";
-        
-        header_description_text["Centre médico sociale de Houailou"] = "Centre médico sociale de Houailou\n" +
-        "        Présentation : Suivi psychiatrique\n" +
-        "        Informations sur les permanences : Visite à Domicile mercredi tous les 15 jours\n" +
-        "        Adresse : Centre médico-social, HOUAILOU\n" +
-        "        Référent : Infirmier psychiatrique\n" +
-        "        Numéro(s) de téléphone : 47.75.40\n" +
-        "        Mail : cms-houailou@province-nord.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-houailou-waa-wi-luu\n" +
-        "        Dispensaire de Houailou\n" +
-        "        Houaïlou, Nouvelle-Calédonie";
-        
-        header_description_text["Permanence d'écoute psychologique (Bourail)"] = "permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les lundis de 07h30 à 17h00.\n" +
-        "        Adresse : CMS de Bourail, BOURAIL\n" +
-        "        Référent : Nicolas DAMON\n" +
-        "        Numéro(s) de téléphone : 51 34 20\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n" +
-        "        Dispensaire bourail\n" +
-        "        Bourail, Nouvelle-Calédonie";
-        
-        
-        header_description_text["Permanence d'écoute psychologique (La Foa)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les mardis de 07h30 à 17h00.\n" +
-        "        Adresse : dispensaire la foa\n" +
-        "        Référent : Laurence ANTOINE\n" +
-        "        Numéro(s) de téléphone : 52 41 12\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n" +
-        "        Centre médico social la Foa\n" +
-        "        Nouvelle-Calédonie";
-        
-        header_description_text["Permanence d'écoute psychologique (Thio)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Permanences : tous les mercredis de 07h30 à 17h00.\n" +
-        "        Adresse : UPASS DE THIO, THIO\n" +
-        "        Référent : Fanélie BOUCHARLAT\n" +
-        "        Numéro(s) de téléphone : 77 47 21\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Commune\n" +
-        "        Zone de compétence : Commune\n" +
-        "        Dispensaire Thio\n" +
-        "        Nouvelle-Calédonie";
-        
-        header_description_text["Permanence d'écoute psychologique (Torre)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les mardis : 07h30 à 16h00 / Les mercredis de 12h30 à 16h00.\n" +
-        "        Adresse : UPASS de Paîta, Rue des Tulipiers - Village, PAITA\n" +
-        "        Référent : Virginie TORRE\n" +
-        "        Numéro(s) de téléphone : 74 10 11\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune";
-        
-        header_description_text["Permanence d'écoute psychologique (Dumbéa)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les lundis : 07h30 à 16h00 / Les mercredis de 07h30 à 11h30\n" +
-        "        Adresse : CMS de Dumbéa-sur-mer, DUMBEA\n" +
-        "        Référent : Virginie TORRE\n" +
-        "        Numéro(s) de téléphone : 74 10 11\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n";
-        
-        header_description_text["Permanence d'écoute psychologique (Mont Doré)"] = "        Permanences Ecoute Psychologique\n" +
-        "        Présentation : Accueil écoute et orientation gratuite anonyme et confidentiel, pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les mardis de 07h30 à 16h00 et les jeudis de 12h00 à 16h00.\n" +
-        "        Adresse : 297, rue Antoine GRISCELLI (dans les locaux du CMS)., MONT DORE\n" +
-        "        Référent : Nicolas DARMON\n" +
-        "        Numéro(s) de téléphone : 51 34 20\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc\n" +
-        "        Dispensaire Boulari";
-        
-        header_description_text["Permanence d'écoute psychologique (Yaté)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les jeudis des semaines paires de 07h30 à 17h00.\n" +
-        "        Adresse : UPASS de YATE, YATE\n" +
-        "        Référent : Fanélie BOUCHARLAT\n" +
-        "        Numéro(s) de téléphone : 77 47 21\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Commune\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : htpps://www.province-sud.nc\n" +
-        "        Centre médico social Yaté";
-        
-        
-        header_description_text["Permanence d'écoute psychologique - annexe (Mont Doré)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les jeudis de 07h30 à 15h30.\n" +
-        "        Adresse : Annexe de la Mairie de Plum, MONT DORE\n" +
-        "        Référent : Laurence ANTOINE\n" +
-        "        Numéro(s) de téléphone : 52 41 12\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n";
-        
-        header_description_text["Permanence d'écoute psychologique - annexe (Nouméa)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les lundis de 7h30 à 16h00.\n" +
-        "        Adresse : Espace CMP, rue GALIENI, Centre ville, NOUMEA\n" +
-        "        Référent : Christel MOUTTOTE (psychologue)\n" +
-        "        Numéro(s) de téléphone : 78 62 76\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune";
-        
-        header_description_text["Permanence d'écoute psychologique (Sainte Marie/Nouméa)"] = "Permanences d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Les mercredis de 07h30 à 16h00 / Les jeudis de 7h30 à 16h00.\n" +
-        "        Adresse : Foyer N'GA ( à côté Maison Municipale de Quartier de Ste Marie), NOUMEA\n" +
-        "        Référent : Christel MOUTTOTE (psychologue)\n" +
-        "        Numéro(s) de téléphone : 78 62 76\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune";
-        
-        header_description_text["Permanence d'écoute psychologique (République/Nouméa)"] = "Permanences d'écoute psychologique\n" +
-        "        Présentation : Activités : Prévention, Social et Insertion,\n" +
-        "        Informations sur les permanences : Accueil du lundi au vendredi de 8h00 à 12h00 et de 13h00 à 17h00 ( 16h00 le vendredi)\n" +
-        "        Adresse : 7 Ter, rue de la République, NOUMEA\n" +
-        "        Référent : Ingrid WAMYTAN\n" +
-        "        Numéro(s) de téléphone : 25 50 78\n" +
-        "        Mail : secretariat.declic@ass.nc\n" +
+        "Présentation : Suivi psychiatrique\n" +
+        "Informations sur les permanences : 1 fois par mois\n" +
+        "Adresse : 26 Route Territoriale 1 Village, POYA\n" +
+        "Référent : infirmière psychiatrique du CHS de Koné\n" +
+        "Numéro(s) de téléphone : 26 Route Territoriale 1 Village\n" +
+        "Mail : cms-poya@province-nord.nc\n" +
         "Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune";
-        
-        header_description_text["Permanence d'écoute psychologique (CMS/Nouméa)"] = "Permanences Ecoute Psychologique\n" +
-        "        Présentation : Accueil, écoute et oritentation gratuite, anonyme et confidentitiel pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Tous les jeudis de 7h30 à 16h00.\n" +
-        "        Adresse : 128 route de la Baie des Dames, dans les locaux du CMS., NOUMEA\n" +
-        "        Référent : Virginie TORRE\n" +
-        "        Numéro(s) de téléphone : 74 10 11\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc\n";
-        
-        header_description_text["Permanence d'écoute psychologique (Montravel/Nouméa)"] = "Permanence d'écoute psychologique\n" +
-        "        Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
-        "        Informations sur les permanences : Tout les mardis de 7h30 à 16h00\n" +
-        "        Adresse : PMI de Montravel, NOUMEA\n" +
-        "        Référent : Chrystel MOUTOTE\n" +
-        "        Numéro(s) de téléphone : 78 62 76\n" +
-        "        Mail : spps@province-sud.nc\n" +
-        "        Type de partenaire : Province\n" +
-        "        Zone de compétence : Commune\n" +
+        "Zone de compétence : Commune\n" +
         "\n" +
-        "        Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n";
-    
+        "Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-poya-neko-nepoui\n" +
+        "Dispensaire de Poya\n" +
+        "RT1, Poya, Nouvelle-Calédonie";
+
+        header_description_text["Centre médico sociale de Houailou"] = "Centre médico sociale de Houailou\n" +
+        "Présentation : Suivi psychiatrique\n" +
+        "Informations sur les permanences : Visite à Domicile mercredi tous les 15 jours\n" +
+        "Adresse : Centre médico-social, HOUAILOU\n" +
+        "Référent : Infirmier psychiatrique\n" +
+        "Numéro(s) de téléphone : 47.75.40\n" +
+        "Mail : cms-houailou@province-nord.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-houailou-waa-wi-luu\n" +
+        "Dispensaire de Houailou\n" +
+        "Houaïlou, Nouvelle-Calédonie";
+
+        header_description_text["Permanence d'écoute psychologique (Bourail)"] = "permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les lundis de 07h30 à 17h00.\n" +
+        "Adresse : CMS de Bourail, BOURAIL\n" +
+        "Référent : Nicolas DAMON\n" +
+        "Numéro(s) de téléphone : 51 34 20\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n" +
+        "Dispensaire bourail\n" +
+        "Bourail, Nouvelle-Calédonie";
+
+
+        header_description_text["Permanence d'écoute psychologique (La Foa)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les mardis de 07h30 à 17h00.\n" +
+        "Adresse : dispensaire la foa\n" +
+        "Référent : Laurence ANTOINE\n" +
+        "Numéro(s) de téléphone : 52 41 12\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n" +
+        "Centre médico social la Foa\n" +
+        "Nouvelle-Calédonie";
+
+        header_description_text["Permanence d'écoute psychologique (Thio)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Permanences : tous les mercredis de 07h30 à 17h00.\n" +
+        "Adresse : UPASS DE THIO, THIO\n" +
+        "Référent : Fanélie BOUCHARLAT\n" +
+        "Numéro(s) de téléphone : 77 47 21\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Commune\n" +
+        "Zone de compétence : Commune\n" +
+        "Dispensaire Thio\n" +
+        "Nouvelle-Calédonie";
+
+        header_description_text["Permanence d'écoute psychologique (Torre)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les mardis : 07h30 à 16h00 / Les mercredis de 12h30 à 16h00.\n" +
+        "Adresse : UPASS de Paîta, Rue des Tulipiers - Village, PAITA\n" +
+        "Référent : Virginie TORRE\n" +
+        "Numéro(s) de téléphone : 74 10 11\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune";
+
+        header_description_text["Permanence d'écoute psychologique (Dumbéa)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les lundis : 07h30 à 16h00 / Les mercredis de 07h30 à 11h30\n" +
+        "Adresse : CMS de Dumbéa-sur-mer, DUMBEA\n" +
+        "Référent : Virginie TORRE\n" +
+        "Numéro(s) de téléphone : 74 10 11\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n";
+
+        header_description_text["Permanence d'écoute psychologique (Mont Doré)"] = "Permanences Ecoute Psychologique\n" +
+        "Présentation : Accueil écoute et orientation gratuite anonyme et confidentiel, pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les mardis de 07h30 à 16h00 et les jeudis de 12h00 à 16h00.\n" +
+        "Adresse : 297, rue Antoine GRISCELLI (dans les locaux du CMS)., MONT DORE\n" +
+        "Référent : Nicolas DARMON\n" +
+        "Numéro(s) de téléphone : 51 34 20\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc\n" +
+        "Dispensaire Boulari";
+
+        header_description_text["Permanence d'écoute psychologique (Yaté)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les jeudis des semaines paires de 07h30 à 17h00.\n" +
+        "Adresse : UPASS de YATE, YATE\n" +
+        "Référent : Fanélie BOUCHARLAT\n" +
+        "Numéro(s) de téléphone : 77 47 21\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Commune\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : htpps://www.province-sud.nc\n" +
+        "Centre médico social Yaté";
+
+
+        header_description_text["Permanence d'écoute psychologique - annexe (Mont Doré)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les jeudis de 07h30 à 15h30.\n" +
+        "Adresse : Annexe de la Mairie de Plum, MONT DORE\n" +
+        "Référent : Laurence ANTOINE\n" +
+        "Numéro(s) de téléphone : 52 41 12\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n";
+
+        header_description_text["Permanence d'écoute psychologique - annexe (Nouméa)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les lundis de 7h30 à 16h00.\n" +
+        "Adresse : Espace CMP, rue GALIENI, Centre ville, NOUMEA\n" +
+        "Référent : Christel MOUTTOTE (psychologue)\n" +
+        "Numéro(s) de téléphone : 78 62 76\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune";
+
+        header_description_text["Permanence d'écoute psychologique (Sainte Marie/Nouméa)"] = "Permanences d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Les mercredis de 07h30 à 16h00 / Les jeudis de 7h30 à 16h00.\n" +
+        "Adresse : Foyer N'GA ( à côté Maison Municipale de Quartier de Ste Marie), NOUMEA\n" +
+        "Référent : Christel MOUTTOTE (psychologue)\n" +
+        "Numéro(s) de téléphone : 78 62 76\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune";
+
+        header_description_text["Permanence d'écoute psychologique (République/Nouméa)"] = "Permanences d'écoute psychologique\n" +
+        "Présentation : Activités : Prévention, Social et Insertion,\n" +
+        "Informations sur les permanences : Accueil du lundi au vendredi de 8h00 à 12h00 et de 13h00 à 17h00 ( 16h00 le vendredi)\n" +
+        "Adresse : 7 Ter, rue de la République, NOUMEA\n" +
+        "Référent : Ingrid WAMYTAN\n" +
+        "Numéro(s) de téléphone : 25 50 78\n" +
+        "Mail : secretariat.declic@ass.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune";
+
+        header_description_text["Permanence d'écoute psychologique (CMS/Nouméa)"] = "Permanences Ecoute Psychologique\n" +
+        "Présentation : Accueil, écoute et oritentation gratuite, anonyme et confidentitiel pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Tous les jeudis de 7h30 à 16h00.\n" +
+        "Adresse : 128 route de la Baie des Dames, dans les locaux du CMS., NOUMEA\n" +
+        "Référent : Virginie TORRE\n" +
+        "Numéro(s) de téléphone : 74 10 11\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc\n";
+
+        header_description_text["Permanence d'écoute psychologique (Montravel/Nouméa)"] = "Permanence d'écoute psychologique\n" +
+        "Présentation : Accueil, écoute et orientation gratuite, anonyme et confidentielle pour tout public rencontrant des difficultés.\n" +
+        "Informations sur les permanences : Tout les mardis de 7h30 à 16h00\n" +
+        "Adresse : PMI de Montravel, NOUMEA\n" +
+        "Référent : Chrystel MOUTOTE\n" +
+        "Numéro(s) de téléphone : 78 62 76\n" +
+        "Mail : spps@province-sud.nc\n" +
+        "Type de partenaire : Province\n" +
+        "Zone de compétence : Commune\n" +
+        "\n" +
+        "Pour plus d'informations, suivre le lien : https://www.province-sud.nc/demarches/permanences-d-ecoute-psychologique-peps?fbclid=IwAR2eLEJ8Ewm7tbaDErTmLLuedavHROR-j6rEcMMh3z8FoLUKGRXDXTLTHzU\n";
+            
         return header_description_text
     }
     

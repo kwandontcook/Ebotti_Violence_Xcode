@@ -13,7 +13,21 @@ import PhoneNumberKit
 import MessageUI
 import Alamofire
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, CLLocationManagerDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        switch result{
+            case .sent :
+                self.dismiss(animated: true, completion: {
+                    self.audio_record_permission();
+                    
+                })
+            case .failed :
+                print("Failed to send the sms")
+            case .cancelled :
+                self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     
     // Set section for collectionview
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -427,8 +441,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else{
             for i in 0..<cached_friend_list.count{
                 do {
-                     let phoneNumber = try phoneNumberKit.parse(cached_friend_list[i].mobile!, withRegion: "GB", ignoreType: true)
-                     phone_list.append("+"+String(phoneNumber.countryCode)+String(phoneNumber.nationalNumber))
+                     phone_list.append(cached_friend_list[i].mobile!)
                 }
                 catch {
                     print("Generic parser error")
@@ -447,11 +460,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 guard let location = locManager.location else{
                     return
                 }
-                // Array that store the current user location's data
-                let p = [URLQueryItem(name: "latitude", value: String(location.coordinate.latitude)),
-                         URLQueryItem(name: "longitude", value: String(location.coordinate.longitude))]
                 // Call SMS Api
-                sms_api(mobile: phone_list, default_parmater: p)
+                sms_api(mobile: phone_list)
             case .notDetermined , .restricted , .denied:
                 // Call SMS Api
                 self.mobileNo = phone_list
@@ -462,12 +472,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    func sms_vc_controller(mobile: [String], message: String){
+        guard MFMessageComposeViewController.canSendText() else {
+            print("error")
+            return
+        }
+        
+        let messageVC = MFMessageComposeViewController()
+        messageVC.body = message;
+        messageVC.recipients = mobile
+        messageVC.messageComposeDelegate = self
+        self.present(messageVC, animated: true, completion: nil)
+    }
     
-    func sms_api(mobile: [String], default_parmater : [URLQueryItem]){
+    
+    
+    func sms_api(mobile: [String]){
         if(mobile.count == 0){
             print("error")
         }else{
-            var parmater = default_parmater
             // Reload SMS Status in case user updates the status in the subpage
             self.reload_sos_status()
             // Check the status
@@ -476,39 +499,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }else{
                message = "Alerte, je suis dans une situation de danger. Appelez les secours si vous n’avez pas de nouvelles dans les 10 minutes. N’essayez pas de m’appeler directement."
             }
-            // Define contact number
-            for i in 0..<mobile.count{
-                parmater.append(URLQueryItem(name: "contact"+String(i+1), value: mobile[i]))
-            }
-            // Define SMS message
-            parmater.append(URLQueryItem(name: "message", value: message))
-            print(parmater)
-            // Send AF request
-            var url = URLComponents(url: URL(string: "https://nve1lby161.execute-api.ap-southeast-2.amazonaws.com/v1/sms")!, resolvingAgainstBaseURL: false)!
-            url.queryItems = parmater
-            // Establish a URL request
-            var UrlRequest = URLRequest(url: url.url!)
-            UrlRequest.httpMethod = "GET"
-            // Send URL Request
-            let UrlTask = URLSession.shared.dataTask(
-                with: UrlRequest,
-                completionHandler: { (data, response, error) in
-                guard let d = data else{
-                    print("failed to retrieve data")
-                    return;
-                }
-                    
-                guard let result = String(data: d, encoding: .utf8) else {
-                    print("failed to format data to string")
-                    return;
-                }
-            })
-            // Store the mobile number for a while
-            self.mobileNo = mobile
-            // Resume the task
-            UrlTask.resume()
-            // Start Recording
-            self.audio_record_permission()
+           
+            sms_vc_controller(mobile: mobile, message: message)
         }
     }
     
