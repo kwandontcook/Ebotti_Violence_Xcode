@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="App_Icon_C" representedClassName="App_Icon_C" syncable="YES" codeGenerationType="category">
         <attribute name="image_name" optional="YES" attributeType="String"/>
         <attribute name="image_title" optional="YES" attributeType="String"/>
@@ -17,6 +17,9 @@
         <attribute name="row_no" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="sos_status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
+    <entity name="PDF_C" representedClassName="PDF_C" syncable="YES" codeGenerationType="category">
+        <attribute name="counter" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="SOS_C" representedClassName="SOS_C" syncable="YES" codeGenerationType="category">
         <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
@@ -25,5 +28,6 @@
         <element name="AudioHistory" positionX="-63" positionY="9" width="128" height="104"/>
         <element name="Emergency_C" positionX="-63" positionY="-18" width="128" height="89"/>
         <element name="SOS_C" positionX="-63" positionY="36" width="128" height="44"/>
+        <element name="PDF_C" positionX="-63" positionY="36" width="128" height="44"/>
     </elements>
 </model>

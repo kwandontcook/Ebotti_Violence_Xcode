@@ -14,6 +14,7 @@ import MessageUI
 import Alamofire
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, AVAudioPlayerDelegate, AVAudioRecorderDelegate, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
+    
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         switch result{
             case .sent :
@@ -28,15 +29,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
-    
     // Set section for collectionview
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 8
     }
+    
     // Set row number for section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
+    
     // Set cell for each section
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if(indexPath.section == 0){
@@ -95,7 +97,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         // Set title
         self.title = ""
-        self.init_loading()
         // register colllection view
         self.collection_view.register(Main_page_col_cell_1.self, forCellWithReuseIdentifier: "main_page_cell_1")
         self.collection_view.register(Main_page_col_cell_2.self, forCellWithReuseIdentifier: "main_page_cell_2")
@@ -108,6 +109,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // delegate and dataSource
         self.collection_view.delegate = self
         self.collection_view.dataSource = self
+        
+        init_loading()
+        pdf_first_time_check()
     }
     
 
@@ -336,6 +340,45 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             // Save the audio into the coreData
             self.create_audio_instance()
         }
+    }
+    
+    // This function is to handle the work with PDF
+    func pdf_first_time_check(){
+        // Array for PDF_C class -> IT tells the system whether user are first time to enter
+        var pdf_list = [PDF_C]()
+        
+        // Fetch the data from CoreData
+        do{
+            pdf_list = try self.context.fetch(.init(entityName: "PDF_C"))
+        }catch{
+            print ("failed to fetch pdf data in VC")
+        }
+        
+        // Examine whether the array is null
+        // If it is null, it means user are first time to enter the app
+        if(pdf_list.count == 0){
+            // Add a new instance into the array
+            pdf_list.append(PDF_C(context: context))
+            do{
+                // Save the change
+                try self.context.save()
+                // Open the VC for showing pdf
+                let v = Info_Pdf_view_2()
+                // IMPORTANT : THIS STEP IS TO SET THE PDF FILE
+                // If you want to change the pdf later, just change the name adhere
+                // Ensure you put the pdf into the Folder that calls "Pdf"
+                v.file_name = "guide3"
+                // Create a UINavigationController because of needing the barButton for dismissing the view
+                let vc = UINavigationController(rootViewController: v)
+                vc.modalTransitionStyle = .coverVertical
+                vc.modalPresentationStyle = .fullScreen
+                // Show the View
+                self.present(vc, animated: true)
+            }catch{
+                print("Failed to save data for pdf in VC")
+            }
+        }
+        // ELSE WE DO NOTHING
     }
     
     // Function - Fetch the cached person name by their mobile
