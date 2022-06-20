@@ -346,14 +346,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func pdf_first_time_check(){
         // Array for PDF_C class -> IT tells the system whether user are first time to enter
         var pdf_list = [PDF_C]()
-        
         // Fetch the data from CoreData
         do{
             pdf_list = try self.context.fetch(.init(entityName: "PDF_C"))
+            print("pdf_list count is \(pdf_list.count)")
         }catch{
             print ("failed to fetch pdf data in VC")
+            return
         }
-        
         // Examine whether the array is null
         // If it is null, it means user are first time to enter the app
         if(pdf_list.count == 0){
