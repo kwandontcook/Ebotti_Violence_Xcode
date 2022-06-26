@@ -82,7 +82,7 @@
 		7B58D2C227D6DA2E004EF31D /* yogazen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B58D2BF27D6DA2D004EF31D /* yogazen@3x.png */; };
 		7B58D2C327D6DA2E004EF31D /* yogazen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B58D2C027D6DA2D004EF31D /* yogazen@2x.png */; };
 		7B58D2C427D6DA2E004EF31D /* yogazen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B58D2C127D6DA2D004EF31D /* yogazen.png */; };
-		7B6E18CB27CF91FF00CB1D8B /* guide3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B6E18CA27CF91FF00CB1D8B /* guide3.pdf */; };
+		7B6E18CB27CF91FF00CB1D8B /* guide4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7B6E18CA27CF91FF00CB1D8B /* guide4.pdf */; };
 		7B746B7227D6F6080004B3FC /* Developer_page_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B746B7127D6F6080004B3FC /* Developer_page_view.swift */; };
 		7B746B7427D6F9B80004B3FC /* Developer_thx_cell_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B746B7327D6F9B80004B3FC /* Developer_thx_cell_1.swift */; };
 		7B75284027D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B75283E27D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift */; };
@@ -114,6 +114,7 @@
 		7BB85F8227D4605B0096285F /* Contact_List_cell_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */; };
 		7BB85F8427D4625F0096285F /* Contact_List_cell_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */; };
 		7BB85F8627D468430096285F /* Contact_List_cell_5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB85F8527D468430096285F /* Contact_List_cell_5.swift */; };
+		8B1609222868643D005BF83A /* guide3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8B1609212868643D005BF83A /* guide3.pdf */; };
 		8C102835BE763445CFE46AAF /* Pods_Ebotti_Violence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26BEC609DFB2A490CA32084D /* Pods_Ebotti_Violence.framework */; };
 		E83A49A4A42929062A0CCBEB /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2975EF887624BCF8532320B2 /* Pods_Ebotti_Violence_Ebotti_ViolenceUITests.framework */; };
 /* End PBXBuildFile section */
@@ -221,7 +222,7 @@
 		7B58D2BF27D6DA2D004EF31D /* yogazen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yogazen@3x.png"; sourceTree = "<group>"; };
 		7B58D2C027D6DA2D004EF31D /* yogazen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yogazen@2x.png"; sourceTree = "<group>"; };
 		7B58D2C127D6DA2D004EF31D /* yogazen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yogazen.png; sourceTree = "<group>"; };
-		7B6E18CA27CF91FF00CB1D8B /* guide3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = guide3.pdf; sourceTree = "<group>"; };
+		7B6E18CA27CF91FF00CB1D8B /* guide4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = guide4.pdf; sourceTree = "<group>"; };
 		7B746B7127D6F6080004B3FC /* Developer_page_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer_page_view.swift; sourceTree = "<group>"; };
 		7B746B7327D6F9B80004B3FC /* Developer_thx_cell_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Developer_thx_cell_1.swift; sourceTree = "<group>"; };
 		7B75283E27D59C4600EBDFA0 /* Emergency_C+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Emergency_C+CoreDataClass.swift"; path = "Ebotti_Violence/Emergency_C+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 		7BB85F8127D4605B0096285F /* Contact_List_cell_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_2.swift; sourceTree = "<group>"; };
 		7BB85F8327D4625F0096285F /* Contact_List_cell_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_4.swift; sourceTree = "<group>"; };
 		7BB85F8527D468430096285F /* Contact_List_cell_5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact_List_cell_5.swift; sourceTree = "<group>"; };
+		8B1609212868643D005BF83A /* guide3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = guide3.pdf; path = ../../../../Downloads/guide3.pdf; sourceTree = "<group>"; };
 		8BF4C93B584B9E2C19729C2A /* Pods-Ebotti_Violence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence.debug.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.debug.xcconfig"; sourceTree = "<group>"; };
 		FB2218901938705A61BEDD14 /* Pods-Ebotti_Violence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ebotti_Violence.release.xcconfig"; path = "Target Support Files/Pods-Ebotti_Violence/Pods-Ebotti_Violence.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -504,7 +506,8 @@
 				7B752BDE27CE2809003C88B5 /* pdf2.pdf */,
 				7B752BDF27CE2809003C88B5 /* pdf3.pdf */,
 				7B752BDC27CE27FA003C88B5 /* violentometre4.pdf */,
-				7B6E18CA27CF91FF00CB1D8B /* guide3.pdf */,
+				7B6E18CA27CF91FF00CB1D8B /* guide4.pdf */,
+				8B1609212868643D005BF83A /* guide3.pdf */,
 			);
 			path = Pdf;
 			sourceTree = "<group>";
@@ -700,9 +703,10 @@
 				7B77F0F227D5DEAC00951397 /* blackplane@3x.png in Resources */,
 				7B58D29827D6D7A8004EF31D /* permago@2x.png in Resources */,
 				7B58D28127D6D5E1004EF31D /* covid19.png in Resources */,
-				7B6E18CB27CF91FF00CB1D8B /* guide3.pdf in Resources */,
+				7B6E18CB27CF91FF00CB1D8B /* guide4.pdf in Resources */,
 				7B58D2A627D6D885004EF31D /* travworld@3x.png in Resources */,
 				7B58D28227D6D5E1004EF31D /* covid19@3x.png in Resources */,
+				8B1609222868643D005BF83A /* guide3.pdf in Resources */,
 				7B58D2C427D6DA2E004EF31D /* yogazen.png in Resources */,
 				7922B50E27DD656C00E9A9B0 /* reveil3x.png in Resources */,
 				7B58D27C27D6D563004EF31D /* sudoku.png in Resources */,
