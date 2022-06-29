@@ -18,12 +18,12 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
     // Declare section cell data
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var section_one_btn_loc = 0
-    var section_header = ["", "", "", "ENREGISTREMENTS", ""]
+    var section_header = ["", "", "ENREGISTREMENTS", "", ""]
     var section_one_content = ["Nom:","Téléphone:"]
-    var section_two_content = ["Dans le cas du lancement de l’alerte directement depuis l’application en appuyant sur le bouton ALERTER, il est possible d’autoriser le lancement automatiquement d’un appel vers vos contacts (en plus des SMS). Ainsi, voici vos options :"]
+    var section_two_content = [""]
     var section_three_content = ["Lancer un appel vers le premier contact de référence uniquement","En cas de non réponse de mon premier contact, lancer automatiquement un deuxième appel vers mon deuxième contact de référence"]
     var section_four_content = ["Dans tous les cas, un enregistrement audio de 3 minutes de votre environnement sera automatiquement effectué par l'application à chaque lancement d'alerte.\nVous les trouverez dans l'application dans l'onglet 'historique' (l'icône en bas à gauche lorsque vous êtes dans le menu principal), et dans les dossiers internes de votre téléphone. " ]
-    var section_five_content = ["Remarque: Chaque appel sera facturé au tarif en vigueur selon votre abonnement."]
+    var section_five_content = ["Remarque: Chaque SMS sera facturé au tarif en vigueur selon votre abonnement."]
     
     var collection_view : UICollectionView = {
         let cv = UICollectionViewFlowLayout()

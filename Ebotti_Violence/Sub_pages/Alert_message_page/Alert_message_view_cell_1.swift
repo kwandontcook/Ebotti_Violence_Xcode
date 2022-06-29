@@ -31,8 +31,8 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         self.text_view_content.removeFromSuperview()
         self.firstContact_cbvoice.removeFromSuperview()
         self.twoContacts_cbvoice.removeFromSuperview()
-        self.list_btn.removeFromSuperview()
-        self.list_view.removeFromSuperview()
+//        self.list_btn.removeFromSuperview()
+//        self.list_view.removeFromSuperview()
     }
     
     let main_view :UIView = {
@@ -51,7 +51,7 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         return v
     }()
     
-    var drop_menu_option : [String]?
+//    var drop_menu_option : [String]?
     
     var firstContact_cbvoice : DLRadioButton = {
         let btn = DLRadioButton()
@@ -67,7 +67,7 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
-    
+
     var twoContacts_cbvoice : DLRadioButton = {
         let btn = DLRadioButton()
         btn.setTitle("", for: .normal);
@@ -128,27 +128,27 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         return v
     }()
     
-    let list_btn : UIButton = {
-        var configuration = UIButton.Configuration.plain()
-        configuration.title = "\t\t\t"
-        configuration.image = UIImage(named: "sort_down")
-        configuration.imagePadding = 200
-        configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
-        
-        let btn = UIButton(configuration: configuration, primaryAction: nil)
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.contentHorizontalAlignment = .left
-        btn.contentVerticalAlignment = .center
-        btn.semanticContentAttribute = .forceRightToLeft
-        btn.setImage(UIImage(named: "sort_down"), for: .normal)
-        btn.titleLabel?.textAlignment = .left
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
-        btn.addTarget(self, action: #selector(drop_down_show), for: .touchUpInside)
-        btn.setTitleColor(.black, for: .normal)
-        return btn
-    }()
+//    let list_btn : UIButton = {
+//        var configuration = UIButton.Configuration.plain()
+//        configuration.title = "\t\t\t"
+//        configuration.image = UIImage(named: "sort_down")
+//        configuration.imagePadding = 200
+//        configuration.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+//        
+//        let btn = UIButton(configuration: configuration, primaryAction: nil)
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.contentHorizontalAlignment = .left
+//        btn.contentVerticalAlignment = .center
+//        btn.semanticContentAttribute = .forceRightToLeft
+//        btn.setImage(UIImage(named: "sort_down"), for: .normal)
+//        btn.titleLabel?.textAlignment = .left
+//        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
+//      //  btn.addTarget(self, action: #selector(drop_down_show), for: .touchUpInside)
+//        btn.setTitleColor(.black, for: .normal)
+//        return btn
+//    }()
     
-    let dropDown = DropDown()
+//    let dropDown = DropDown()
     
     func init_component_header(){
         self.remove_component()
@@ -181,14 +181,14 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
-        
+
         self.main_view.addSubview(twoContacts_cbvoice)
         twoContacts_cbvoice.isSelected = second_button_status
         twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor).isActive = true
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
-        
+
         firstContact_cbvoice.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
         twoContacts_cbvoice.addTarget(self, action: #selector(radio_btn_control), for: .touchUpInside)
     }
@@ -208,21 +208,21 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         list_view.trailingAnchor.constraint(equalTo: main_view.trailingAnchor).isActive = true
         list_view.bottomAnchor.constraint(equalTo: main_view.bottomAnchor).isActive = true
         
-        self.list_view.addSubview(list_btn)
-        list_btn.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 5).isActive = true
-        list_btn.leadingAnchor.constraint(equalTo: list_view.leadingAnchor,constant: 10).isActive = true
-        list_btn.trailingAnchor.constraint(equalTo: list_view.trailingAnchor).isActive = true
-        list_btn.bottomAnchor.constraint(equalTo: list_view.bottomAnchor).isActive = true
+//        self.list_view.addSubview(list_btn)
+//        list_btn.topAnchor.constraint(equalTo: list_view.topAnchor,constant: 5).isActive = true
+//        list_btn.leadingAnchor.constraint(equalTo: list_view.leadingAnchor,constant: 10).isActive = true
+//        list_btn.trailingAnchor.constraint(equalTo: list_view.trailingAnchor).isActive = true
+//        list_btn.bottomAnchor.constraint(equalTo: list_view.bottomAnchor).isActive = true
         
         // Set dropDownList
-        dropDown.anchorView = list_view // UIView or UIBarButtonItem
-        dropDown.dataSource = drop_menu_option! // UIView or UIBarButtonItem
-        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.direction = .bottom
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.list_btn.setTitle(item, for: .normal)
-        }
+//        dropDown.anchorView = list_view // UIView or UIBarButtonItem
+//        dropDown.dataSource = drop_menu_option! // UIView or UIBarButtonItem
+//        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+//        dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
+//        dropDown.direction = .bottom
+//        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+//            self.list_btn.setTitle(item, for: .normal)
+//        }
     }
     
     func init_component_2(){
@@ -246,14 +246,14 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         firstContact_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         firstContact_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         firstContact_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
-        
+
         self.main_view.addSubview(twoContacts_cbvoice)
         twoContacts_cbvoice.isSelected = second_button_status
         twoContacts_cbvoice.topAnchor.constraint(equalTo: firstContact_cbvoice.bottomAnchor).isActive = true
         twoContacts_cbvoice.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
         twoContacts_cbvoice.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.45).isActive = true
         twoContacts_cbvoice.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.85).isActive = true
-        
+
         self.reload_sos_status()
         self.firstContact_cbvoice.addTarget(self, action: #selector(chat_radio_btn_control), for: .touchUpInside)
         self.twoContacts_cbvoice.addTarget(self, action: #selector(chat_radio_btn_control), for: .touchUpInside)
@@ -297,9 +297,9 @@ class Alert_message_view_cell_1: UICollectionViewCell {
         }
     }
     
-    @objc func drop_down_show(){
-        self.dropDown.show()
-    }
+//    @objc func drop_down_show(){
+//        self.dropDown.show()
+//    }
     
     @objc func radio_btn_control(){
         if(first_button_status){

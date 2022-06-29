@@ -23,12 +23,14 @@ class Help_Lines_View: UIViewController, UITableViewDelegate, UITableViewDataSou
             cell.phone_btn.setTitle(mobile_arr[indexPath.row], for: .normal)
             cell.phone_btn_1.setTitle("730792", for: .normal)
             cell.description_block.text = description_arr[indexPath.row]
+            cell.backgroundColor = UIColor.white
         // Load normal setting
         }else{
             cell.init_component()
             cell.header.text = label_text[indexPath.row]
             cell.description_block.text = description_arr[indexPath.row]
             cell.phone_btn.setTitle(mobile_arr[indexPath.row], for: .normal)
+            cell.backgroundColor = UIColor.white
         }
         
         cell.selectionStyle = .none
@@ -69,6 +71,7 @@ class Help_Lines_View: UIViewController, UITableViewDelegate, UITableViewDataSou
         v.layer.cornerRadius = 5
         v.showsVerticalScrollIndicator = false
         v.showsHorizontalScrollIndicator = false
+        v.backgroundColor = UIColor.white
         return v
     }()
     

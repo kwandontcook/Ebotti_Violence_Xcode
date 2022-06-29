@@ -25,21 +25,26 @@ class Developer_page_view: UIViewController, UITableViewDataSource, UITableViewD
             cell.init_component_cell_1()
             cell.description_header.text = section_content[indexPath.row]
             cell.contact_btn.titleLabel!.text = section_email[indexPath.row]
+            cell.backgroundColor = UIColor.white
         }else if(indexPath.row == 1){
             cell.init_component_cell_2()
             cell.description_header.text = section_content[indexPath.row]
+            cell.backgroundColor = UIColor.white
         }else if(indexPath.row == 2){
             cell.init_component_cell_3()
             cell.description_header.text = section_content[indexPath.row]
             cell.contact_btn.titleLabel!.text = section_email[indexPath.row]
+            cell.backgroundColor = UIColor.white
         }else if(indexPath.row == 3){
             cell.init_component_cell_4()
             cell.gouv_button.addTarget(self, action: #selector(nav_web_1), for: .touchUpInside)
             cell.sln_button.addTarget(self, action: #selector(nav_web_2), for: .touchUpInside)
+            cell.backgroundColor = UIColor.white
         }else{
             cell.init_component_cell_5()
             cell.description_block.text = section_content[indexPath.row]
             cell.contact_btn.titleLabel!.text = section_email[indexPath.row]
+            cell.backgroundColor = UIColor.white
         }
         
         cell.header.text = section_header[indexPath.row]
@@ -88,6 +93,7 @@ class Developer_page_view: UIViewController, UITableViewDataSource, UITableViewD
         v.layer.borderColor =  UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
         v.layer.borderWidth = 0.3
         v.layer.cornerRadius = 5
+        v.backgroundColor = UIColor.white
         return v
     }()
     
@@ -117,6 +123,7 @@ class Developer_page_view: UIViewController, UITableViewDataSource, UITableViewD
         self.table_view.delegate = self
         self.table_view.separatorStyle = .none
         self.table_view.register(Developer_thx_cell_1.self, forCellReuseIdentifier: "cell")
+        self.table_view.backgroundColor = UIColor.white
     }
     
     

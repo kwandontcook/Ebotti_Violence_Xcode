@@ -28,7 +28,7 @@ class Main_page_col_cell_6: UICollectionViewCell {
     // Declare variables - header
     let header : UITextView = {
         let label = UITextView()
-        label.text = "Appels d'urgence"
+        label.text = "Messages d'urgence"
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = .white
         label.textAlignment = .center

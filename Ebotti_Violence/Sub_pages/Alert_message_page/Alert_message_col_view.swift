@@ -14,20 +14,33 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
 
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var sos_list = [SOS_C]()
-    var section_header = ["Lors du lancement d’une alerte, en plus de l’appel téléphonique, un message sera automatiquement envoyé à votre (ou vos) contact(s) de référence.", "Localisation GPS"]
+    
+    var section_header = ["", "Localisation GPS"]
 
-    var section_one_dict_header = ["","Vous pouvez choisir si vous voulez envoyer ce message uniquement à votre premier contact de référence, ou aux deux :", "Choisissez le nombre de pressions nécessaires sur le bouton d’allumage du téléphone pour lancer une alerte" , "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :","Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" ]
+//    var section_one_dict_header = ["","Vous pouvez choisir si vous voulez envoyer ce message uniquement à votre premier contact de référence, ou aux deux :", "Choisissez le nombre de pressions nécessaires sur le bouton d’allumage du téléphone pour lancer une alerte" , "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :","Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" ]
+    
+    var section_one_dict_header = ["", "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :","Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" ]
+    
+//    var section_one_dict = [
+//        "":[""],
+//        "Vous pouvez choisir si vous voulez envoyer ce message uniquement à votre premier contact de référence, ou aux deux :": ["Premier contact uniquement", "Aux deux contacts (deux SMS)"],
+//        "Choisissez le nombre de pressions nécessaires sur le bouton d’allumage du téléphone pour lancer une alerte": ["5","6","7"],
+//        "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :":
+//            ["Alerte, je suis en danger et je vous ai choisi comme contact référent pour me venir en aide. N'essayez pas de m'appeler en première intention, il se peut que je ne sois pas en mesure de vous répondre.","Alerte, je suis dans une situation de danger. Appelez les secours si vous n’avez pas de nouvelles dans les 10 minutes. N’essayez pas de m’appeler directement."],
+//        "Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" : ["Ceci est un message préenregistré provenant de l’application Dignity. Il signale une demande d’aide de la part d’une personne en difficulté. Une alerte a également été lancé à un de ses contacts."]
+//    ]
     
     var section_one_dict = [
         "":[""],
-        "Vous pouvez choisir si vous voulez envoyer ce message uniquement à votre premier contact de référence, ou aux deux :": ["Premier contact uniquement", "Aux deux contacts (deux SMS)"],
-        "Choisissez le nombre de pressions nécessaires sur le bouton d’allumage du téléphone pour lancer une alerte": ["5","6","7"],
+    
+        
         "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :":
             ["Alerte, je suis en danger et je vous ai choisi comme contact référent pour me venir en aide. N'essayez pas de m'appeler en première intention, il se peut que je ne sois pas en mesure de vous répondre.","Alerte, je suis dans une situation de danger. Appelez les secours si vous n’avez pas de nouvelles dans les 10 minutes. N’essayez pas de m’appeler directement."],
         "Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" : ["Ceci est un message préenregistré provenant de l’application Dignity. Il signale une demande d’aide de la part d’une personne en difficulté. Une alerte a également été lancé à un de ses contacts."]
     ]
    
     var section_two_contents = "Lors de l’envoi de chaque SMS, votre position GPS sera donnée à votre contact. Cette fonction ne sera cependant réalisable que si l’option de localisation de votre téléphone (dans les paramètres de votre téléphone) est activée."
+    
     var footer_contents = "Remarques: \n- Chaque SMS envoyé sera facturé au tarif en vigueur selon votre abonnement.\n- Les SMS ne pourront être acheminés que si les numéros de téléphone renseignés sont des numéros de téléphones portables."
     
     var collection_view : UICollectionView = {
@@ -76,7 +89,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         // Set components
         self.init_component()
         self.reload_sos_status()
-        self.title = "Appels d'urgence"
+        self.title = "Messages d'urgence"
     }
 
     
@@ -102,7 +115,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         if(section == 0){
-            return 5
+            return 3
         }else{
             return 2
         }
@@ -114,12 +127,17 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_1", for: indexPath) as! Alert_message_view_cell_1
             if(indexPath.row == 0){
                 return self.cell_one_header_setting(cell: cell, indexPath: indexPath)
+                //return self.cell_two_setting(cell: cell, indexPath: indexPath)
             }else if(indexPath.row == 1){
-                return self.cell_one_setting(cell: cell, indexPath: indexPath)
-            }else if(indexPath.row == 2){
-                return self.cell_two_setting(cell: cell, indexPath: indexPath)
-            }else if(indexPath.row == 3){
                 return self.cell_three_setting(cell: cell, indexPath: indexPath)
+                //return self.cell_one_setting(cell: cell, indexPath: indexPath)
+               //return self.cell_one_setting(cell: cell, indexPath: indexPath)
+          //  }else if(indexPath.row == 2){
+               // return self.cell_one_setting(cell: cell, indexPath: indexPath)
+                //return self.cell_two_setting(cell: cell, indexPath: indexPath)
+           // }else if(indexPath.row == 3){
+               // return self.cell_one_setting(cell: cell, indexPath: indexPath)
+                //return self.cell_three_setting(cell: cell, indexPath: indexPath)
             }else{
                 return self.cell_four_setting(cell: cell, indexPath: indexPath)
             }
@@ -150,36 +168,36 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         cell.init_component()
         cell.text_view.text = section_one_dict_header[indexPath.row]
         
-        if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
-            cell.firstContact_cbvoice.setTitle(dict_array[0], for: .normal)
-            cell.twoContacts_cbvoice.setTitle(dict_array[1], for: .normal)
-        }
+//        if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
+//            cell.firstContact_cbvoice.setTitle(dict_array[0], for: .normal)
+//            cell.twoContacts_cbvoice.setTitle(dict_array[1], for: .normal)
+//        }
         
         return cell
     }
     
     func cell_two_setting(cell: Alert_message_view_cell_1, indexPath: IndexPath) -> Alert_message_view_cell_1{
 
-        if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
-            cell.drop_menu_option = dict_array
-            cell.list_btn.setTitle("7", for: .normal)
-            cell.init_component_1()
-            cell.text_view.text = ""
-        }
-        
+//        if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
+//            cell.drop_menu_option = dict_array
+//            cell.list_btn.setTitle("7", for: .normal)
+//            cell.init_component_1()
+//            cell.text_view.text = ""
+//        }
+
         return cell
     }
     
     func cell_three_setting(cell: Alert_message_view_cell_1, indexPath: IndexPath) -> Alert_message_view_cell_1{
         cell.init_component_2()
         cell.text_view.text = section_one_dict_header[indexPath.row]
-        
+
         if let dict_array = section_one_dict[section_one_dict_header[indexPath.row]] as? [String] {
             cell.firstContact_cbvoice.setTitle(dict_array[0], for: .normal)
             cell.firstContact_cbvoice.titleLabel?.font = .systemFont(ofSize: 13.5)
             cell.twoContacts_cbvoice.setTitle(dict_array[1], for: .normal)
             cell.twoContacts_cbvoice.titleLabel?.font = .systemFont(ofSize: 13.5)
-            
+
             if sos_list.count == 2{
                 cell.firstContact_cbvoice.isSelected = self.sos_list[0].status
                 cell.twoContacts_cbvoice.isSelected = self.sos_list[1].status
@@ -188,9 +206,9 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
                 cell.twoContacts_cbvoice.isSelected = false
             }
         }
-        
-        
-        
+
+
+
         return cell
     }
     
@@ -225,14 +243,14 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
             return CGSize(width: self.collection_view.frame.width-10, height: 180)
         }else{
             if(indexPath.row == 0){
-                return CGSize(width: self.collection_view.frame.width-10, height: 70)
-            }else if(indexPath.row == 1){
-                return CGSize(width: self.collection_view.frame.width-10, height: 180)
-            }
-            else if(indexPath.row == 2){
-                return CGSize(width: self.collection_view.frame.width-10, height: 70)
-            }else if(indexPath.row == 3){
+                return CGSize(width: self.collection_view.frame.width-10, height: 10)
+            } else if(indexPath.row == 1){
                 return CGSize(width: self.collection_view.frame.width-10, height: 250)
+  //          }
+//            else if(indexPath.row == 2){
+//                return CGSize(width: self.collection_view.frame.width-10, height: 70)
+//            }else if(indexPath.row == 3){
+//                return CGSize(width: self.collection_view.frame.width-10, height: 250)
             }else{
                 return CGSize(width: self.collection_view.frame.width-10, height: 180)
             }
