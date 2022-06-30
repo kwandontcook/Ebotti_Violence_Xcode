@@ -31,17 +31,28 @@ class Info_page_col: UICollectionViewCell {
         
         // Add text label
         self.main_view.addSubview(header)
-        header.topAnchor.constraint(equalTo: main_view.topAnchor, constant: 10).isActive = true
+        
+//        let top = 5.0;
+//        let bottom = 5.0;
+//        let left = 5.0;
+//        let right = 5.0;
+//        header.frame = CGRect(x: 0, y: 0, width: header.frame.width + left + right, height: header.frame.height + top + bottom)
+//        let insets = UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+//        header.drawText(in: header.)
+        
+        
+        header.topAnchor.constraint(equalTo: main_view.topAnchor, constant: 0).isActive = true
+        //header.bottomAnchor.constraint(equalTo: main_view.bottomAnchor, constant: 10).isActive = true
         header.leadingAnchor.constraint(equalTo: main_view.leadingAnchor, constant: 10).isActive = true
-        header.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.2).isActive = true
+        header.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 1.0).isActive = true
         header.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.6).isActive = true
         
         // icon
         self.main_view.addSubview(icon)
-        icon.topAnchor.constraint(equalTo: main_view.topAnchor, constant: 10).isActive = true
-        icon.trailingAnchor.constraint(equalTo: main_view.trailingAnchor, constant: -10).isActive = true
-        icon.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.6).isActive = true
-        icon.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.15).isActive = true
+        icon.topAnchor.constraint(equalTo: main_view.topAnchor, constant: 5).isActive = true
+        icon.trailingAnchor.constraint(equalTo: main_view.trailingAnchor, constant: -5).isActive = true
+        icon.heightAnchor.constraint(equalTo: main_view.heightAnchor, multiplier: 0.8).isActive = true
+        icon.widthAnchor.constraint(equalTo: main_view.widthAnchor, multiplier: 0.25).isActive = true
     }
     
     let main_view :UIView = {
@@ -64,15 +75,27 @@ class Info_page_col: UICollectionViewCell {
     }()
     
     let header : UILabel = {
+        
+       // let frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         let label = UILabel()
         label.text = ""
         label.contentMode = .scaleAspectFit
         label.font = UIFont.boldSystemFont(ofSize: 14.0)
         label.textColor = .black
         label.textAlignment = .left
+        
+        label.baselineAdjustment = .none
+        
+        
+        
+//        let unconstrainedSize = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+//        label.heightAnchor.constraint(equalToConstant: label.sizeThatFits(unconstrainedSize).height).isActive = true
+        
+        //label.backgroundColor = UIColor.cyan
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
+        // label.sizeToFit()
         return label
     }()
     

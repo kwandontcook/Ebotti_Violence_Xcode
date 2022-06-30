@@ -18,7 +18,7 @@ class Info_pages_view: UIViewController, UICollectionViewDelegate, UICollectionV
     var pdf_file_name = ["violentometre4","pdf2","pdf3"]
     var pdf_title = ["Violentomètre", "Carte violence","Carte enfant"]
     // Declare section two data
-    var section_two_header = ["Harcèlement sexuel", "Les agressions sexuelles - le viol", "L’outrage sexiste", "Le mariage forcé"]
+    var section_two_header = ["Harcèlement sexuel", "Agression sexuelle / Viol", "Comportement sexiste", "Le mariage forcé"]
     var section_two_icon = ["harcelement3", "interdit", "badtalk2","menotte_ring"]
     var section_two_url = ["https://violences-conjugales.gouv.nc/que-dit-la-loi/harcelement-sexuel", "https://violences-conjugales.gouv.nc/que-dit-la-loi/violences-sexuelles", "https://violences-conjugales.gouv.nc/que-dit-la-loi/outrage-sexiste","https://violences-conjugales.gouv.nc/que-dit-la-loi/mariage-force"]
     
@@ -66,6 +66,7 @@ class Info_pages_view: UIViewController, UICollectionViewDelegate, UICollectionV
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_1", for: indexPath) as! Info_page_col
         if(indexPath.section == 0){
             cell.header.text = section_one_header[indexPath.row]
+            
             cell.icon.image = UIImage(named: section_one_icon[indexPath.row])
         }else{
             cell.header.text = section_two_header[indexPath.row]
