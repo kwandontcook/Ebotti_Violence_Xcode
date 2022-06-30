@@ -118,6 +118,9 @@ class Main_page_col_cell_6: UICollectionViewCell {
         
         // Bind action
         alertSettings_button.addTarget(self, action: #selector(q1), for: .touchUpInside)
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(q1) )
+        self.stack_view.addGestureRecognizer(gesture)
     }
     
     @objc func q1(){

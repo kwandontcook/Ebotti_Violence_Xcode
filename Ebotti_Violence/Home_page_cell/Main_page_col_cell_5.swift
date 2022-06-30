@@ -116,6 +116,22 @@ class Main_page_col_cell_5: UICollectionViewCell {
         
         // Bind action
         alertVoice_button.addTarget(self, action: #selector(q1), for: .touchUpInside)
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(q1) )
+        self.stack_view.addGestureRecognizer(gesture)
+
+
+    }
+    
+    @objc func handleTap() {
+        // example task: change background color
+               
+        self.stack_view.backgroundColor = UIColor.red
+                
+    }
+    
+    func clickAction(sender : UITapGestureRecognizer) {
+        // Do what you want
     }
     
     @objc func q1(){
