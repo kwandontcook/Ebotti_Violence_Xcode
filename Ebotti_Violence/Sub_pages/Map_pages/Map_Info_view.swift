@@ -86,7 +86,7 @@ class Map_Info_view: UIViewController {
         self.view.addSubview(header)
         header.topAnchor.constraint(equalTo: view.topAnchor, constant: 5).isActive = true
         header.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5).isActive = true
-        header.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.12).isActive = true
+        header.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15).isActive = true
         header.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85).isActive = true
         // Add header
         self.view.addSubview(description_block)
@@ -99,7 +99,7 @@ class Map_Info_view: UIViewController {
     func setFrame_Size(_ text: String){
         //get estimated height somehow????
         let estimatedSize = estimateFrameForText(text)
-        self.view.frame = CGRect(x: 0, y: 0, width: estimatedSize.width+40, height: estimatedSize.height+40)
+        self.view.frame = CGRect(x: 0, y: 0, width: estimatedSize.width+60, height: estimatedSize.height+60)
     }
     
     

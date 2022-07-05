@@ -15,6 +15,10 @@ class Info_Pdf_view: UIViewController {
         self.title = title_str
         self.view.backgroundColor = .white
         // Set up PdfViewer
+        
+        // this line
+           self.edgesForExtendedLayout = []
+        
         self.view.addSubview(pdfView)
         pdfView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         pdfView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -23,6 +27,7 @@ class Info_Pdf_view: UIViewController {
         pdfView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
         pdfView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         
+  
         // Open pdf
         self.open_pdf()
     }

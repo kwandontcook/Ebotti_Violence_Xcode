@@ -39,6 +39,7 @@ class MapView_sub_class{
         header_location_text["Permanence d'écoute psychologique (République/Nouméa)"] = CLLocationCoordinate2D(latitude: -22.2688729, longitude:166.4395283);
         header_location_text["Permanence d'écoute psychologique (CMS/Nouméa)"] = CLLocationCoordinate2D(latitude: -22.2324242, longitude:166.4288253);
         header_location_text["Permanence d'écoute psychologique (Montravel/Nouméa)"] = CLLocationCoordinate2D(latitude: -22.2485659, longitude: 166.4559020);
+    
         
         return header_location_text
     }
@@ -551,10 +552,12 @@ class MapView_sub_class{
         
         header_description_text["Brigade de Pouébo"] = ""
         header_description_text["Brigade de Koumac"] =  "Présentation : Accueil et assistance aux victimes. Prise de plainte et orientation des victimes vers un accompagnement juridique, social et psychologique.\n" +
-        "Informations sur les permanences : Du lundi au vendredi : 08h00-16h00\n" +
-        "Adresse : 03, rue Raphael Ménard, NOUMEA\n" +
+        "Informations sur les permanences : \n" +
+        "- Du lundi au samedi : 07h00-11h30 / 14h00-17h30\n" +
+        "- Dimanche et jour fériés : 08h30-11h30 / 14h30-17h30\n" +
+        "Adresse : Lotissement Municipal, Rue Louise Maignan, 98850, Koumac\n" +
         "Référent :\n" +
-        "Numéro(s) de téléphone : Le 17 (urgence) ou le 41 37 00\n" +
+        "Numéro(s) de téléphone : Le 17 (urgence) ou le 47 89 50\n" +
         "Mail :\n" +
         "Type de partenaire : Etat\n" +
         "Zone de compétence : Commune\n" +
@@ -785,9 +788,16 @@ class MapView_sub_class{
         return header_description_text
     }
     
+    // Ligne 2
     func create_dataSet_header_set_ccas() -> [String:CLLocationCoordinate2D]{
         // Create data object
         var header_location_text = [String:CLLocationCoordinate2D]()
+        
+        header_location_text["Médipôle de Koutio - Centre"] = CLLocationCoordinate2D(latitude: -22.20899106223535, longitude: 166.452357068431);
+        header_location_text["Clinique Ile Nou-Magnin"] = CLLocationCoordinate2D(latitude: -22.26936482769426, longitude: 166.4085659837726);
+        header_location_text["Centre hospitalier territorial - Gaston Bourret"] = CLLocationCoordinate2D(latitude: -22.206168224598933, longitude: 166.45270790209608);
+        header_location_text["Pôle sanitaire du Nord"] = CLLocationCoordinate2D(latitude: -21.098117554975655, longitude: 164.8871093953968);
+        
         header_location_text["Centre communal d'action sociale de Nouméa"] = CLLocationCoordinate2D(latitude: -22.271, longitude:166.439);
         header_location_text["Direction Provinciale de l'Action Sanitaire et Sociale"] = CLLocationCoordinate2D(latitude: -22.268, longitude:166.439);
         header_location_text["Centre Hospitalier Spécialisé Albert Bousquet"] = CLLocationCoordinate2D(latitude: -22.271, longitude:166.439);
@@ -795,12 +805,74 @@ class MapView_sub_class{
         header_location_text["Mission de la condition féminine province sud"] = CLLocationCoordinate2D(latitude: -22.273875802969965, longitude:166.44438575161544);
         header_location_text["PMI Montravel"] = CLLocationCoordinate2D(latitude: -22.245546863966776, longitude:166.47284159008788);
         
+        header_location_text["Païta - centre médical du Col de Pirogue"] = CLLocationCoordinate2D(latitude: -22.072634965630115, longitude: 166.32861083947842);
+        header_location_text["Bouloparis - aide médical"] = CLLocationCoordinate2D(latitude: -21.860804854702, longitude: 166.052246368885);
+        header_location_text["La Foa - circonscription médicale de la Foa"] = CLLocationCoordinate2D(latitude: -21.708242610467266, longitude: 165.82456985353838);
+        header_location_text["Bourail - circonscription médicale"] = CLLocationCoordinate2D(latitude: -22.2485659, longitude: 166.4559020);
+        header_location_text["Poya - dispensaire"] = CLLocationCoordinate2D(latitude: -21.346241615285788, longitude: 165.15858578179188);
+        header_location_text["Népoui - dispensaire"] = CLLocationCoordinate2D(latitude: -21.324347264488015, longitude: 164.99687585204552);
+        header_location_text["Koné - dispensaire et maternité village"] = CLLocationCoordinate2D(latitude: -21.06039871834303, longitude: 164.8602418817856);
+        header_location_text["Voh - dispensaire"] = CLLocationCoordinate2D(latitude: -20.949212436508237, longitude: 164.68846496828857);
+        header_location_text["Kaala Gomen - dispensaire"] = CLLocationCoordinate2D(latitude: -20.656912378663396, longitude: 164.39708855288072);
+        header_location_text["Koumac - centre hospitalier du Nord"] = CLLocationCoordinate2D(latitude: -20.524288298167427, longitude: 164.2872903462089);
+        header_location_text["Ouégoa - dispensaire"] = CLLocationCoordinate2D(latitude: -20.392422833398427, longitude: 164.58042715137702);
+        header_location_text["Poum - dispensaire"] = CLLocationCoordinate2D(latitude: -20.230591977438596, longitude: 164.02377365456377);
+        header_location_text["Pouébo - dispensaire"] = CLLocationCoordinate2D(latitude: -20.392463059149563, longitude: 164.58043788021217);
+        header_location_text["Touho - dispensaire"] = CLLocationCoordinate2D(latitude: -20.780304060917814, longitude: 165.22689628177955);
+        header_location_text["Poindimié - centre hospitalier du Nord"] = CLLocationCoordinate2D(latitude: -20.939376072065144, longitude: 165.339646299975);
+        header_location_text["Poindimié - dispensaire"] = CLLocationCoordinate2D(latitude: -20.939376072065144, longitude: 165.339646299975);
+        header_location_text["Ponerihouen - dispensaire"] = CLLocationCoordinate2D(latitude: -21.071733397493368, longitude: 165.40247582039643);
+        header_location_text["Houailou - dispensaire"] = CLLocationCoordinate2D(latitude: -21.279400744040355, longitude: 165.6304132259661);
+        header_location_text["Kouaoua - dispensaire"] = CLLocationCoordinate2D(latitude: -21.396629150247236, longitude: 165.8266495723233);
+        header_location_text["Canala - dispensaire"] = CLLocationCoordinate2D(latitude: -21.520115350533978, longitude: 165.96492277631006);
+        header_location_text["Thio - circonscription médicale"] = CLLocationCoordinate2D(latitude: -21.611830701357114, longitude: 166.2155697705132);
+        header_location_text["Yaté - dispensaire"] = CLLocationCoordinate2D(latitude: -22.160419160068336, longitude: 166.94393403948055);
+        header_location_text["Village Vao - circonscription médicale"] = CLLocationCoordinate2D(latitude: -22.665976500342733, longitude: 167.4970381773012);
+        header_location_text["Lifou - centre médical Wé"] = CLLocationCoordinate2D(latitude: -20.908243185495262, longitude: 167.2692771204006);
+        header_location_text["Lifou - centre médical Chépénéhé"] = CLLocationCoordinate2D(latitude: -20.777012632854706, longitude: 167.14970165432703);
+        header_location_text["Ouvéa - circonscription médicale d'Ouloup"] = CLLocationCoordinate2D(latitude: -20.637523876904247, longitude: 166.56432064786594);
+        header_location_text["Maré - circonscription médicale"] = CLLocationCoordinate2D(latitude: -22.26703467545964, longitude: 166.43956790437488);
+        header_location_text["Belep - services médicaux sociaux"] = CLLocationCoordinate2D(latitude: -19.74894927052524, longitude: 163.66653790982033);
+        
         
         return header_location_text
     }
     
     func create_dataSet_description_set_ccas() -> [String:String]{
         var header_description_text = [String:String]()
+        
+        header_description_text["Médipôle de Koutio - Centre"] = "Présentation : Cet établissement qui accueillait notamment les transportés du Bagnes au 19ème siècle est devenu public en 1990. Il est l'établissement de référence en Nouvelle-Calédonie en terme de Santé Mentale.\n" +
+        "        Directeur : M. Philippe Palombo\n" +
+        "        Directeur adjoints: MM. Joël Murgues et Guilhem Mestre\n" +
+        "        Adresse : \n" +
+        "        42 rue Eschembrenner - 98800 NOUMEA\n" +
+        "        Tel : (687) 24 36 36\n" +
+        "        Fax : (687) 27 12 68\n" +
+        "        E-Mail : direction@chs.nc\n"
+        
+        header_description_text["Clinique Ile Nou-Magnin"] = "Présentation : Cliniquue Ile Nou-Magnin.\n" +
+        "        Adresse : \n" +
+        "        5 rue Contre-Amiral Joseph du Bouzet Nouville, 98800 Nouméa\n" +
+        "        Tel (standard) : (687) 42 00 00\n" +
+        "        Tel (urgences de 7h-23h) : (687) 42 00 00\n"
+        
+        header_description_text["Centre hospitalier territorial - Gaston Bourret"] = "Présentation : Etablissement maritime puis militaire, le CHT est devenu public ane 1981. Situé sur le médipôle de Koutio, il est l'établissement de référence de la Nouvelle Calédonie en matière de m´´decine, chirurgie et obstétrique de la Province Sud.\n" +
+        "        Directeur : M. Joachim Tutugoro\n" +
+        "        Directeur adjoints: M. Marc Wete\n" +
+        "        Adresse : \n" +
+        "        110 boulevard Joseph Wamytan - 98835 Dumbéa\n" +
+        "        Tel : (687) 20 80 00\n" +
+        "        E-Mail : dg@cht.nc\n" +
+        "        Site web : www.cht.nc\n"
+        
+        header_description_text["Pôle sanitaire du Nord"] = "Présentation : Le Centre Hospitalier du Nord (CHN) regroupe deux hôpitaux, l'un sur la côte Ouest (hôpital Paul Thavoavianon à Koumac), l'autre sur la côte Est (hôpital Raymond Doui Nebayes à Poindimié). Etablissement public de référence en terme de médecine, chirurgie et d'obstetrique en Province Nord.\n" +
+        "        Directeur : M. Joachim Tutugoro\n" +
+        "        Directeur adjoints: M. Marc Wete\n" +
+        "        Adresse : \n" +
+        "        rue Emile Frouin - 98850 KOUMAC\n" +
+        "        Tel : (687) 42 65 14\n" +
+        "        Fax : (687) 42 65 19\n" +
+        "        E-Mail : direction@chn.nc\n"
         
         header_description_text["Centre communal d'action sociale de Nouméa"] = "Présentation : Le CCAS de Nouméa anime une action générale de prévention et de développement social en direction de différents publics : petite enfance, enfance et adolescence, personnes en situation de handicap, les séniors et les familles.\n" +
         "        Informations sur les permanences : Du lundi au vendredi : 07h30 - 16h00\n" +
@@ -840,6 +912,15 @@ class MapView_sub_class{
         "Pièces jointes:\n" +
         "Aucune pièce jointe n’a été trouvée\n"
         
+//        = "Présentation : Cet établissement qui accueillait notamment les transportés du Bagnes au 19ème siècle est devenu public en 1990. Il est l'établissement de référence en Nouvelle-Calédonie en terme de Santé Mentale.\n" +
+//        "        Directeur : M. Philippe Palombo\n" +
+//        "        Directeur adjoints: MM. Joël Murgues et Guilhem Mestre\n" +
+//        "        Adresse : \n" +
+//        "        42 rue Eschembrenner - 98800 NOUMEA\n" +
+//        "        Tel : (687) 24 36 36\n" +
+//        "        Fax : (687) 27 12 68\n" +
+//        "        E-Mail : direction@chs.nc\n"
+        
         header_description_text["Foyer Bethani"] = "Foyer d'accueil temporaire pour les femmes et enfants victimes de violences en attente de trouver un relogement (orientation par une assistante sociale de secteur qui fait le signalement et la demande d'admission)\n" +
         "adresse : 4 rue du Dr Guégan 98800 Nouméa\n" +
         "Le foyer «Béthanie Centre-ville», situé 4, rue du Dr Guégan à Nouméa, qui assure l’hébergement, la restauration et l’accompagnement social des femmes victimes ou non de violences conjugales ou intrafamiliales, en grande précarité avec ou sans enfants (limite d’âge de 12 ans pour les garçons).\n" +
@@ -861,7 +942,34 @@ class MapView_sub_class{
         "à coté de la GBNC\n" +
         "qui dispose de l'aide d'une juriste (à confirmer si cela n'a pas changer) conseil gratuit écoute et conseils en toute anonymat (dans le respect de la dignity)"
         
-        
+        header_description_text["Païta - centre médical du Col de Pirogue"] = "\nTél: (687) 35 11 19\n                                               ";
+        header_description_text["Bouloparis - aide médical"] = "\nTél: (687) 35 17 06\n                                               ";
+        header_description_text["La Foa - circonscription médicale de la Foa"] = "\nTél: (687) 44 32 14\n                                               ";
+        header_description_text["Bourail - circonscription médicale"] = "\nTél: (687) 44 11 64\n                                               ";
+        header_description_text["Poya - dispensaire"] = "\nTél: (687) 47 74 30\n                                               ";
+        header_description_text["Népoui - dispensaire"] = "\nTél: (687) 47 74 40\n                                               ";
+        header_description_text["Koné - dispensaire et maternité village"] = "\nTél: (687) 47 22 04\n                                               ";
+        header_description_text["Voh - dispensaire"] = "\nTél: (687) 47 27 15\n                                               ";
+        header_description_text["Kaala Gomen - dispensaire"] = "\nTél: (687) 47 67 11\n                                               ";
+        header_description_text["Koumac - centre hospitalier du Nord"] = "\nTél: (687) 47 22 04\n                                               ";
+        header_description_text["Ouégoa - dispensaire"] = "\nTél: (687) 47 74 80\n                                               ";
+        header_description_text["Poum - dispensaire"] = "\nTél: (687) 47 64 72\n                                               ";
+        header_description_text["Pouébo - dispensaire"] = "\nTél: (687) 47 74 90\n                                               ";
+        header_description_text["Touho - dispensaire"] = "\nTél: (687) 42 88 15\n                                               ";
+        header_description_text["Poindimié - centre hospitalier du Nord"] = "\nTél: (687) 42 71 44\n                                               ";
+        header_description_text["Poindimié - dispensaire"] = "\nTél: (687) 42 72 33\n                                               ";
+        header_description_text["Ponerihouen - dispensaire"] = "\nTél: (687) 42 85 08\n                                               ";
+        header_description_text["Houailou - dispensaire"] = "\nTél: (687) 47 75 40\n                                               ";
+        header_description_text["Kouaoua - dispensaire"] = "\nTél: (687) 47 75 50\n                                               ";
+        header_description_text["Canala - dispensaire"] = "\nTél: (687) 42 31 47\n                                               ";
+        header_description_text["Thio - circonscription médicale"] = "\nTél: (687) 44 52 22\n                                               ";
+        header_description_text["Yaté - dispensaire"] = "\nTél: (687) 46 41 35\n                                               ";
+        header_description_text["Village Vao - circonscription médicale"] = "\nTél: (687) 46 11 15\n                                               ";
+        header_description_text["Lifou - centre médical Wé"] = "\nTél: (687) 45 12 12\n                                               ";
+        header_description_text["Lifou - centre médical Chépénéhé"] = "\nTél: (687) 45 12 79\n                                               ";
+        header_description_text["Ouvéa - circonscription médicale d'Ouloup"] = "\nTél: (687) 45 71 10\n                                               ";
+        header_description_text["Maré - circonscription médicale"] = "\nTél: (687) 45 42 12\n                                               ";
+        header_description_text["Belep - services médicaux sociaux"] = "\nTél: (687) 47 64 81\n                                               ";
         
         
         return header_description_text

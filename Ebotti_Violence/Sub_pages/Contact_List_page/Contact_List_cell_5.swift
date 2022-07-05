@@ -25,7 +25,7 @@ class Contact_List_cell_5: UICollectionViewCell {
     func init_component(){
         // Create mainView
         self.contentView.addSubview(main_view)
-        main_view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        main_view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30).isActive = true
         main_view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16).isActive = true
         main_view.heightAnchor.constraint(equalTo: contentView.heightAnchor).isActive = true
         main_view.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.9).isActive = true
@@ -49,6 +49,7 @@ class Contact_List_cell_5: UICollectionViewCell {
     let text_view : UITextView = {
         let label = UITextView()
         label.text = ""
+    
         label.contentMode = .scaleAspectFit
         label.font = UIFont.italicSystemFont(ofSize: 14.0)
         label.textColor = .black

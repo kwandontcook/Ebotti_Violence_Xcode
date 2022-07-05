@@ -18,10 +18,10 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
     // Declare section cell data
     var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var section_one_btn_loc = 0
-    var section_header = ["", "", "ENREGISTREMENTS", "", ""]
+    var section_header = ["CONTACTS", "ENREGISTREMENTS", "", "", ""]
     var section_one_content = ["Nom:","Téléphone:"]
-    var section_two_content = [""]
-    var section_three_content = ["Lancer un appel vers le premier contact de référence uniquement","En cas de non réponse de mon premier contact, lancer automatiquement un deuxième appel vers mon deuxième contact de référence"]
+  //  var section_two_content = [""]
+   // var section_three_content = ["Lancer un appel vers le premier contact de référence uniquement","En cas de non réponse de mon premier contact, lancer automatiquement un deuxième appel vers mon deuxième contact de référence"]
     var section_four_content = ["Dans tous les cas, un enregistrement audio de 3 minutes de votre environnement sera automatiquement effectué par l'application à chaque lancement d'alerte.\nVous les trouverez dans l'application dans l'onglet 'historique' (l'icône en bas à gauche lorsque vous êtes dans le menu principal), et dans les dossiers internes de votre téléphone. " ]
     var section_five_content = ["Remarque: Chaque SMS sera facturé au tarif en vigueur selon votre abonnement."]
     
@@ -92,7 +92,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 4
+        return 3
     }
 
 
@@ -129,11 +129,11 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
             cell.Add_user_img_view.addTarget(self, action: #selector(retrieve_contact), for: .touchUpInside)
             cell.Delete_img_view.addTarget(self, action: #selector(deleteData_func), for: .touchUpInside)
             return cell
-        } else if(indexPath.section == 1){
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_2", for: indexPath) as! Contact_List_cell_2
-            cell.text_view.text = section_two_content[indexPath.row]
-            return cell
-        }else if(indexPath.section == 2){
+//        } else if(indexPath.section == 1){
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_2", for: indexPath) as! Contact_List_cell_2
+//            cell.text_view.text = section_two_content[indexPath.row]
+//            return cell
+        }else if(indexPath.section == 1){
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_4", for: indexPath) as! Contact_List_cell_4
             cell.text_view.text = section_four_content[indexPath.row]
             return cell
@@ -178,7 +178,7 @@ class Contact_List_view: UIViewController, UICollectionViewDelegate, UICollectio
         if(section_header[section] == ""){
             return CGSize(width: self.collection_view.frame.width-10, height: 2)
         }else{
-            return CGSize(width: self.collection_view.frame.width-10, height: 30)
+            return CGSize(width: self.collection_view.frame.width-10, height: 60)
         }
     }
     
