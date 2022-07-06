@@ -36,7 +36,7 @@ class Alert_message_col_view: UIViewController, UICollectionViewDelegate, UIColl
         
         "Sélectionnez le message qui sera automatiquement envoyé à votre (ou vos) contact(s) de référence :":
             ["Alerte, je suis en danger et je vous ai choisi comme contact référent pour me venir en aide. N'essayez pas de m'appeler en première intention, il se peut que je ne sois pas en mesure de vous répondre.","Alerte, je suis dans une situation de danger. Appelez les secours si vous n’avez pas de nouvelles dans les 10 minutes. N’essayez pas de m’appeler directement."],
-        "Dans tous les cas, un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" : ["Ceci est un message préenregistré provenant de l’application Dignity. Il signale une demande d’aide de la part d’une personne en difficulté. Une alerte a également été lancé à un de ses contacts."]
+        "Un SMS supplémentaire sera envoyé à l’association « SOS Ecoute », de sorte à les prévenir de la situation de danger et d’en avoir une traçabilité. En voici le contenu :" : ["Ceci est un message préenregistré provenant de l’application Dignity. Il signale une demande d’aide de la part d’une personne en difficulté. Une alerte a également été lancé à un de ses contacts.\n"]
     ]
    
     var section_two_contents = "Lors de l’envoi de chaque SMS, votre position GPS sera donnée à votre contact. Cette fonction ne sera cependant réalisable que si l’option de localisation de votre téléphone (dans les paramètres de votre téléphone) est activée."

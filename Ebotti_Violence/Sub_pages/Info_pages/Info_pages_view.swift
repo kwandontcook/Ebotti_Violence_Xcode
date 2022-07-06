@@ -13,7 +13,7 @@ class Info_pages_view: UIViewController, UICollectionViewDelegate, UICollectionV
     
     var header = ["Hors ligne","En ligne"]
     // Declare section one data
-    var section_one_header = ["Violentometre", "Carte violence intrafamiliale", "Carte informative enfant"]
+    var section_one_header = ["Violentomètre", "Carte violence intrafamiliale", "Carte informative enfant"]
     var section_one_icon = ["violenceicon2", "carte", "child"]
     var pdf_file_name = ["violentometre4","pdf2","pdf3"]
     var pdf_title = ["Violentomètre", "Carte violence","Carte enfant"]
